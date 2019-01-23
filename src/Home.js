@@ -1,27 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Home from './Home';
 import anime from 'animejs';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      isLoading: true
-    };
-  }
-  componentDidMount(){
-    setTimeout( () => this.setState({isLoading: false}), 6000);
-  }
-
+class Home extends Component {
   render() {
-    if(this.state.isLoading){
-      return null;
-    }
     return (
       <div className="App">
-      <Home/>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -38,8 +23,7 @@ class App extends Component {
         </header>
       </div>
     );
-    
   }
 }
 
-export default App;
+export default Home;

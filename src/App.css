@@ -1,3 +1,12 @@
+.load:empty{
+  background-color: #03030C;
+  height: max-content;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+
+}
 .App {
   text-align: center;
 }
