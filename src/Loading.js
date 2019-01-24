@@ -21,6 +21,9 @@ componentDidMount(){
   }
     ,20);
 }
+componentWillUnmount(){
+  return null;
+}
   render() {
     return (
       <div className="loading-bar">

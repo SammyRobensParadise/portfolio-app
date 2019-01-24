@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './Welcome.css';
 import anime from 'animejs';
 
 class Welcome extends Component {
-  render() {
+  constructor(props){
+    super(props);
+    this.state = {
+      welcomeTxt: "Welcome.",
+      SubTxt: ""
+    }
+  }
+  componentDidMount(){
+    let updateMsg = "It looks live you've made it from cyber space.";
+    setTimeout(() => {
+      this.setState({SubTxt: updateMsg});
+    },3000)
+  }
+  render(props) {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="welcome-pan">
+      <div className="welcome-txt"><span>{this.state.welcomeTxt}</span></div>
+      <div className="welcome-msg"><span>{this.state.SubTxt}</span></div>
       </div>
     );
   }
