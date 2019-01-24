@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './Loading.css';
 import anime from 'animejs';
 
 class Loading extends Component {
+  constructor(props){
+    super(props);
+    this.state ={
+      isTriggered: false,
+      percentage: 0
+    }
+  }
+componentDidMount(){
+  setInterval(() => {
+    let index = this.state.percentage+1;
+    if(index > 100){
+      clearInterval(this.state)
+    }else {
+    this.setState({percentage: index})}
+  }
+    ,20);
+}
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="loading-bar">
+      <div className="loading-percentage"><span className="loading-text">Loading</span><span className="load-percentage">{" "+this.state.percentage+"%"}</span></div>
+      <div className="loading-bar-inner" percentage={this.state.percentage} style={{width: `${this.state.percentage}%`}}></div>
       </div>
     );
   }

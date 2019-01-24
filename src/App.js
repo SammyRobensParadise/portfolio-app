@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './Home';
+import Loading from './Loading';
+import Welcome from './Welcome';
 import anime from 'animejs';
 
 class App extends Component {
@@ -12,12 +14,12 @@ class App extends Component {
     };
   }
   componentDidMount(){
-    setTimeout( () => this.setState({isLoading: false}), 6000);
+    setTimeout( () => this.setState({isLoading: false}), 3000);
   }
 
   render() {
     if(this.state.isLoading){
-      return null;
+      return <Loading/>;
     }
     return (
       <div className="App">
