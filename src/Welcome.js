@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Welcome.css';
 import anime from 'animejs';
 
@@ -8,20 +7,38 @@ class Welcome extends Component {
     super(props);
     this.state = {
       welcomeTxt: "Welcome.",
-      SubTxt: ""
+      showSubTxt: false
     }
   }
-  componentDidMount(){
-    let updateMsg = "It looks live you've made it from cyber space.";
+  animeJS = {};
+  updateMsg = "It looks like you've made it from cyber space."
+  showtextDiv = <div className="welcome-msg"><span>{this.updateMsg}</span></div>
+  componentDidMount(props){
     setTimeout(() => {
-      this.setState({SubTxt: updateMsg});
+      this.setState({showSubTxt: true});
+      this.animateEase();
     },3000)
   }
+  animateEase = () => {
+    anime({
+      targets: '.welcome-msg',
+      duration: 1200,
+      opacity: [0,1],
+      easing: 'linear'
+    })
+  }
   render(props) {
+    if(!this.state.showSubTxt){
+      return(
+        <div className="welcome-pan">
+        <div className="welcome-txt"><span>{this.state.welcomeTxt}</span></div>
+        </div>
+      )
+    }
     return (
       <div className="welcome-pan">
       <div className="welcome-txt"><span>{this.state.welcomeTxt}</span></div>
-      <div className="welcome-msg"><span>{this.state.SubTxt}</span></div>
+      <div>{this.showtextDiv}</div>
       </div>
     );
   }
