@@ -16,14 +16,25 @@ class Welcome extends Component {
   componentDidMount(props){
     setTimeout(() => {
       this.setState({showSubTxt: true});
-      this.animateEase();
+      this.animateEaseIn();
     },3000)
   }
-  animateEase = () => {
+  componentWillUnmount(){
+      this.animateEaseOut()
+  }
+  animateEaseIn = () => {
     anime({
       targets: '.welcome-msg',
       duration: 1200,
       opacity: [0,1],
+      easing: 'linear'
+    })
+  }
+  animateEaseOut = () => {
+    anime({
+      targets: ['.welcome-msg','.welcome-txt'],
+      duration: 1200,
+      opacity: [1,0],
       easing: 'linear'
     })
   }

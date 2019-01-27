@@ -4,10 +4,21 @@ import './Home.css';
 import anime from 'animejs';
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isRendered: false
+    }
+  }
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({isRendered: true});
+    },500);
+  }
   render() {
     return (
       <div className="Home">
-      <HomeImage/>
+      <HomeImage className="home-image-target" />
       </div>
     );
   }
