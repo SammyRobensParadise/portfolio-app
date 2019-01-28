@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
+import './styles/Feature.css';
 import anime from 'animejs';
 
-class About extends Component {
+class Feature extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload here is some sample text.
           </p>
@@ -23,4 +26,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Feature;

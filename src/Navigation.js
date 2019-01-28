@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+
+import './styles/Navigation.css';
 import anime from 'animejs';
 
-class About extends Component {
+class Navigation extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="navigation-bar">
         <header className="App-header">
           <p>
             Edit <code>src/App.js</code> and save to reload here is some sample text.
@@ -23,4 +25,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Navigation;

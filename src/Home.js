@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import HomeImage from './sub_components/HomeImage';
-import './Home.css';
+import './styles/Home.css';
 import anime from 'animejs';
+import { Container, Row, Col } from 'reactstrap';
 
 class Home extends Component {
   constructor(props){
@@ -18,7 +19,9 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
+      <Container>
       <HomeImage className="home-image-target" />
+      </Container>
       </div>
     );
   }

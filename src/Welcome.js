@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Welcome.css';
+import './styles/Welcome.css';
 import anime from 'animejs';
 
 class Welcome extends Component {
@@ -17,10 +17,7 @@ class Welcome extends Component {
     setTimeout(() => {
       this.setState({showSubTxt: true});
       this.animateEaseIn();
-    },3000)
-  }
-  componentWillUnmount(){
-      this.animateEaseOut()
+    },3200)
   }
   animateEaseIn = () => {
     anime({
