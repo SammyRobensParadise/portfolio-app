@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Container,Col,Row} from 'reactstrap';
 import './styles/Navigation.css';
 import anime from 'animejs';
 
@@ -7,19 +7,17 @@ class Navigation extends Component {
   render() {
     return (
       <div className="navigation-bar">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Container>
+        <Col>
+        <Row>
+      <ul>
+  <li className="home"><span className="navigation">R. Paradise</span></li>
+  <li className="work"><span className="navigation">Work</span></li>
+  <li className="about"><span className="navigation">About</span></li>
+      </ul>
+      </Row>
+        </Col>
+      </Container>
       </div>
     );
   }

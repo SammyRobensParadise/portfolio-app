@@ -14,6 +14,9 @@ import Welcome from './Welcome';
 import Navigation from './Navigation';
 import Buffer from './Buffer';
 
+//Buttons anf Features
+import Socials from './sub_components/Socials';
+
 //Library import -------------------------
 import anime from 'animejs';
 
@@ -42,6 +45,9 @@ class App extends Component {
     setTimeout(() => {
       this.pushComponents(Feature);  
     }, 10);
+    setTimeout(() => {
+      this.pushComponents(Home);  
+    }, 10);
     setTimeout( () => this.setState({isLoading: false}), 3000);
   }
   
@@ -56,9 +62,12 @@ class App extends Component {
       components: [...prevState.components, component]
     }));
   }
+  _getCurrentStack = (props) => {
+    return (this.state.components.length-1);
+  }
 
 //Render: Sent to Browser -------------------
-  render() {
+  render(props) {
     if(this.state.isLoading){
       return <Loading/>;
     }
@@ -68,10 +77,9 @@ class App extends Component {
     if(this.state.onboardComplete){
     return (
       <div className="App">
-      {console.log(this.state.components)}
       <Navigation/>
       <Home/>
-      <Buffer/>
+      <Socials/>
       </div>
     );
     }

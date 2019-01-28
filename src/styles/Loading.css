@@ -7,6 +7,7 @@
     font-family: century-gothic, sans-serif;
     font-weight: 400;
     font-style: normal;
+    cursor: wait;
 }
 .loading-percentage{
     color: #ffffff !important;

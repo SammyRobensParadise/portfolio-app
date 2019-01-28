@@ -8,3 +8,33 @@
     font-weight: 400;
     font-style: normal;
 }
+.content{
+ text-align: center
+}
+.line-1{ 
+    display: inline-block;
+    width: 30rem;
+    margin-block-start: 6rem;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(60) 1s 1 normal both,
+             blinkTextCursor 500ms steps(60) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 30rem;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}

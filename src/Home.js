@@ -20,6 +20,9 @@ class Home extends Component {
     return (
       <div className="Home">
       <Container>
+      <div className="content">
+      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
+      </div>
       <HomeImage className="home-image-target" />
       </Container>
       </div>
