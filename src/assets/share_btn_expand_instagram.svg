@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+        <style>.cls-1{fill:#fff;}.cls-2{fill:#03030c;}</style>
+    </defs>
+    <title>share btn expand instagram (2)</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="share_btn_expand_instagram" data-name="share btn expand instagram">
+            <circle class="cls-1" cx="100" cy="100" r="100"/>
+            <g id="instagram_outer" data-name="instagram outer">
+                <path class="cls-2" d="M150,38a12,12,0,0,1,12,12V150a12,12,0,0,1-12,12H50a12,12,0,0,1-12-12V50A12,12,0,0,1,50,38H150m0-20H50A32,32,0,0,0,18,50V150a32,32,0,0,0,32,32H150a32,32,0,0,0,32-32V50a32,32,0,0,0-32-32Z"/>
+            </g>
+            <g id="instagram_inner" data-name="instagram inner">
+                <circle class="cls-2" cx="100.5" cy="97.5" r="35"/>
+                <circle class="cls-2" cx="148" cy="52" r="10"/>
+            </g>
+        </g>
+    </g>
+</svg>

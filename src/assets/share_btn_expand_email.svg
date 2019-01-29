@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 200">
+    <defs>
+        <style>.cls-1{fill:#fff;}.cls-2{fill:#03030c;}.cls-3{fill:none;stroke:#03030c;stroke-miterlimit:10;stroke-width:15px;}</style>
+    </defs>
+    <title>share btn expland email (2)</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="share_btn_expland_email" data-name="share btn expland email">
+            <circle class="cls-1" cx="100" cy="100" r="100"/>
+            <g id="email_outer" data-name="email outer">
+                <path class="cls-2" d="M190,44a12,12,0,0,1,12,12v87a12,12,0,0,1-12,12H90a12,12,0,0,1-12-12V56A12,12,0,0,1,90,44H190m0-20H90A32,32,0,0,0,58,56v87a32,32,0,0,0,32,32H190a32,32,0,0,0,32-32V56a32,32,0,0,0-32-32Z"/>
+            </g>
+            <g id="envelope">
+                <path class="cls-3" d="M77.5,34.5l63,50,63-50"/>
+            </g>
+        </g>
+    </g>
+</svg>

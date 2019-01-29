@@ -80,6 +80,28 @@ class App extends Component {
       <Navigation/>
       <Home/>
       <Socials/>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
+      <p>scroll text</p>
+      <br></br>
       </div>
     );
     }
