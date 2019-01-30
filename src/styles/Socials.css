@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 
-.social{
+.social {
     height: max-content;
     color: #ffffff !important;
     font-family: century-gothic, sans-serif;
@@ -8,15 +8,18 @@
     font-style: normal;
 
 }
-.btn-contain{
-right: 1%;
-top: 60%;
-margin-block-start: 2rem;
-margin-inline-end: 2rem;
-margin-inline-start: 2rem;
-position: fixed;
+
+.btn-contain {
+    right: 1%;
+    top: 60%;
+    margin-block-start: 2rem;
+    margin-inline-end: 2rem;
+    margin-inline-start: 2rem;
+    width: 8rem;
+    position: fixed;
 }
-.icon-resume{
+
+.icon-resume {
     background-image: url('../assets/resume_btn.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,10 +27,9 @@ position: fixed;
     height: 3.5rem;
     width: 4rem;
     margin-block-start: 1rem;
-    position: inherit;
-
 }
-.icon-resume:hover{
+
+.icon-resume:hover {
     background: url('../assets/resume_btn_blue.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +39,8 @@ position: fixed;
     cursor: pointer;
 
 }
-.icon-social{
+
+.icon-social {
     background-image: url('../assets/share_icon.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,8 +49,10 @@ position: fixed;
     width: 4rem;
     margin-block-start: 1rem;
 
+
 }
-.icon-social:hover{
+
+.icon-social:hover {
     background: url('../assets/share_icon_blue.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,22 +62,46 @@ position: fixed;
     cursor: pointer;
 
 }
-.icon-contact{
+
+.icon-contact {
     background-image: url('../assets/contact_icon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.5rem;
+    width: 4rem;
+    margin-block-start: 1rem;
+}
+
+.icon-contact:hover {
+    background: url('../assets/contact_icon_blue.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.5rem;
+    width: 4rem;
+    cursor: pointer;
+
+}
+
+.icon-fb {
+    background-image: url('../assets/share_btn_expand_fb.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 3.5rem;
     width: auto;
     margin-block-start: 1rem;
+    position: inherit;
 }
-.icon-contact:hover{
-    background: url('../assets/contact_icon_blue.svg');
+
+.icon-fb:hover {
+    background-image: url('../assets/share_btn_expand_fb.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 3.5rem;
     width: auto;
+    margin-block-start: 1rem;
     cursor: pointer;
-
 }

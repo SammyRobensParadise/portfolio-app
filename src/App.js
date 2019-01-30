@@ -27,6 +27,7 @@ class App extends Component {
       isLoading: true,
       unWelcome: true,
       onboardComplete: false,
+      screenClick: 0,
       components: [
         Buffer
       ]
@@ -65,6 +66,10 @@ class App extends Component {
   _getCurrentStack = (props) => {
     return (this.state.components.length-1);
   }
+  _registerClicks = () => {
+    let current = this.state.screenClick;
+   this.setState({screenClick: current+1});
+  }
 
 //Render: Sent to Browser -------------------
   render(props) {
@@ -77,31 +82,11 @@ class App extends Component {
     if(this.state.onboardComplete){
     return (
       <div className="App">
+      <div className="click-target" onClick={this._registerClicks}>
       <Navigation/>
       <Home/>
-      <Socials/>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
-      <p>scroll text</p>
-      <br></br>
+      </div>
+      <Socials currentClickCount={this.state.screenClick}/>
       </div>
     );
     }
