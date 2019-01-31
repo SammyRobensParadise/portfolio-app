@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import CSS ---------------------------------------
-import '../styles/Socials.css';
+import '../styles/Socials.scss';
 
 /*/import assets ------------------------------------
 import expandedGithub from '../assets/connect_expand_github.svg';
@@ -35,11 +35,14 @@ class Socials extends Component {
     componentDidUpdate(props){
       let PrevClickCount = this.props.currentClickCount;
       if(PrevClickCount > this.state.currentClickCount){
-        console.log(this.props.currentClickCount);
+        this.ShareContract();
+        this.ContactContract();
+        setTimeout(() => {
         this.setState({
           showContactExpanded: false,
           showShareExpanded: false
         });
+      },600);
         this.setState({currentClickCount: PrevClickCount});
       }  
     }
@@ -47,31 +50,88 @@ class Socials extends Component {
       this.setState({showContactExpanded: false});
       if(!this.state.showShareExpanded){
       this.setState({showShareExpanded: true});
-      setTimeout(() => {this.animeShareExpand()},1)
-      
+      setTimeout(() => {this.ShareExpand()},1)
       } else {
-        this.setState({showShareExpanded: false});
+       // this.setState({showShareExpanded: false});
       }
     }
     toggleContact = () => {
       this.setState({showShareExpanded: false});
       if(!this.state.showContactExpanded){
       this.setState({showContactExpanded: true});
+      setTimeout(() => {this.ContactExpand()},1)
       } else {
-        this.setState({showContactExpanded: false});
+        // this.setState({showContactExpanded: false});
       }
     }
-    animeShareExpand = () =>{
+
+    //expand the share buttons pannel ---------------------------------
+    ShareExpand = () =>{
       anime({
         targets: '.icon-fb',
-        translateX: '-8rem',
-        translateY: '4rem',
-        duration: 500,
+        translateX: '-6rem',
+        opacity: [0,1],
+        duration: 600,
+      })
+      anime({
+        targets: '.icon-instagram',
+        translateX: '-6rem',
+        opacity: [0,1],
+        delay: 100,
+        duration: 600,
+      })
+      anime({
+        targets: '.icon-email',
+        translateX: '-6rem',
+        opacity: [0,1],
+        delay: 200,
+        duration: 600,
       })
     }
+    //close the share buttons pannel ----------------------------------
+    ShareContract = () => {
+      anime({
+        targets: '.icon-fb',
+        translateX: '6rem',
+        opacity: [1,0],
+        delay: 200,
+        duration: 600,
+      })
+      anime({
+        targets: '.icon-instagram',
+        translateX: '6rem',
+        opacity: [1,0],
+        delay: 100,
+        duration: 600,
+      })
+      anime({
+        targets: '.icon-email',
+        translateX: '6rem',
+        opacity: [1,0],
+        duration: 600,
+      })
+    }
+  //expand Contact pannel ---------------------------------------
+  ContactExpand = () =>{
+    anime({
+      targets: '.icon-github',
+      translateX: '-6rem',
+      opacity: [0,1],
+      duration: 600,
+    })
+  }
+  ContactContract = () => {
+    anime({
+      targets: '.icon-github',
+      translateX: '6rem',
+      opacity: [1,0],
+      duration: 600,
+    })
+  }
+
   render() {
   const shareList = <div className="expanded-share"><div className="icon-fb"></div><div className="icon-instagram"></div><div className="icon-email"></div></div>
-    const contactList = <ul><li><div className="icon-github"></div></li></ul>
+    const contactList = <div className="expanded-contact"><div className="icon-github"></div></div>
     let showContact = this.state.showContactExpanded;
     let showShare = this.state.showShareExpanded;
 
@@ -91,7 +151,7 @@ class Socials extends Component {
       <div className="social">
       <div className="btn-contain">
       <div className="btn"><div className="icon-resume"></div></div>
-      <div className="btn">{shareList}<div className="icon-social" onClick={this.toggledShare}></div></div>
+      <div className="btn"><span>{shareList}<div className="icon-social" onClick={this.toggledShare}></div></span></div>
       <div className="btn"><div className="icon-contact" onClick={this.toggleContact}></div></div>
       </div>
       </div>
@@ -103,7 +163,7 @@ class Socials extends Component {
       <div className="btn-contain">
       <div className="btn"><div className="icon-resume"></div></div>
       <div className="btn"><div className="icon-social" onClick={this.toggledShare}></div></div>
-      <div className="btn"><div className="icon-contact" onClick={this.toggleContact}></div>{contactList}</div>
+      <div className="btn"><span>{contactList}<div className="icon-contact" onClick={this.toggleContact}></div></span></div>
       </div>
       </div>
       );
@@ -111,5 +171,4 @@ class Socials extends Component {
 
 }
 }
-
 export default Socials;

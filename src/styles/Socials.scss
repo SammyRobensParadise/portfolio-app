@@ -1,0 +1,105 @@
+@import url("https://use.typekit.net/ucu5nmz.css");
+@import './Global.scss';
+
+.social {
+    @extend %universal-component-layout;
+}
+
+.btn-contain {
+    right: 1%;
+    bottom: 2%;
+    margin-inline-end: 1%;
+    position: fixed;
+}
+
+%button-shared {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-block-start: 1rem;
+}
+
+%button-shared-hover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+}
+
+.icon-resume {
+    background-image: url('../assets/resume_btn.svg');
+    @extend %button-shared;
+
+}
+
+.icon-resume:hover {
+    background: url('../assets/resume_btn_blue.svg');
+    @extend %button-shared-hover;
+}
+
+.icon-social {
+    background-image: url('../assets/share_icon.svg');
+    @extend %button-shared;
+
+
+}
+
+.icon-social:hover {
+    background: url('../assets/share_icon_blue.svg');
+    @extend %button-shared-hover;
+}
+
+.icon-contact {
+    background-image: url('../assets/contact_icon.svg');
+    @extend %button-shared;
+}
+
+.icon-contact:hover {
+    background: url('../assets/contact_icon_blue.svg');
+    @extend %button-shared-hover;
+
+}
+
+.icon-fb {
+    background-image: url('../assets/share_btn_expand_fb.svg');
+    @extend %button-shared;
+}
+
+.icon-fb:hover {
+    background-image: url('../assets/share_btn_expand_fb.svg');
+    @extend %button-shared-hover;
+    cursor: pointer;
+}
+
+.icon-instagram {
+    background-image: url('../assets/share_btn_expand_instagram.svg');
+    @extend %button-shared;
+
+}
+
+.icon-instagram:hover {
+    background-image: url('../assets/share_btn_expand_instagram.svg');
+    @extend %button-shared-hover;
+}
+
+.icon-email {
+    background-image: url('../assets/share_btn_expand_email.svg');
+    @extend %button-shared
+}
+
+.icon-email:hover {
+    background-image: url('../assets/share_btn_expand_email.svg');
+    @extend %button-shared-hover;
+}
+.icon-github{
+    background-image: url('../assets/connect_expand_github.svg');
+    @extend %button-shared;
+}
+.icon-github:hover{
+    background-image: url('../assets/connect_expand_github.svg');
+    @extend %button-shared-hover;
+}

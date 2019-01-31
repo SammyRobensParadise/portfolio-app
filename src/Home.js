@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeImage from './sub_components/HomeImage';
-import './styles/Home.css';
+import './styles/Home.scss';
 import anime from 'animejs';
 import { Container, Row, Col } from 'reactstrap';
 

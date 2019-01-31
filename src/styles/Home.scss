@@ -1,12 +1,8 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
+@import './Global.scss';
 
 .Home{
-    height: max-content;
-    background-color: #04040c;
-    color: #ffffff !important;
-    font-family: century-gothic, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  @extend %universal-component-layout;
 }
 .content{
  text-align: center
@@ -27,6 +23,7 @@
 
 /* Animation */
 .anim-typewriter{
+  cursor: none;
   animation: typewriter 4s steps(60) 1s 1 normal both,
              blinkTextCursor 500ms steps(60) infinite normal;
 }
