@@ -7,7 +7,7 @@
 
 .btn-contain {
     right: 1%;
-    bottom: 2%;
+    bottom: 10%;
     margin-inline-end: 1%;
     position: fixed;
 }
@@ -70,7 +70,7 @@
 }
 
 .icon-fb:hover {
-    background-image: url('../assets/share_btn_expand_fb.svg');
+    background-image: url('../assets/share_btn_expand_fb_blue.svg');
     @extend %button-shared-hover;
     cursor: pointer;
 }
@@ -82,7 +82,7 @@
 }
 
 .icon-instagram:hover {
-    background-image: url('../assets/share_btn_expand_instagram.svg');
+    background-image: url('../assets/share_btn_expand_instagram_blue.svg');
     @extend %button-shared-hover;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .icon-email:hover {
-    background-image: url('../assets/share_btn_expand_email.svg');
+    background-image: url('../assets/share_btn_expand_email_blue.svg');
     @extend %button-shared-hover;
 }
 .icon-github{
@@ -100,6 +100,6 @@
     @extend %button-shared;
 }
 .icon-github:hover{
-    background-image: url('../assets/connect_expand_github.svg');
+    background-image: url('../assets/connect_expand_github_blue.svg');
     @extend %button-shared-hover;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Container,Col,Row} from 'reactstrap';
-import './styles/Navigation.css';
+import './styles/Navigation.scss';
 import anime from 'animejs';
 
 class Navigation extends Component {
