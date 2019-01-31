@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
-import {Container,Col,Row} from 'reactstrap';
 import './styles/Navigation.scss';
 import anime from 'animejs';
 
 class Navigation extends Component {
-  render() {
+  constructor(props){
+    super(props);
+    this.state = {
+      isRendered: false
+    }
+  }
+  render(props) {
+    var homepageNav = <div><div className= "more-button"></div></div>;
+    var obj = Navigation;
     return (
+      <div className="navigation-module">
       <div className="navigation-bar">
-      <Container>
-        <Col>
-        <Row>
+
       <ul>
   <li className="home"><span className="navigation">R. Paradise</span></li>
   <li className="work"><span className="navigation">Work</span></li>
   <li className="about"><span className="navigation">About</span></li>
       </ul>
-      </Row>
-        </Col>
-      </Container>
+      </div>
+      {homepageNav}
       </div>
     );
   }

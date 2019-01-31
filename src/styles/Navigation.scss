@@ -39,3 +39,17 @@ ul {
       cursor: pointer;
 
   }
+  .more-button{
+      background-image: url("../assets/more_btn.svg");
+      position: fixed;
+      left: 10%;
+      bottom: 10%;
+      width: 4.5rem;
+      height: 9rem;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  .more-button:hover{
+      background-image: url('../assets/more_btn_hover.svg');
+      cursor: pointer;
+  }

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 59.72">
+    <defs>
+        <style>.cls-1,.cls-2{fill:#fff;}.cls-2{font-size:36px;font-family:CenturyGothic, Century Gothic;}</style>
+    </defs>
+    <title>back btnrevised</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="back_btn" data-name="back btn">
+            <polygon class="cls-1" points="27 43.72 183 43.72 183 35.72 27 35.72 27 19.72 0 39.72 27 59.72 27 43.72"/>
+            <text class="cls-2" transform="translate(91.95 30.92)">back</text>
+        </g>
+    </g>
+</svg>
