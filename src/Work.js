@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import anime from 'animejs';
 
 class Work extends Component {
@@ -8,7 +7,7 @@ class Work extends Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
+            Edit <code>src/App.js</code> WORK
           </p>
           <a
             className="App-link"

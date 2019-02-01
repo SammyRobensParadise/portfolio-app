@@ -8,13 +8,21 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isRendered: false
+      isRendered: false,
+      name: Home
     }
   }
   componentDidMount(){
-    setTimeout(() => {
       this.setState({isRendered: true});
-    },500);
+  }
+  componentDidUpdate(){
+    return true;
+  }
+  _getRenderStatus = () => {
+    return this.state.isRendered;
+  }
+  _getClass = () => {
+    return this.state.name;
   }
   render() {
     return (

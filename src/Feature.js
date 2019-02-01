@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/Feature.css';
 import anime from 'animejs';
 
@@ -8,9 +7,8 @@ class Feature extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
+            FEATURE SECTION
           </p>
           <a
             className="App-link"
