@@ -19,13 +19,7 @@ class Navigation extends Component {
     super(props);
     this.state = {
       isRendered: false,
-      navigation: [
-        null
-      ],
-      home: new Home(),
-      about: new About(),
-      work: new Work(),
-      Feature: new Feature()
+      home: new Home()
     }
 
   }
@@ -45,14 +39,6 @@ class Navigation extends Component {
   pushHome = () => {
     if (this.state.home._getRenderStatus()) {
     }
-  }
-  pushToNavigationStack = (screen) => {
-    setTimeout((screen) => {
-      this.setState(prevState => ({
-        navigation: [...prevState.navigation, screen]
-      }))
-      console.log("stack update: " + this.state.navigation[1]);
-    }, 10);
   }
   render(props) {
    return (

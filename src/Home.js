@@ -13,7 +13,7 @@ class Home extends Component {
     this.state = {
       isRendered: false,
       classRef: Home,
-      navRef: new NavigationHandler("Home")
+      navRef: new NavigationHandler(Home)
     }
   }
   componentDidMount() {
@@ -26,6 +26,9 @@ class Home extends Component {
   }
   _getRenderStatus = () => {
     return this.state.isRendered;
+  }
+  _getRenderScreen = () => {
+    return <Home />;
   }
   render() {
     return (

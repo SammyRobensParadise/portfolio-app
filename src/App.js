@@ -21,6 +21,7 @@ import Socials from './sub_components/Socials';
 
 //Library import -------------------------
 import anime from 'animejs';
+import NavigationHandler from './NavigationHandler';
 
 class App extends Component {
   constructor(props) {
@@ -30,13 +31,14 @@ class App extends Component {
       unWelcome: true,
       onboardComplete: false,
       screenClick: 0,
-      screenViewer: null
+      screenViewer: new NavigationHandler()
     };
   }
 
   //Definitions ------------------------------
 
   componentDidMount(props) {
+    this.state.screenViewer.pushToNavigationStack(Home);
     setTimeout(() => this.setState({
       isLoading: false
     }), 3000);
@@ -68,6 +70,7 @@ class App extends Component {
 
 //Render: Sent to Browser -------------------
   render(props) {
+
     if(this.state.isLoading){
       return <Loading/>;
     }
@@ -78,7 +81,7 @@ class App extends Component {
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
-      <Home/>
+      <Home />
       </div>
       <Socials currentClickCount={this.state.screenClick}/>
       </div>
