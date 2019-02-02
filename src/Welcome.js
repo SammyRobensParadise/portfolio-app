@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import './styles/Welcome.css';
 import anime from 'animejs';
 
 class Welcome extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       welcomeTxt: "Welcome.",
@@ -13,25 +15,28 @@ class Welcome extends Component {
   animeJS = {};
   updateMsg = "It looks like you've made it from cyber space."
   showtextDiv = <div className="welcome-msg"><span>{this.updateMsg}</span></div>
-  componentDidMount(props){
+  componentDidMount(props) {
     setTimeout(() => {
-      this.setState({showSubTxt: true});
+      this.setState({
+        showSubTxt: true
+      });
       this.animateEaseIn();
-    },3200)
+    }, 3200)
   }
   animateEaseIn = () => {
     anime({
       targets: '.welcome-msg',
       duration: 1200,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear'
     })
   }
   animateEaseOut = () => {
     anime({
-      targets: ['.welcome-msg','.welcome-txt'],
+      targets: ['.welcome-msg', '.welcome-txt'],
+      
       duration: 1200,
-      opacity: [1,0],
+      opacity: [1, 0],
       easing: 'linear'
     })
   }

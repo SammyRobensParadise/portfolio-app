@@ -1,27 +1,31 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import './styles/Loading.css';
 
 class Loading extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       isTriggered: false,
       percentage: 0
     }
   }
-componentDidMount(){
-  setInterval(() => {
-    let index = this.state.percentage+1;
-    if(index > 100){
-      clearInterval(this.state)
-    }else {
-    this.setState({percentage: index})}
+  componentDidMount() {
+    setInterval(() => {
+      let index = this.state.percentage + 1;
+      if (index > 100) {
+        clearInterval(this.state)
+      } else {
+        this.setState({
+          percentage: index
+        })
+      }
+    }, 20);
   }
-    ,20);
-}
-componentWillUnmount(){
-  return null;
-}
+  componentWillUnmount() {
+    return true;
+  }
   render() {
     return (
       <div className="loading-bar">

@@ -1,14 +1,17 @@
 import React, {
   Component
 } from 'react';
-import './styles/Navigation.scss';
+import '../styles/Navigation.scss';
 import anime from 'animejs';
 //Component import -----------------------
 
-import Home from './Home';
-import About from './About';
-import Work from './Work';
-import Feature from './Feature';
+import Home from '../Home';
+import About from '../About';
+import Work from '../Work';
+import Feature from '../Feature';
+
+//manifestimport
+import { homeButtonStructure } from './ButtonManifest';
 
 
 class Navigation extends Component {
@@ -40,9 +43,7 @@ class Navigation extends Component {
     return true;
   }
   pushHome = () => {
-    console.log(this.state.home._getClass());
     if (this.state.home._getRenderStatus()) {
-      this.pushToNavigationStack(this.state.home._getClass());
     }
   }
   pushToNavigationStack = (screen) => {
@@ -54,18 +55,11 @@ class Navigation extends Component {
     }, 10);
   }
   render(props) {
-
-    var homepageNav = <div><div className= "more-button"></div></div>;
-    return (
-      <div className="navigation-module">
-      <div className="navigation-bar">
-      <ul>
-  <li className="home"><span className="navigation">R. Paradise</span></li>
-  <li className="work"><span className="navigation">Work</span></li>
-  <li className="about"><span className="navigation">About</span></li>
-      </ul>
+   return (
+      <div className="buttons">
+      <div className="buttons-inner">
+        {homeButtonStructure}
       </div>
-      {homepageNav}
       </div>
     );
   }

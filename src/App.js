@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 //CSS import -----------------------------
 import './styles/App.css';
 
@@ -11,7 +13,7 @@ import Feature from './Feature';
 //Loading and Buffering Component import -
 import Loading from './Loading';
 import Welcome from './Welcome';
-import Navigation from './Navigation';
+import Navigation from './sub_components/Button';
 import Buffer from './Buffer';
 
 //Buttons anf Features
@@ -21,54 +23,47 @@ import Socials from './sub_components/Socials';
 import anime from 'animejs';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       isLoading: true,
       unWelcome: true,
       onboardComplete: false,
       screenClick: 0,
-      components: [
-        Buffer
-      ]
+      screenViewer: null
     };
   }
 
-//Definitions ------------------------------
+  //Definitions ------------------------------
 
-  componentDidMount(props){
-    setTimeout(() => {
-      this.pushComponents(About);  
-    }, 10);
-    setTimeout(() => {
-      this.pushComponents(Work);  
-    }, 10);
-    setTimeout(() => {
-      this.pushComponents(Feature);  
-    }, 10);
-    setTimeout(() => {
-      this.pushComponents(Home);  
-    }, 10);
-    setTimeout( () => this.setState({isLoading: false}), 3000);
+  componentDidMount(props) {
+    setTimeout(() => this.setState({
+      isLoading: false
+    }), 3000);
   }
-  
-  componentDidUpdate(props){
-    if(!props.onboardComplete){
-      setTimeout( () => this.setState({unWelcome: false, onboardComplete: true}), 9000);
+
+  componentDidUpdate(props) {
+    if (!props.onboardComplete) {
+      setTimeout(() => this.setState({
+        unWelcome: false,
+        onboardComplete: true
+      }), 9000);
     }
   }
- 
-  pushComponents = (component) =>{
+
+  pushComponents = (component) => {
     this.setState(prevState => ({
       components: [...prevState.components, component]
     }));
   }
   _getCurrentStack = (props) => {
-    return (this.state.components.length-1);
+    return (this.state.components.length - 1);
   }
   _registerClicks = () => {
     let current = this.state.screenClick;
-   this.setState({screenClick: current+1});
+    this.setState({
+      screenClick: current + 1
+    });
   }
 
 //Render: Sent to Browser -------------------
@@ -83,7 +78,6 @@ class App extends Component {
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
-      <Navigation/>
       <Home/>
       </div>
       <Socials currentClickCount={this.state.screenClick}/>
