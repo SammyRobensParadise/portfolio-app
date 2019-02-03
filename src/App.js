@@ -9,6 +9,8 @@ import Home from './Home';
 import About from './About';
 import Work from './Work';
 import Feature from './Feature';
+import NavigationHandler from './NavigationHandler';
+import ButtonManifest from './sub_components/ButtonManifest'
 
 //Loading and Buffering Component import -
 import Loading from './Loading';
@@ -21,7 +23,6 @@ import Socials from './sub_components/Socials';
 
 //Library import -------------------------
 import anime from 'animejs';
-import NavigationHandler from './NavigationHandler';
 
 class App extends Component {
   constructor(props) {
@@ -31,13 +32,19 @@ class App extends Component {
       unWelcome: true,
       onboardComplete: false,
       screenClick: 0,
-      screenViewer: new NavigationHandler()
+      screenViewer: new NavigationHandler(),
+      ButtonHandler: new ButtonManifest(),
+      HasError: false
     };
   }
 
   //Definitions ------------------------------
+componentDidCatch(error, info){
+  this.setState({ HasError: true})
+}
 
-  componentDidMount(props) {
+  componentDidMount() {
+    console.log(" App componentdidmount()")
     this.state.screenViewer.pushToNavigationStack(<Home/>);
     setTimeout(() => this.setState({
       isLoading: false
@@ -53,14 +60,6 @@ class App extends Component {
     }
   }
 
-  pushComponents = (component) => {
-    this.setState(prevState => ({
-      components: [...prevState.components, component]
-    }));
-  }
-  _getCurrentStack = (props) => {
-    return (this.state.components.length - 1);
-  }
   _registerClicks = () => {
     let current = this.state.screenClick;
     this.setState({
@@ -70,7 +69,9 @@ class App extends Component {
 
 //Render: Sent to Browser -------------------
   render(props) {
-
+    if(this.state.HasError){
+      return <p>Oops! It looks like something has gone wrong in our codebase. Come back in a bit to see if the problem is fixed!</p>
+    }
     if(this.state.isLoading){
       return <Loading/>;
     }

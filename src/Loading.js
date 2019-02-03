@@ -23,9 +23,6 @@ class Loading extends Component {
       }
     }, 20);
   }
-  componentWillUnmount() {
-    return true;
-  }
   render() {
     return (
       <div className="loading-bar">

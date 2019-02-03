@@ -6,25 +6,32 @@ import React, {
 import Home from '../Home';
 import Work from '../Work';
 import NavigationHandler from '../NavigationHandler';
+import App from '../App';
 
-export default class ButtonManifest {
+export default class ButtonManifest extends Component{
     constructor(props){
+        super(props);
         this.state = {
             navigationRefObj: new NavigationHandler(),
             home: Home
         }
     }
- navigationBarStructure = () =>{ return (
+
+ navigationBarStructure = () => {
+         return (
     <ul>
-    <li className="home" onClick={this.state.navigationRefObj.pushToNavigationStack(<Home/>)}><span className="navigation">R. Paradise</span></li>
-    <li className="work" onClick={this.state.navigationRefObj.pushToNavigationStack(<Work/>)}><span className="navigation">Work</span></li>
+    <li className="home" ><span className="navigation">R. Paradise</span></li>
+    <li className="work" ><span className="navigation">Work</span></li>
     <li className="about"><span className="navigation">About</span></li>
      </ul>
 
 );
 }
+componentDidUpdate(props){
+}
 
- homeButtonStructure= () => { return (
+ homeButtonStructure = () => {
+         return (
     <div className="navigation-module">
     <div className="navigation-bar">
     {this.navigationBarStructure()}

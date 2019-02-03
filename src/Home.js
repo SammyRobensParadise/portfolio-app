@@ -7,14 +7,14 @@ import anime from 'animejs';
 import Button from './sub_components/Button';
 import NavigationHandler from './NavigationHandler';
 import App from './App';
+import Navigation from './sub_components/Button';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isRendered: false,
-      classRef: Home,
-      navRef: new NavigationHandler(Home)
+      classRef: Home
     }
   }
   componentDidMount() {
@@ -25,12 +25,6 @@ class Home extends Component {
   componentDidUpdate() {
     return true;
   }
-  _getRenderStatus = () => {
-    return this.state.isRendered;
-  }
-  _getRenderScreen = () => {
-    return <Home />;
-  }
   render() {
     return (
       <div className="Home">
@@ -38,7 +32,7 @@ class Home extends Component {
       <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
       </div>
       <HomeImage className="home-image-target" />
-      <Button currentView={this.state.classRef}/>
+      <Navigation currentView={this.state.classRef}/>
       </div>
     );
   }
