@@ -9,6 +9,8 @@ import Home from '../Home';
 import About from '../About';
 import Work from '../Work';
 import Feature from '../Feature';
+import NavigationHandler from '../NavigationHandler';
+import ButtonManifest from './ButtonManifest';
 
 //manifestimport
 import { homeButtonStructure } from './ButtonManifest';
@@ -19,7 +21,7 @@ class Navigation extends Component {
     super(props);
     this.state = {
       isRendered: false,
-      home: new Home()
+      currentButtonView: props.currentView,
     }
 
   }
@@ -31,24 +33,21 @@ class Navigation extends Component {
     return true;
   }
   componentDidUpdate() {
-    if (this.state.home.componentDidUpdate()) {
-      this.pushHome();
-    }
+
     return true;
   }
-  pushHome = () => {
-    if (this.state.home._getRenderStatus()) {
-    }
-  }
   render(props) {
+    let manifestObj = new ButtonManifest()
+    if (this.state.currentButtonView === Home){
    return (
       <div className="buttons">
       <div className="buttons-inner">
-        {homeButtonStructure}
+        <manifestObj.homeButtonStructure/>
       </div>
       </div>
     );
   }
+}
 }
 
 

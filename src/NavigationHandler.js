@@ -1,6 +1,7 @@
 import { throws } from "assert";
 import React from 'react';
 import Home from "./Home";
+import ButtonManifest from './sub_components/ButtonManifest';
 
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
@@ -19,7 +20,7 @@ export default class NavigationHandler {
     pushToNavigationStack = (screen) => {
         this.ViewStack.push(screen);
     }
-    popFromNavigationStacl = (ViewStack) => {
+    popFromNavigationStack = (ViewStack) => {
         ViewStack.pop();
     }
     _getIndex(){
@@ -31,9 +32,9 @@ export default class NavigationHandler {
     _getViewStack(){
         return this.ViewStack;
     }
-    _getCurrentView(){
+    _getCurrentView = () =>{
         let displayEl = this.ViewStack.length-1;
-        console.log(displayEl)
+        console.log('_getCurrentView() Triggered ' + this.ViewStack.toString());
         return this.ViewStack[displayEl];
     }
 }

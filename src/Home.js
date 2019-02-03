@@ -6,6 +6,7 @@ import './styles/Home.scss';
 import anime from 'animejs';
 import Button from './sub_components/Button';
 import NavigationHandler from './NavigationHandler';
+import App from './App';
 
 class Home extends Component {
   constructor(props) {
@@ -38,7 +39,6 @@ class Home extends Component {
       </div>
       <HomeImage className="home-image-target" />
       <Button currentView={this.state.classRef}/>
-      {console.log("in home:"+this.state.classRef)}
       </div>
     );
   }

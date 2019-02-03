@@ -38,7 +38,7 @@ class App extends Component {
   //Definitions ------------------------------
 
   componentDidMount(props) {
-    this.state.screenViewer.pushToNavigationStack(Home);
+    this.state.screenViewer.pushToNavigationStack(<Home/>);
     setTimeout(() => this.setState({
       isLoading: false
     }), 3000);
@@ -81,7 +81,7 @@ class App extends Component {
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
-      <Home />
+      < this.state.screenViewer._getCurrentView />
       </div>
       <Socials currentClickCount={this.state.screenClick}/>
       </div>
