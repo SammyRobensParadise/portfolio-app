@@ -34,29 +34,32 @@ class App extends Component {
       screenClick: 0,
       screenViewer: new NavigationHandler(),
       ButtonHandler: new ButtonManifest(),
-      HasError: false
+      HomeRef: new Home(),
+      HasError: false,
     };
   }
 
   //Definitions ------------------------------
 componentDidCatch(error, info){
   this.setState({ HasError: true})
+  console.log(error,info);
 }
 
   componentDidMount() {
-    console.log(" App componentdidmount()")
-    this.state.screenViewer.pushToNavigationStack(<Home/>);
+    console.log(" App::componentdidmount()")
     setTimeout(() => this.setState({
-      isLoading: false
+      isLoading: false,
     }), 3000);
+    this.state.screenViewer.pushToNavigationStack(Home);
   }
 
   componentDidUpdate(props) {
     if (!props.onboardComplete) {
-      setTimeout(() => this.setState({
+      setTimeout(() => {this.setState({
         unWelcome: false,
         onboardComplete: true
-      }), 9000);
+      });
+    },9000);
     }
   }
 
@@ -73,10 +76,10 @@ componentDidCatch(error, info){
       return <p>Oops! It looks like something has gone wrong in our codebase. Come back in a bit to see if the problem is fixed!</p>
     }
     if(this.state.isLoading){
-      return <Loading/>;
+      return( <div><Loading/><NavigationHandler/></div>);
     }
     if(!this.state.isLoading && this.state.unWelcome){
-      return <Welcome/>;
+      return <div><Welcome/><NavigationHandler/></div> ;
     }
     if(this.state.onboardComplete){
     return (
@@ -85,6 +88,7 @@ componentDidCatch(error, info){
       < this.state.screenViewer._getCurrentView />
       </div>
       <Socials currentClickCount={this.state.screenClick}/>
+      <NavigationHandler/>
       </div>
     );
     }

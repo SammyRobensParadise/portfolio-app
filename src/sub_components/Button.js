@@ -30,6 +30,7 @@ class Navigation extends Component {
     return this.state.isRendered;
   }
   componentDidMount() {
+    console.log("Navigation::componentdidMount()")
     return true;
   }
   componentDidUpdate() {

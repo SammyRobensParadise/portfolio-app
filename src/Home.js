@@ -17,10 +17,15 @@ class Home extends Component {
       classRef: Home
     }
   }
+  componentDidCatch(error,info){
+    console.log(error,info);
+  }
   componentDidMount() {
     this.setState({
       isRendered: true
     });
+    console.log("Home::compondentDidMount()");
+    return true;
   }
   componentDidUpdate() {
     return true;

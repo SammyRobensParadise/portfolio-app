@@ -16,6 +16,10 @@ export default class ButtonManifest extends Component{
             home: Home
         }
     }
+componentDidMount(){
+    console.log("ButtonManifest::componentDidMount()");
+    return true;
+}
 
  navigationBarStructure = () => {
          return (

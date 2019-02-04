@@ -12,27 +12,43 @@ import Work from './Work';
 
 export default class NavigationHandler extends Component {
 
-    //ViewStack = []; // declaration of the viewHandler Navigation Stack
+       // declaration of the viewHandler Navigation Stack
 
     constructor(componentRegister,props){
-        super(props);
+        super(componentRegister,props);
         this.componentRegister = componentRegister;
+        this.ViewStack = [<p> ViewStack Var: We are still getting things prepared, if you've been waiting a while try reloading the page...</p>];
         this.state = {
             naviationActive: true,
-            ViewStack: [<p> 404 error it looks like something has gone wrong</p>],
-            HasError: false
+            ViewStack: [<p> We are still getting things prepared, if you've been waiting a while try reloading the page...</p>],
+            HasError: false,
+            homeRef: <Home/>
         }
     }
     componentDidCatch(error,info){
         console.log(error,info);
     }
+    componentDidMount(){
+        console.log("NavigationHandler::componentDidMount()");
+        return true;
+    }
     componentDidUpdate(screen){
-        console.log("navigation Handler componentdidupdate")
+        console.log("NavigationHandler::componentdidupdate()")
     }
     pushToNavigationStack = (screen) => {
-       this.setState(prevState => ({
-             ViewStack: [...prevState.ViewStack, screen]
-          }))
+        if(!this.componentDidMount()){
+            return;
+        }
+        if(screen === Home){
+        console.log("pushtonavigation stack called");
+     /*  this.setState({
+             ViewStack: [...this.state.ViewStack, this.state.homeRef]
+          }); */
+          this.ViewStack.push(<Home/>);
+        }
+   }
+   componentWillUnmount(){
+       console.log("NavigationHandler:componentWillUnmount()");
    }
     popFromNavigationStack = (ViewStack) => {
         ViewStack.pop();
@@ -40,13 +56,13 @@ export default class NavigationHandler extends Component {
     _getRegister(){
         return this.componentRegister;
     }
-    _getViewStack(){
-        return this.ViewStack;
-    }
     _getCurrentView = () =>{
-        let displayEl = this.state.ViewStack.length-1;
-        console.log('_getCurrentView() Triggered ' + this._getViewStack());
-        console.log('displayEl: '+ displayEl);
-        return this.state.ViewStack[displayEl];
+        let displayEl = this.ViewStack.length-1;
+      //  console.log(this.ViewStack.push(<Home/>))
+        console.log('_getCurrentView() Triggered ', "displayEL: " + displayEl);
+        return this.ViewStack[displayEl];
+    }
+    render(){
+        return <div></div>;
     }
 }
