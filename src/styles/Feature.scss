@@ -1,0 +1,14 @@
+@import url("https://use.typekit.net/ucu5nmz.css");
+@import './Global.scss';
+
+.Feature{
+  @extend %universal-component-layout;
+}
+.content{
+ text-align: center
+}
+.combined-web-img{
+    height: 1000px;
+    width: auto;
+    transform: rotate(45deg);
+}

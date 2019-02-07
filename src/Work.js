@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import anime from 'animejs';
+import NavigationHandler from './NavigationHandler';
 
 class Work extends Component {
   constructor(props){
     super(props);
       this.state = {
-        _isRendered: false
+        _isRendered: false,
+        NavigationViewer: new NavigationHandler ()
+
       }
   }
   componentDidMount(){

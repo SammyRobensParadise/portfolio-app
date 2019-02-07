@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import './styles/Feature.css';
+import './styles/Feature.scss';
 import anime from 'animejs';
+import fullWebpage from './img/Combined.png';
 
 class Feature extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            FEATURE SECTION
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="Feature">
+      <div className="screen-1">
+      <img className="combined-web-img" src={fullWebpage} alt="full webpage of Emily Bandel's website"></img>
+      </div>
+      <div className="screen-2"></div>
+      <div className="screen-3"></div> 
+      <p>sample</p>
       </div>
     );
   }

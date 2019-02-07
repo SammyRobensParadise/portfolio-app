@@ -56,14 +56,13 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                  {
                     ViewStack.push( <p>404: Error Page Not Found</p>)
                     }
-                //this._getCurrentView()
                 }
 
                 componentWillUnmount() {
                     console.log("NavigationHandler:componentWillUnmount()");
                 }
-                popFromNavigationStack = (ViewStack) => {
-                    ViewStack.pop();
+                popFromNavigationStack = () => {
+                   ViewStack.pop();
                 }
                 _getRegister() {
                     return this.componentRegister;
