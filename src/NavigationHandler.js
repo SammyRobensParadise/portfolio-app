@@ -1,28 +1,25 @@
 import { throws } from "assert";
 import React,{Component} from 'react';
 import Home from "./Home";
-import ButtonManifest from './sub_components/ButtonManifest';
-import Button from './sub_components/Button';
 import App from './App';
 import Work from './Work';
+import About from './About';
 
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
 //is what is rendered in the browser so if this is the stack => | | | | | | | [     _|_ ...this is sent to the browser...   ]
-
+export var ViewStack = [<p> ViewStack Var: We are still getting things prepared, if you've been waiting a while try reloading the page...</p>];
 export default class NavigationHandler extends Component {
 
        // declaration of the viewHandler Navigation Stack
 
+
     constructor(componentRegister,props){
         super(componentRegister,props);
         this.componentRegister = componentRegister;
-        this.ViewStack = [<p> ViewStack Var: We are still getting things prepared, if you've been waiting a while try reloading the page...</p>];
+       console.log("NavigationHandler::constructor()",componentRegister)
         this.state = {
-            naviationActive: true,
-            ViewStack: [<p> We are still getting things prepared, if you've been waiting a while try reloading the page...</p>],
-            HasError: false,
-            homeRef: <Home/>
+            HasError: false
         }
     }
     componentDidCatch(error,info){
@@ -34,20 +31,21 @@ export default class NavigationHandler extends Component {
     }
     componentDidUpdate(screen){
         console.log("NavigationHandler::componentdidupdate()")
+        let appobj = new App()
+        appobj.forceUpdate();
     }
     pushToNavigationStack = (screen) => {
-        if(!this.componentDidMount()){
-            return;
-        }
         if(screen === Home){
-        console.log("pushtonavigation stack called");
-     /*  this.setState({
-             ViewStack: [...this.state.ViewStack, this.state.homeRef]
-          }); */
-          this.ViewStack.push(<Home/>);
+          ViewStack.push(<Home/>);
+        } else
+        if(screen === Work){
+            ViewStack.push(<Work/>)
+        } else {
+            ViewStack.push(<p>error</p>)
         }
-   }
-   componentWillUnmount(){
+        this._getCurrentView()
+        }
+      componentWillUnmount(){
        console.log("NavigationHandler:componentWillUnmount()");
    }
     popFromNavigationStack = (ViewStack) => {
@@ -56,13 +54,11 @@ export default class NavigationHandler extends Component {
     _getRegister(){
         return this.componentRegister;
     }
-    _getCurrentView = () =>{
-        let displayEl = this.ViewStack.length-1;
-      //  console.log(this.ViewStack.push(<Home/>))
-        console.log('_getCurrentView() Triggered ', "displayEL: " + displayEl);
-        return this.ViewStack[displayEl];
-    }
-    render(){
-        return <div></div>;
+    _getCurrentView = (props) =>{
+        var displayEl = ViewStack.length;
+        let elem = displayEl-1;
+        console.log(ViewStack, "in _getCurrentView()")
+       // appref.setState({currentView: this.ViewStack[elem]})
+        return ViewStack[elem];
     }
 }

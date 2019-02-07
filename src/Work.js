@@ -20,6 +20,7 @@ class Work extends Component {
         <header className="App-header">
           <p>
             Edit <code>src/App.js</code> WORK
+            {console.log("work is in render")}
           </p>
         </header>
       </div>

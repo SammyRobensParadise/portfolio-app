@@ -10,12 +10,10 @@ import About from './About';
 import Work from './Work';
 import Feature from './Feature';
 import NavigationHandler from './NavigationHandler';
-import ButtonManifest from './sub_components/ButtonManifest'
 
 //Loading and Buffering Component import -
 import Loading from './Loading';
 import Welcome from './Welcome';
-import Navigation from './sub_components/Button';
 import Buffer from './Buffer';
 
 //Buttons anf Features
@@ -26,6 +24,7 @@ import anime from 'animejs';
 
 class App extends Component {
   constructor(props) {
+    console.log("App::Constructor()")
     super(props);
     this.state = {
       isLoading: true,
@@ -33,8 +32,6 @@ class App extends Component {
       onboardComplete: false,
       screenClick: 0,
       screenViewer: new NavigationHandler(),
-      ButtonHandler: new ButtonManifest(),
-      HomeRef: new Home(),
       HasError: false,
     };
   }
@@ -61,34 +58,37 @@ componentDidCatch(error, info){
       });
     },9000);
     }
+    console.log("App:componentDidUpdate()");
   }
-
   _registerClicks = () => {
     let current = this.state.screenClick;
     this.setState({
       screenClick: current + 1
     });
   }
+  forceUpdate(){
 
+  }
 //Render: Sent to Browser -------------------
+
   render(props) {
     if(this.state.HasError){
-      return <p>Oops! It looks like something has gone wrong in our codebase. Come back in a bit to see if the problem is fixed!</p>
+      return <h1><span>Oops! It looks like something has gone wrong in our codebase. Come back in a bit when the problem is fixed!</span></h1>
     }
     if(this.state.isLoading){
-      return( <div><Loading/><NavigationHandler/></div>);
+      return( <div><Loading/></div>);
     }
     if(!this.state.isLoading && this.state.unWelcome){
-      return <div><Welcome/><NavigationHandler/></div> ;
+      return <div><Welcome/></div> ;
     }
     if(this.state.onboardComplete){
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
-      < this.state.screenViewer._getCurrentView />
+     {console.log("in App::render()")}
+     < this.state.screenViewer._getCurrentView />
       </div>
       <Socials currentClickCount={this.state.screenClick}/>
-      <NavigationHandler/>
       </div>
     );
     }

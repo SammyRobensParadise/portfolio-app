@@ -10,7 +10,7 @@ import About from '../About';
 import Work from '../Work';
 import Feature from '../Feature';
 import NavigationHandler from '../NavigationHandler';
-import ButtonManifest from './ButtonManifest';
+
 
 //manifestimport
 
@@ -19,8 +19,7 @@ class Navigation extends Component {
     super(props);
     this.state = {
       isRendered: false,
-      currentButtonView: props.currentView,
-      manifestObj: new ButtonManifest()
+      currentButtonView: props.currentView
 
     }
 
