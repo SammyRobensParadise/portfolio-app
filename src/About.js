@@ -7,7 +7,7 @@ class About extends Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Edit <code>src/App.js</code> and save to reload here is some sample text.
+            Edit <code>src/App.js</code>ABOUT
           </p>
           <a
             className="App-link"

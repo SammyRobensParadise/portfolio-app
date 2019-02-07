@@ -9,6 +9,8 @@ import Button from './sub_components/Button';
 import NavigationHandler from './NavigationHandler';
 import App from './App';
 import Work from './Work';
+import About from './About';
+import Feature from './Feature';
 
 class Home extends Component {
   constructor(props) {
@@ -38,7 +40,7 @@ class Home extends Component {
       <ul>
       <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">R. Paradise</span></li>
       <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><span className="navigation">Work</span></li>
-      <li className="about"><span className="navigation">About</span></li>
+      <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><span className="navigation">About</span></li>
        </ul>
        </div>
       <div className="content">
@@ -47,7 +49,7 @@ class Home extends Component {
       </div>
       <HomeImage className="home-image-target" />
       {console.log("Home is in render")}
-      <div><div className= "more-button"></div></div>
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"></div></div>
       </div>
     );
   }
