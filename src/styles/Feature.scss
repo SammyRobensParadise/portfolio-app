@@ -4,11 +4,121 @@
 .Feature{
   @extend %universal-component-layout;
 }
-.content{
- text-align: center
-}
+$scale-size: 30%;
+$edge-distance: 5%;
+$text-area-width: 28.8125rem;
+$text-right: 35%;
+$text-top: 20%;
+$text-botton: 60%;
+$solution-text-right: 55%;
+
 .combined-web-img{
-    height: 1000px;
-    width: auto;
-    transform: rotate(45deg);
+    height: auto;
+    width: $scale-size - 10;
+    position: absolute;
+
+    right: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.landing-page-image{
+    height: auto;
+    width: $scale-size;
+    position: fixed;
+    right: $edge-distance;
+    top:20%;
+    display: none;
+}
+.emily-twitter-photo{
+    height: auto;
+    width: $scale-size;
+    position: fixed;
+    left: $edge-distance;
+    top: 20%;
+}
+.feature-title{
+    color: #ffffff !important;
+    text-decoration: underline;
+    z-index: 1;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    position: fixed;
+    display: inline-block;
+    top: 2rem;
+    right: $text-right;
+
+}
+
+.the-problem-header{
+    font-size: 1.125rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: right;
+    position: fixed;
+    width: $text-area-width;
+    right: $text-right;
+    top: $text-top;
+    z-index: 99;
+    padding-bottom: 2%;
+}
+.the-problem-text{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: right;
+    position: fixed;
+    width: $text-area-width;
+    right: $text-right;
+    top: $text-top + 2;
+    z-index: 99;
+}
+.the-solution-header{
+    font-size: 1.125rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: right;
+    position: fixed;
+    width: $text-area-width;
+    right: $solution-text-right;
+    top: $text-botton;
+    z-index: 99;
+    padding-bottom: 2%;
+}
+
+.the-solution-text{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: right;
+    position: fixed;
+    width: $text-area-width;
+    right: $solution-text-right;
+    top: $text-botton + 2;
+    z-index: 99;
+}
+.go-to-website-button a{
+        border-width: 3px;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        position: fixed;
+        right: 35%;
+        top: $text-botton;
+        width: 12rem;
+        height: 3rem;
+        z-index: 98;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+
+}
+.go-btn-text{
+    margin-top: 1rem;    
+}
+.go-to-website-button:hover a{
+    border-color: #221563;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
