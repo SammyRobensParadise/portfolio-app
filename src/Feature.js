@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import './styles/Feature.scss';
+import './styles/Navigation.scss';
 import anime from 'animejs';
 import fullWebpage from './img/Combined.png';
 import landingPageImage from './img/LandingPage.png';
 import TwitterLogo from './img/Emily_Bandel_Twitter.png';
+import Work from './Work';
+import NavigationHandler from './NavigationHandler';
 
 class Feature extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isRendered: false,
+      NavigationViewer: new NavigationHandler()
+    }
+  }
+  //ANIMATIONS REQUIRED
   render() {
     return (
       <div className="Feature">
@@ -25,9 +36,8 @@ class Feature extends Component {
       <img className="combined-web-img" src={fullWebpage} alt="full webpage of Emily Bandel's website"></img>
       <img className="landing-page-image" src={landingPageImage} alt="full webpage of Emily Bandel's website"></img>
       <img className="emily-twitter-photo" src={TwitterLogo} alt='Twitter Logo'></img>
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><div className= "more-button"></div></div>
       </div>
-      <div className="screen-2"></div>
-      <div className="screen-3"></div> 
       </div>
     );
   }

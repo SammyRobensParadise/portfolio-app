@@ -3,6 +3,7 @@ import anime from 'animejs';
 
 class About extends Component {
   render() {
+    //ANIMATIONS REQUIRED
     return (
       <div className="App">
         <header className="App-header">

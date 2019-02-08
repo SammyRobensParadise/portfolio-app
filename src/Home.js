@@ -5,7 +5,6 @@ import HomeImage from './sub_components/HomeImage';
 import './styles/Home.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
-import Button from './sub_components/Button';
 import NavigationHandler from './NavigationHandler';
 import App from './App';
 import Work from './Work';
@@ -33,6 +32,7 @@ class Home extends Component {
   componentDidUpdate() {
     return true;
   }
+  //ANIMATIONS REQUIRED
   render() {
     return (
       <div className="Home">

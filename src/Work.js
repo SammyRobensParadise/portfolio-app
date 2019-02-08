@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import anime from 'animejs';
 import NavigationHandler from './NavigationHandler';
+import About from './About';
+import './styles/WorkOne.scss';
+import './styles/Navigation.scss';
+import ffLogo from './img/ff_logo_red_.png';
 
 class Work extends Component {
   constructor(props){
@@ -8,24 +12,24 @@ class Work extends Component {
       this.state = {
         _isRendered: false,
         NavigationViewer: new NavigationHandler ()
-
       }
   }
   componentDidMount(){
-    console.log("Work::componentdidMount()");
     this.setState({
       _isRendered: true
     })
   }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> WORK
-            {console.log("work is in render")}
-          </p>
-        </header>
+      <div className="work-one">
+      <div className="work-title">Work</div>
+      <div className="ff_logo">
+      <img className="ff-logo-img" src={ffLogo} alt="finger food logo"></img></div>
+      <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most challenging problems. 
+        I leverage analytics and user experience data to ship game changing products of every shape and size.</p></div>
+        <div className="the-role-header"><span>Role:</span></div>
+        <div className="the-job-header"><span>QA Lead &#38; Analytics developer</span></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
       </div>
     );
   }

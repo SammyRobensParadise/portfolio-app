@@ -1,18 +1,19 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 @import './Global.scss';
 
-.Feature{
-  @extend %universal-component-layout;
+.Feature {
+    @extend %universal-component-layout;
 }
+
 $scale-size: 30%;
 $edge-distance: 5%;
 $text-area-width: 28.8125rem;
 $text-right: 35%;
 $text-top: 20%;
 $text-botton: 60%;
-$solution-text-right: 55%;
+$solution-text-right: 50%;
 
-.combined-web-img{
+.combined-web-img {
     height: auto;
     width: $scale-size - 10;
     position: absolute;
@@ -21,22 +22,25 @@ $solution-text-right: 55%;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-.landing-page-image{
+
+.landing-page-image {
     height: auto;
     width: $scale-size;
     position: fixed;
     right: $edge-distance;
-    top:20%;
+    top: 20%;
     display: none;
 }
-.emily-twitter-photo{
+
+.emily-twitter-photo {
     height: auto;
     width: $scale-size;
     position: fixed;
     left: $edge-distance;
     top: 20%;
 }
-.feature-title{
+
+.feature-title {
     color: #ffffff !important;
     text-decoration: underline;
     z-index: 1;
@@ -50,7 +54,7 @@ $solution-text-right: 55%;
 
 }
 
-.the-problem-header{
+.the-problem-header {
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -63,7 +67,8 @@ $solution-text-right: 55%;
     z-index: 99;
     padding-bottom: 2%;
 }
-.the-problem-text{
+
+.the-problem-text {
     font-size: 1rem;
     color: rgb(255, 255, 255);
     line-height: 1.2;
@@ -74,7 +79,8 @@ $solution-text-right: 55%;
     top: $text-top + 2;
     z-index: 99;
 }
-.the-solution-header{
+
+.the-solution-header {
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -88,7 +94,7 @@ $solution-text-right: 55%;
     padding-bottom: 2%;
 }
 
-.the-solution-text{
+.the-solution-text {
     font-size: 1rem;
     color: rgb(255, 255, 255);
     line-height: 1.2;
@@ -99,24 +105,27 @@ $solution-text-right: 55%;
     top: $text-botton + 2;
     z-index: 99;
 }
-.go-to-website-button a{
-        border-width: 3px;
-        border-color: rgb(255, 255, 255);
-        border-style: solid;
-        position: fixed;
-        right: 35%;
-        top: $text-botton;
-        width: 12rem;
-        height: 3rem;
-        z-index: 98;
-        text-decoration: none;
-        color: rgb(255, 255, 255);
+
+.go-to-website-button a {
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    position: fixed;
+    right: 35%;
+    top: $text-botton;
+    width: 12rem;
+    height: 3rem;
+    z-index: 98;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 
 }
-.go-btn-text{
-    margin-top: 1rem;    
+
+.go-btn-text {
+    margin-top: 1rem;
 }
-.go-to-website-button:hover a{
+
+.go-to-website-button:hover a {
     border-color: #221563;
     cursor: pointer;
     text-decoration: none;
