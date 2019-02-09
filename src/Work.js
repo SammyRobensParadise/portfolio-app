@@ -29,7 +29,11 @@ class Work extends Component {
         I leverage analytics and user experience data to ship game changing products of every shape and size.</p></div>
         <div className="the-role-header"><span>Role:</span></div>
         <div className="the-job-header"><span>QA Lead &#38; Analytics developer</span></div>
+        <div className="ff-job-details-button"><div className="details-btn-text">Details...</div></div>
+        <div className="projects-header"><span>Disclosable Projects:</span></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "next-button"></div></div>
       </div>
     );
   }

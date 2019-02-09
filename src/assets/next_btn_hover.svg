@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.95 64.72">
+    <defs>
+        <style>.cls-1,.cls-2{fill:#221563;}.cls-2{font-size:36px;font-family:CenturyGothic, Century Gothic;}</style>
+    </defs>
+    <title>nextbtnrevised</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="nextbtn">
+            <polygon class="cls-1" points="159.95 48.72 3.95 48.72 3.95 40.72 159.95 40.72 159.95 24.72 186.95 44.72 159.95 64.72 159.95 48.72"/>
+            <text class="cls-2" transform="translate(0 30.92)">next</text>
+        </g>
+    </g>
+</svg>

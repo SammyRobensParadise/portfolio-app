@@ -85,7 +85,6 @@ componentDidCatch(error, info){
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
-     {console.log("in App::render()")}
      < this.state.screenViewer._getCurrentView />
       </div>
       <Socials currentClickCount={this.state.screenClick}/>

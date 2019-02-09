@@ -27,7 +27,7 @@ $solution-text-right: 50%;
 
 }
 .ff-logo-img{
-    padding-top: 0.25rem;
+    padding-top: 0rem;
     width: 35rem;
     height: auto;
     position: fixed;
@@ -68,6 +68,44 @@ $solution-text-right: 50%;
     width: $text-area-width;
     right: $text-right;
     top: $text-top+22;
+    z-index: 99;
+    padding-bottom: 2%;
+}
+.ff-job-details-button{
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    position: fixed;
+    right: 50%;
+    top: $text-top+30.5;
+    width: 10rem;
+    height: 3rem;
+    z-index: 98;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.details-btn-text {
+    margin-top: 1rem;
+}
+
+.ff-job-details-button:hover{
+    border-color: #221563;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.projects-header{
+    font-size: 1.125rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: right;
+    position: fixed;
+    width: $text-area-width;
+    right: $text-right+12;
+    top: $text-top+45;
     z-index: 99;
     padding-bottom: 2%;
 }
