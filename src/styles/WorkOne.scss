@@ -103,7 +103,7 @@ $solution-text-right: 50%;
     line-height: 1.2;
     text-align: right;
     position: fixed;
-    width: $text-area-width;
+    width: $text-area-width - 15;
     right: $text-right+12;
     top: $text-top+45;
     z-index: 99;

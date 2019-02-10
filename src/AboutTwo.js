@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import NavigationHandler from './NavigationHandler';
 import './styles/AboutOne.scss';
 import './styles/Navigation.scss';
-import AboutTwo from './AboutTwo';
 import anime from 'animejs';
 
-class About extends Component {
+class AboutTwo extends Component {
   constructor(props){
     super(props);
       this.state = {
@@ -21,12 +20,12 @@ class About extends Component {
   render() {
     //ANIMATIONS REQUIRED
     return (
-      <div className="About-one">
+      <div className="About-two">
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutTwo)}><div className= "next-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack()}><div className= "next-button"></div></div>
       </div>
     );
   }
 }
 
-export default About;
+export default AboutTwo;
