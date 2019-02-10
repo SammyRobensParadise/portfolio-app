@@ -7,6 +7,7 @@ import React, {
 import Home from "./Home";
 import App from './App';
 import Work from './Work';
+import WorkTwo from './WorkTwo';
 import About from './About';
 import Feature from "./Feature";
 
@@ -42,16 +43,19 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
             }
             pushToNavigationStack = (screen) => {
                 if (screen === Home) {
-                    ViewStack.push( < Home/> );
+                    ViewStack.push( <Home/> );
                 } else
                 if (screen === Work) {
-                    ViewStack.push( < Work/> )
+                    ViewStack.push( <Work/> )
                 } else
                 if (screen === About) {
-                    ViewStack.push( < About/> )
+                    ViewStack.push( <About/> )
                 } else 
                 if (screen === Feature){
                     ViewStack.push( <Feature/>)
+                } else
+                if ( screen === WorkTwo){
+                    ViewStack.push( <WorkTwo/> )
                 } else
                  {
                     ViewStack.push( <p>404: Error Page Not Found</p>)

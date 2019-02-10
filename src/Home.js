@@ -47,8 +47,8 @@ class Home extends Component {
 
       <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
       </div>
+      <div className="hidden-base-64"></div>
       <HomeImage className="home-image-target" />
-      {console.log("Home is in render")}
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"></div></div>
       </div>
     );

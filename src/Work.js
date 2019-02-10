@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import anime from 'animejs';
 import NavigationHandler from './NavigationHandler';
 import About from './About';
+import WorkTwo from './WorkTwo';
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import ffLogo from './img/ff_logo_red_.png';
@@ -41,7 +42,7 @@ class Work extends Component {
         </div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "next-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(WorkTwo)}><div className= "next-button"></div></div>
       </div>
     );
   }
