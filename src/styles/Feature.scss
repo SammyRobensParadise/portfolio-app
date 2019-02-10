@@ -131,3 +131,38 @@ $solution-text-right: 50%;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+.projects-container {
+    position: fixed;
+    width: 52%;
+    height: 20%;
+    bottom: 25%;
+    left: 50%;
+    margin-bottom: -10%;
+    /* Negative half of height. */
+    margin-left: -25%;
+}
+
+.lulu-logo {
+    position: absolute;
+    height: auto;
+    width: 14rem;
+    left: -0.5rem;
+    top: 20%;
+}
+
+.kroger-logo {
+    position: absolute;
+    height: auto;
+    width: 8rem;
+    left: 42.5%;
+    top: 0rem;
+}
+
+.sphero-logo {
+    position: absolute;
+    height: auto;
+    width: 12rem;
+    right: 0rem;
+    top: 20%;
+}
