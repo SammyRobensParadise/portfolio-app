@@ -24,7 +24,7 @@ class WorkTwo extends Component {
       <div className="worktwo-title">Work</div>
       <div className="canada-gov-logo"></div>
       <div className="the-description-text-gov"><p>As a Software Engineering Student working with Environment and Climate Change Canada's 
-          Transportation Division to aid in the development of various software engineering solutions the backbone of regulatory compliance.</p></div>
+          Transportation Division to aid in the development of various software engineering solutions; the backbone of regulatory compliance.</p></div>
         <div className="the-role-header-gov"><span>Role:</span></div>
         <div className="the-job-header-gov"><span>Software Engineering Co-op</span></div>
         <div className="gov-job-details-button"><div className="details-btn-text">Details...</div></div>

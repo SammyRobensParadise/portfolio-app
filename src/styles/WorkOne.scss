@@ -26,7 +26,8 @@ $solution-text-right: 50%;
     right: $text-right;
 
 }
-.ff-logo-img{
+
+.ff-logo-img {
     padding-top: 0rem;
     width: 35rem;
     height: auto;
@@ -34,7 +35,8 @@ $solution-text-right: 50%;
     right: 20%;
     top: $text-top;
 }
-.the-description-text{
+
+.the-description-text {
     font-size: 1rem;
     color: rgb(255, 255, 255);
     line-height: 1.2;
@@ -46,7 +48,8 @@ $solution-text-right: 50%;
     z-index: 99;
     margin-right: 0.5rem;
 }
-.the-role-header{
+
+.the-role-header {
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -59,7 +62,8 @@ $solution-text-right: 50%;
     z-index: 99;
     padding-bottom: 2%;
 }
-.the-job-header{
+
+.the-job-header {
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -72,7 +76,8 @@ $solution-text-right: 50%;
     z-index: 99;
     padding-bottom: 2%;
 }
-.ff-job-details-button{
+
+.ff-job-details-button {
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -91,13 +96,14 @@ $solution-text-right: 50%;
     margin-top: 1rem;
 }
 
-.ff-job-details-button:hover{
+.ff-job-details-button:hover {
     border-color: #221563;
     cursor: pointer;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.projects-header{
+
+.projects-header {
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
