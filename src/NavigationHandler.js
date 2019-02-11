@@ -11,6 +11,7 @@ import WorkTwo from './WorkTwo';
 import About from './About';
 import Feature from "./Feature";
 import AboutTwo from './AboutTwo';
+import AboutThree from "./AboutThree";
 
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
@@ -60,6 +61,9 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 } else
                 if( screen === AboutTwo){
                     ViewStack.push( <AboutTwo/>)
+                } else
+                if( screen === AboutThree){
+                    ViewStack.push(<AboutThree/>)
                 } else
                  {
                     ViewStack.push( <p>404: Error Page Not Found</p>)

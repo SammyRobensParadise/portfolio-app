@@ -3,6 +3,7 @@ import NavigationHandler from './NavigationHandler';
 import './styles/AboutTwo.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
+import AboutThree from './AboutThree';
 
 class AboutTwo extends Component {
   constructor(props){
@@ -34,7 +35,7 @@ class AboutTwo extends Component {
         <div className="waterloo-grad-year"><span>2017-2023</span></div>
       </div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack()}><div className= "next-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutThree)}><div className= "next-button"></div></div>
       </div>
     );
   }
