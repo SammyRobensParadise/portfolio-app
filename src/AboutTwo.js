@@ -36,6 +36,7 @@ class AboutTwo extends Component {
       </div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutThree)}><div className= "next-button"></div></div>
+        <div className="screen-number"><p>2/3</p></div>
       </div>
     );
   }

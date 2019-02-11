@@ -21,7 +21,7 @@ class Feature extends Component {
     return (
       <div className="Feature">
       <div className="screen-1">
-      <div className="feature-title">Act of Inspiration</div>
+      <div className="feature-title">Feature Project</div>
       <div className="definition-text">
       <div className="the-problem-header"><span>The Problem</span></div>
       <div className="the-problem-text"><p>Emily Bandel, and Actress based in Vancouver and California, with features on Sabrina, Standing Room Only, and A Twisted Fate; was looking for a way to show her talent and uniqueness to a growing audinace.
@@ -36,7 +36,9 @@ class Feature extends Component {
       <img className="combined-web-img" src={fullWebpage} alt="full webpage of Emily Bandel's website"></img>
       <img className="landing-page-image" src={landingPageImage} alt="full webpage of Emily Bandel's website"></img>
       <img className="emily-twitter-photo" src={TwitterLogo} alt='Twitter Logo'></img>
+      <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><div className= "more-button"></div></div>
+      <div className="screen-number"><p>1/1</p></div> 
       </div>
       </div>
     );

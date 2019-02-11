@@ -63,6 +63,7 @@ $solution-text-right: 50%;
     padding-bottom: 2%;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    cursor: none;
 }
 
 .the-name-header {
@@ -103,4 +104,12 @@ $solution-text-right: 50%;
     right: $text-right + 18;
     top: $text-top;
     z-index: 99;
+}
+.hidden-base-64-about{
+    transform: rotate(-90deg);
+    position: fixed;
+    left: 14%;
+    top: 50%;
+    font-size: 0.8rem;
+    z-index: 90;
 }

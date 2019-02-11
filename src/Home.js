@@ -10,6 +10,10 @@ import App from './App';
 import Work from './Work';
 import About from './About';
 import Feature from './Feature';
+import {
+  CSSTransition,
+  TransitionGroup,
+} from 'react-transition-group';
 
 class Home extends Component {
   constructor(props) {
@@ -26,7 +30,6 @@ class Home extends Component {
     this.setState({
       isRendered: true
     });
-    console.log("Home::compondentDidMount()");
     return true;
   }
   componentDidUpdate() {
@@ -47,9 +50,10 @@ class Home extends Component {
 
       <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
       </div>
-      <div className="hidden-base-64"></div>
+      <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
       <HomeImage className="home-image-target" />
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"></div></div>
+      <div className="screen-number"><p>1/1</p></div>
       </div>
     );
   }

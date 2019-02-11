@@ -34,6 +34,7 @@ class WorkTwo extends Component {
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "next-button"></div></div>
+        <div className="screen-number"><p>2/2</p></div>
       </div>
     );
   }

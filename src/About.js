@@ -43,9 +43,11 @@ class About extends Component {
       <div className="the-description-text-about-one-higher"><p>Through my exposure to, and interest in software,
          as well as my personal persuit of web development I found a keen interest in the connection
         between a user's experience and the interface that is presented to that user</p></div>
+        <div className="hidden-base-64-about"><p>V2VzdCBDb2FzdCBLaWQu</p></div>
 
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutTwo)}><div className= "next-button"></div></div>
+        <div className="screen-number"><p>1/3</p></div>
       </div>
     );
   }

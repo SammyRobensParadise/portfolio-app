@@ -26,6 +26,7 @@ class AboutThree extends Component {
       <div className="toolkit-background"></div>
       </div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
+        <div className="screen-number"><p>3/3</p></div>
       </div>
     );
   }

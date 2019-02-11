@@ -31,7 +31,8 @@ animateImageAppear = () =>{
     if(!this.state.isRendered){
       return (
         <div className="home-page">
-        <div className="Home-Image">
+        <div className="Home-Image-load">
+       <p>Generating...</p>
         </div>
         </div>
       )
