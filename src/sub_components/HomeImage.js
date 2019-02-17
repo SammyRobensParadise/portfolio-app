@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import anime from 'animejs';
 import landingImage from '../assets/landing_page.svg'
 import '../styles/HomeImage.css';
-import { Container, Row, Col } from 'reactstrap';
+import { CSSTransition } from 'react-transition-group'
 
 class HomeImage extends Component {
     constructor(props){
@@ -12,12 +12,12 @@ class HomeImage extends Component {
         }
     }
 componentDidMount(){
-  setTimeout( () => {
+ setTimeout( () => {
     this.setState({
       isRendered: true
     });
-    this.animateImageAppear();
-  },1500)
+   this.animateImageAppear();
+  },2000)
 }
 animateImageAppear = () =>{
   anime({

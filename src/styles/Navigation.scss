@@ -3,11 +3,13 @@
 
 $buttonWidth: 6rem;
 $buttonHeight: 4rem;
-.navigation-bar{
+
+.navigation-bar {
     @extend %universal-component-layout;
     font-size: 1.5rem;
     z-index: 99;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -17,45 +19,53 @@ ul {
     top: 0;
     width: 100%;
     margin-right: 10%;
-  }
-.home{
+}
+
+.home {
     float: left;
     margin-left: 2rem;
 }
-.work{
+
+.work {
     float: right;
 }
-  li .navigation {
+
+li .navigation {
     display: inline-block;
     color: #ffffff;
     text-align: center;
     margin-inline-end: 2rem;
     margin-block-start: 2rem;
     mix-blend-mode: difference;
-  }
-  .about{
-      float: right !important;
-  }
-  .navigation:hover{
-      font-weight: 600;
-      cursor: pointer;
+}
 
-  }
-  .more-button{
-      background-image: url("../assets/more_btn.svg");
-      position: fixed;
-      left: 10%;
-      bottom: 6%;
-      width: $buttonHeight;
-      height: $buttonWidth;
-      background-repeat: no-repeat;
-      background-position: center;
-  }
-  .more-button:hover{
-      background-image: url('../assets/more_btn_hover.svg');
-      cursor: pointer;
-  }
-  .back-button{
+.about {
+    float: right !important;
+}
+
+.navigation:hover {
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.more-button {
+    background-image: url("../assets/more_btn.svg");
+    position: fixed;
+    left: 10%;
+    bottom: 6%;
+    width: $buttonHeight;
+    height: $buttonWidth;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.more-button:hover {
+    background-image: url('../assets/more_btn_hover.svg');
+    cursor: pointer;
+}
+
+.back-button {
     background-image: url("../assets/back_btn.svg");
     position: fixed;
     left: 11.5%;
@@ -65,12 +75,13 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
 }
-.back-button:hover{
+
+.back-button:hover {
     background-image: url('../assets/back_btn_hover.svg');
     cursor: pointer;
 }
 
-.next-button{
+.next-button {
     background-image: url("../assets/next_btn.svg");
     position: fixed;
     right: 11.5%;
@@ -80,14 +91,44 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
 }
-.next-button:hover{
+
+.next-button:hover {
     background-image: url('../assets/next_btn_hover.svg');
     cursor: pointer;
 }
-.screen-number{
+
+.screen-number {
     position: fixed;
     bottom: 5%;
     right: 10%;
     font-size: 0.5rem;
     cursor: none;
+}
+
+.glow-button-inner {
+    width: 2.5rem;
+    height: 6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    top: 10%;
+    margin-top: -25%;
+    left: 45%;
+    margin-left: -25%;
+    right: 50%;
+    margin-right: -25%;
+}
+
+.glow-button-inner-horizontal {
+    width: 6rem;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -20%;
+    left: 10%;
+    margin-left: -20%;
+    right: 10%;
+    margin-right: -25%;
 }

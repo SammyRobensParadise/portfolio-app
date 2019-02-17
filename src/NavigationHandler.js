@@ -35,11 +35,11 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 console.log(error, info);
             }
             componentDidMount() {
-                console.log("NavigationHandler::componentDidMount()");
+
                 return true;
             }
             componentDidUpdate(screen) {
-                console.log("NavigationHandler::componentdidupdate()")
+
                 let appobj = new App()
                 appobj.forceUpdate();
             }
@@ -71,7 +71,7 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 }
 
                 componentWillUnmount() {
-                    console.log("NavigationHandler:componentWillUnmount()");
+
                 }
                 popFromNavigationStack = () => {
                    ViewStack.pop();
@@ -82,8 +82,6 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 _getCurrentView = (props) => {
                     var displayEl = ViewStack.length;
                     let elem = displayEl - 1;
-                    console.log(ViewStack, "in _getCurrentView()")
-                    // appref.setState({currentView: this.ViewStack[elem]})
                     return ViewStack[elem];
                 }
             }

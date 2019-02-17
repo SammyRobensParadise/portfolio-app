@@ -22,6 +22,20 @@ class Work extends Component {
     this.setState({
       _isRendered: true
     })
+    setTimeout( () => {
+      this.animateGlow()
+    },10000)
+  }
+  animateGlow = () => {
+    anime({
+      targets: '.glow-button-inner-horizontal',
+      direction: 'alternate',
+      loop: true,
+      easing: 'linear',
+      duration: 2500,
+      borderRadius: ['25%', '35%'],
+      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
+    })
   }
   render() {
     return (
@@ -42,7 +56,7 @@ class Work extends Component {
         </div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(WorkTwo)}><div className= "next-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(WorkTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/2</p></div>
       </div>
     );

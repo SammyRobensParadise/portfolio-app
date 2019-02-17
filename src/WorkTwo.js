@@ -16,6 +16,20 @@ class WorkTwo extends Component {
   componentDidMount(){
     this.setState({
       _isRendered: true
+    });
+    setTimeout( () => {
+      this.animateGlow()
+    },10000)
+  }
+  animateGlow = () => {
+    anime({
+      targets: '.glow-button-inner',
+      direction: 'alternate',
+      loop: true,
+      easing: 'linear',
+      duration: 2500,
+      borderRadius: ['25%', '35%'],
+      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
     })
   }
   render() {
@@ -31,7 +45,7 @@ class WorkTwo extends Component {
         <div className="tower-parent">
         <div className="peace-tower-background"></div>
         </div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "next-button"></div></div>
         <div className="screen-number"><p>2/2</p></div>

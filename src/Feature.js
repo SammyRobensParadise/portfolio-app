@@ -16,6 +16,28 @@ class Feature extends Component {
       NavigationViewer: new NavigationHandler()
     }
   }
+  componentDidMount() {
+    this.setState({
+      isRendered: true
+    });
+    setTimeout( () => {
+      this.animateGlow()
+    },10000)
+
+    return true;
+  }
+  animateGlow = () => {
+    anime({
+      targets: '.glow-button-inner',
+      direction: 'alternate',
+      loop: true,
+      easing: 'linear',
+      duration: 2500,
+      borderRadius: ['25%', '35%'],
+      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' inset 0rem 0rem 2rem 0.1rem #450092'  ]
+    })
+  }
+  //AN
   //ANIMATIONS REQUIRED
   render() {
     return (
@@ -37,7 +59,7 @@ class Feature extends Component {
       <img className="landing-page-image" src={landingPageImage} alt="full webpage of Emily Bandel's website"></img>
       <img className="emily-twitter-photo" src={TwitterLogo} alt='Twitter Logo'></img>
       <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><div className= "more-button"></div></div>
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div> 
       </div>
       </div>

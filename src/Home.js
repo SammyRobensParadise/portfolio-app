@@ -10,10 +10,7 @@ import App from './App';
 import Work from './Work';
 import About from './About';
 import Feature from './Feature';
-import {
-  CSSTransition,
-  TransitionGroup,
-} from 'react-transition-group';
+
 
 class Home extends Component {
   constructor(props) {
@@ -22,6 +19,7 @@ class Home extends Component {
       isRendered: false,
       NavigationViewer: new NavigationHandler()
     }
+    console.log(this.state);
   }
   componentDidCatch(error,info){
     console.log(error,info);
@@ -30,10 +28,24 @@ class Home extends Component {
     this.setState({
       isRendered: true
     });
+    setTimeout( () => {
+      this.animateGlow(this.setisViewed)
+    },10000)
     return true;
   }
   componentDidUpdate() {
     return true;
+  }
+  animateGlow = () => {
+    anime({
+      targets: '.glow-button-inner',
+      direction: 'alternate',
+      loop: true,
+      easing: 'linear',
+      duration: 2500,
+      borderRadius: ['25%', '35%'],
+      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
+    })
   }
   //ANIMATIONS REQUIRED
   render() {
@@ -51,8 +63,10 @@ class Home extends Component {
       <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
       </div>
       <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
+  
       <HomeImage className="home-image-target" />
-      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"></div></div>
+    
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div>
       </div>
     );
