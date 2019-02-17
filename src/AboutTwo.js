@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import NavigationHandler from './NavigationHandler';
 import './styles/AboutTwo.scss';
 import './styles/Navigation.scss';
@@ -7,33 +9,33 @@ import AboutThree from './AboutThree';
 import Home from './Home';
 
 class AboutTwo extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-      this.state = {
-        _isRendered: false,
-        NavigationViewer: new NavigationHandler ()
-      }
+    this.state = {
+      _isRendered: false,
+      NavigationViewer: new NavigationHandler()
+    }
   }
-  componentDidCatch(error,info){
-    console.log(error,info);
+  componentDidCatch(error, info) {
+    console.log(error, info);
     this.state.NavigationViewer.pushToNavigationStack(Home);
   }
-  componentDidMount(){
+  componentDidMount() {
     this.setState({
       _isRendered: true
     });
-    setTimeout( () => {
+    setTimeout(() => {
       this.animateImageAppear()
-    },1000);
-    setTimeout( () => {
+    }, 1000);
+    setTimeout(() => {
       this.animateGlow()
-    },10000)
+    }, 10000)
   }
-  animateImageAppear = () =>{
+  animateImageAppear = () => {
     anime({
       targets: '.waterloo-background',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'easeInExpo'
     })
   }
@@ -45,7 +47,7 @@ class AboutTwo extends Component {
       easing: 'linear',
       duration: 2500,
       borderRadius: ['25%', '35%'],
-      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
+      boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
   }
   render() {

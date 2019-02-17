@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import './styles/Feature.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
@@ -19,34 +21,34 @@ class Feature extends Component {
     }
   }
 
-  componentDidCatch(error,info){
-    console.log(error,info);
+  componentDidCatch(error, info) {
+    console.log(error, info);
     this.state.NavigationHandler.pushToNavigationStack(Home);
   }
   componentDidMount() {
     this.setState({
       isRendered: true
     });
-    setTimeout( () => {
+    setTimeout(() => {
       this.animateImageAppear()
-    },1500);
-    setTimeout( () => {
+    }, 1500);
+    setTimeout(() => {
       this.animateGlow()
-    },10000)
+    }, 10000)
 
     return true;
   }
-  animateImageAppear = () =>{
+  animateImageAppear = () => {
     anime({
       targets: '.emily-twitter-photo',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear'
     })
     anime({
       targets: '.combined-web-img',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear',
       delay: 500
     })
@@ -59,7 +61,7 @@ class Feature extends Component {
       easing: 'linear',
       duration: 2500,
       borderRadius: ['25%', '35%'],
-      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' inset 0rem 0rem 2rem 0.1rem #450092'  ]
+      boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' inset 0rem 0rem 2rem 0.1rem #450092']
     })
   }
   //AN

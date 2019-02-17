@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import anime from 'animejs';
 import NavigationHandler from './NavigationHandler';
 import About from './About';
@@ -12,53 +14,53 @@ import luluLogo from './img/lulu@2x.png';
 import Home from './Home';
 
 class Work extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-      this.state = {
-        _isRendered: false,
-        NavigationViewer: new NavigationHandler ()
-      }
+    this.state = {
+      _isRendered: false,
+      NavigationViewer: new NavigationHandler()
+    }
   }
-  componentDidCatch(error,info){
-    console.log(error,info);
+  componentDidCatch(error, info) {
+    console.log(error, info);
     this.state.NavigationViewer.pushToNavigationStack(Home);
   }
-  componentDidMount(){
+  componentDidMount() {
     this.setState({
       _isRendered: true
     });
-    setTimeout( () => {
+    setTimeout(() => {
       this.animateImageAppear()
-    },1000);
-    setTimeout( () => {
+    }, 1000);
+    setTimeout(() => {
       this.animateGlow()
-    },10000)
+    }, 10000)
   }
-  animateImageAppear = () =>{
+  animateImageAppear = () => {
     anime({
       targets: '.ff-logo-img',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear'
     })
     anime({
       targets: '.lulu-logo',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear',
       delay: 500
     })
     anime({
       targets: '.kroger-logo',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear',
       delay: 1000
     })
     anime({
       targets: '.sphero-logo',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'linear',
       delay: 1500
     })
@@ -71,7 +73,7 @@ class Work extends Component {
       easing: 'linear',
       duration: 2500,
       borderRadius: ['25%', '35%'],
-      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
+      boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
   }
   render() {

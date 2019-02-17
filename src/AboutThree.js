@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import NavigationHandler from './NavigationHandler';
 import './styles/AboutThree.scss';
 import './styles/Navigation.scss';
@@ -6,30 +8,30 @@ import anime from 'animejs';
 import Home from './Home';
 
 class AboutThree extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-      this.state = {
-        _isRendered: false,
-        NavigationViewer: new NavigationHandler ()
-      }
+    this.state = {
+      _isRendered: false,
+      NavigationViewer: new NavigationHandler()
+    }
   }
-  componentDidCatch(error,info){
-    console.log(error,info);
+  componentDidCatch(error, info) {
+    console.log(error, info);
     this.state.NavigationViewer.pushToNavigationStack(Home);
   }
-  componentDidMount(){
+  componentDidMount() {
     this.setState({
       _isRendered: true
     });
-    setTimeout( () => {
+    setTimeout(() => {
       this.animateImageAppear()
-    },1000);
+    }, 1000);
   }
-  animateImageAppear = () =>{
+  animateImageAppear = () => {
     anime({
       targets: '.toolkit-background',
       duration: 1000,
-      opacity: [0,1],
+      opacity: [0, 1],
       easing: 'easeInExpo'
     })
   }

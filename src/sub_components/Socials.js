@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
+import { FacebookProvider, ShareButton } from 'react-facebook';
 //import CSS ---------------------------------------
 import '../styles/Socials.scss';
 
-/*/import assets ------------------------------------
-import expandedGithub from '../assets/connect_expand_github.svg';
-import contactSocial from '../assets/contact_icon.svg';
-import contactSocialHover from '../assets/contact_icon_blue.svg';
-import resumeSocial from '../assets/resume_btn.svg';
-import resumeSocialHover from '../assets/resume_btn_blue.svg';
-import shareSocial from '../assets/share_icon.svg';
-import shareSocialHover from '../assets/share_icon_blue.svg';
-import instagramSocial from '../assets/share_btn_expand_instagram.svg';
-import facebookSocial from '../assets/share_btn_expand_fb.svg';
-import emailSocial from '../assets/share_btn_expand_email.svg';
-*/
 //import libraries ---------------------------------
 import anime from 'animejs';
 
@@ -80,13 +69,6 @@ class Socials extends Component {
         delay: 100,
         duration: 600,
       })
-      anime({
-        targets: '.icon-email',
-        translateX: '-6rem',
-        opacity: [0,1],
-        delay: 200,
-        duration: 600,
-      })
     }
     //close the share buttons pannel ----------------------------------
     ShareContract = () => {
@@ -104,12 +86,6 @@ class Socials extends Component {
         delay: 100,
         duration: 600,
       })
-      anime({
-        targets: '.icon-email',
-        translateX: '6rem',
-        opacity: [1,0],
-        duration: 600,
-      })
     }
   //expand Contact pannel ---------------------------------------
   ContactExpand = () =>{
@@ -117,6 +93,14 @@ class Socials extends Component {
       targets: '.icon-github',
       translateX: '-6rem',
       opacity: [0,1],
+      duration: 600,
+      delay: 100
+    })
+    anime({
+      targets: '.icon-email',
+      translateX: '-6rem',
+      opacity: [0,1],
+      delay: 200,
       duration: 600,
     })
   }
@@ -126,12 +110,27 @@ class Socials extends Component {
       translateX: '6rem',
       opacity: [1,0],
       duration: 600,
+      delay: 100
+    })
+    anime({
+      targets: '.icon-email',
+      translateX: '6rem',
+      opacity: [1,0],
+      duration: 600,
     })
   }
 
   render() {
-  const shareList = <div className="expanded-share"><div className="icon-fb"></div><div className="icon-instagram"></div><div className="icon-email"></div></div>
-    const contactList = <div className="expanded-contact"><div className="icon-github"></div></div>
+  const shareList = <div className="expanded-share">
+  <div className="icon-fb-outer">
+   <FacebookProvider appId="813508179041617">
+ <ShareButton className="icon-fb" href="https://portfolio-app-1091c.firebaseapp.com/">
+  </ShareButton>
+ </FacebookProvider>
+ </div>
+ <a id="instagram-link" href="https://www.instagram.com/stereo_west/" target="_blank" rel="noopener noreferrer"><div className="icon-instagram"></div></a> </div>
+    const contactList = <div className="expanded-contact"><a id="github-link" href="https://github.com/SammyRobensParadise" target="_blank" rel="noopener noreferrer"><div className="icon-github"></div></a>
+    <a href="mailto:srobensp@edu.uwaterloo.ca?Subject=Inquiry%20From%20Website" target="_top"><div className="icon-email"></div></a></div>
     let showContact = this.state.showContactExpanded;
     let showShare = this.state.showShareExpanded;
 

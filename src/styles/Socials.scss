@@ -67,6 +67,12 @@
 .icon-fb {
     background-image: url('../assets/share_btn_expand_fb.svg');
     @extend %button-shared;
+    border: 0;
+    padding: 0;
+    background-color: #03030C;
+}
+.icon-fb:focus{
+    outline: none;
 }
 
 .icon-fb:hover {

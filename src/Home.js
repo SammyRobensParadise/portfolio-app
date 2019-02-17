@@ -20,16 +20,16 @@ class Home extends Component {
       NavigationViewer: new NavigationHandler()
     }
   }
-  componentDidCatch(error,info){
-    console.log(error,info);
+  componentDidCatch(error, info) {
+    console.log(error, info);
   }
   componentDidMount() {
     this.setState({
       isRendered: true
     });
-    setTimeout( () => {
+    setTimeout(() => {
       this.animateGlow(this.setisViewed)
-    },10000)
+    }, 10000)
     return true;
   }
   componentDidUpdate() {
@@ -43,7 +43,7 @@ class Home extends Component {
       easing: 'linear',
       duration: 2500,
       borderRadius: ['25%', '35%'],
-      boxShadow: [ ' inset 0rem 0rem 0rem 0rem #450092',' 0rem 0rem 2rem 0.1rem #450092'  ]
+      boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
   }
   //ANIMATIONS REQUIRED
