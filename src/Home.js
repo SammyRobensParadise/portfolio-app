@@ -19,7 +19,6 @@ class Home extends Component {
       isRendered: false,
       NavigationViewer: new NavigationHandler()
     }
-    console.log(this.state);
   }
   componentDidCatch(error,info){
     console.log(error,info);

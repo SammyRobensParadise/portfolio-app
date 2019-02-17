@@ -15,6 +15,10 @@ class WorkTwo extends Component {
         NavigationViewer: new NavigationHandler ()
       }
   }
+  componentDidCatch(error,info){
+    console.log(error,info);
+    this.state.NavigationViewer.pushToNavigationStack(Home);
+  }
   componentDidMount(){
     this.setState({
       _isRendered: true

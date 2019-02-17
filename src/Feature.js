@@ -18,6 +18,11 @@ class Feature extends Component {
       NavigationViewer: new NavigationHandler()
     }
   }
+
+  componentDidCatch(error,info){
+    console.log(error,info);
+    this.state.NavigationHandler.pushToNavigationStack(Home);
+  }
   componentDidMount() {
     this.setState({
       isRendered: true
