@@ -3,6 +3,7 @@ import NavigationHandler from './NavigationHandler';
 import './styles/AboutThree.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
+import Home from './Home';
 
 class AboutThree extends Component {
   constructor(props){
@@ -15,12 +16,28 @@ class AboutThree extends Component {
   componentDidMount(){
     this.setState({
       _isRendered: true
+    });
+    setTimeout( () => {
+      this.animateImageAppear()
+    },1000);
+  }
+  animateImageAppear = () =>{
+    anime({
+      targets: '.toolkit-background',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'easeInExpo'
     })
   }
   render() {
     //ANIMATIONS REQUIRED
     return (
       <div className="About-three">
+      <div className="navigation-bar">
+      <ul>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+       </ul>
+       </div>
     <div className="aboutthree-title">Toolbox</div>
       <div className="background-parent-about-three">
       <div className="toolkit-background"></div>

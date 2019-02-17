@@ -34,6 +34,7 @@ $solution-text-right: 50%;
     position: fixed;
     right: 20%;
     top: $text-top;
+    opacity: 0;
 }
 
 .the-description-text {
@@ -115,4 +116,13 @@ $solution-text-right: 50%;
     top: $text-top+45;
     z-index: 99;
     padding-bottom: 2%;
+}
+.lulu-logo{
+    opacity: 0;
+}
+.kroger-logo{
+    opacity: 0;
+}
+.sphero-logo{
+    opacity: 0;
 }

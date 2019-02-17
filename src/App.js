@@ -14,7 +14,6 @@ import NavigationHandler from './NavigationHandler';
 //Loading and Buffering Component import -
 import Loading from './Loading';
 import Welcome from './Welcome';
-import Buffer from './Buffer';
 
 //Buttons anf Features
 import Socials from './sub_components/Socials';
@@ -24,7 +23,6 @@ import anime from 'animejs';
 
 class App extends Component {
   constructor(props) {
-    console.log("App::Constructor()")
     super(props);
     this.state = {
       isLoading: true,
@@ -37,13 +35,14 @@ class App extends Component {
   }
 
   //Definitions ------------------------------
-componentDidCatch(error, info){
-  this.setState({ HasError: true})
-  console.log(error,info);
-}
+  componentDidCatch(error, info) {
+    this.setState({
+      HasError: true
+    })
+    console.log(error, info);
+  }
 
   componentDidMount() {
-    console.log(" App::componentdidmount()")
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
@@ -52,13 +51,13 @@ componentDidCatch(error, info){
 
   componentDidUpdate(props) {
     if (!props.onboardComplete) {
-      setTimeout(() => {this.setState({
-        unWelcome: false,
-        onboardComplete: true
-      });
-    },9000);
+      setTimeout(() => {
+        this.setState({
+          unWelcome: false,
+          onboardComplete: true
+        });
+      }, 9000);
     }
-    console.log("App:componentDidUpdate()");
   }
   _registerClicks = () => {
     let current = this.state.screenClick;
@@ -66,7 +65,7 @@ componentDidCatch(error, info){
       screenClick: current + 1
     });
   }
-  forceUpdate(){
+  forceUpdate() {
 
   }
 //Render: Sent to Browser -------------------

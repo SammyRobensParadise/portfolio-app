@@ -60,7 +60,7 @@ class Home extends Component {
        </div>
       <div className="content">
 
-      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer artist, and student.</p>
+      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer, artist, and student.</p>
       </div>
       <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
   

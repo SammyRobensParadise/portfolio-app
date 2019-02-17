@@ -7,6 +7,8 @@ import landingPageImage from './img/LandingPage.png';
 import TwitterLogo from './img/Emily_Bandel_Twitter.png';
 import Work from './Work';
 import NavigationHandler from './NavigationHandler';
+import Home from './Home';
+import About from './About';
 
 class Feature extends Component {
   constructor(props) {
@@ -21,10 +23,28 @@ class Feature extends Component {
       isRendered: true
     });
     setTimeout( () => {
+      this.animateImageAppear()
+    },1500);
+    setTimeout( () => {
       this.animateGlow()
     },10000)
 
     return true;
+  }
+  animateImageAppear = () =>{
+    anime({
+      targets: '.emily-twitter-photo',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear'
+    })
+    anime({
+      targets: '.combined-web-img',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear',
+      delay: 500
+    })
   }
   animateGlow = () => {
     anime({
@@ -42,6 +62,11 @@ class Feature extends Component {
   render() {
     return (
       <div className="Feature">
+      <div className="navigation-bar">
+      <ul>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+       </ul>
+       </div>
       <div className="screen-1">
       <div className="feature-title">Feature Project</div>
       <div className="definition-text">
@@ -49,7 +74,7 @@ class Feature extends Component {
       <div className="the-problem-text"><p>Emily Bandel, and Actress based in Vancouver and California, with features on Sabrina, Standing Room Only, and A Twisted Fate; was looking for a way to show her talent and uniqueness to a growing audinace.
        Emily was having trouble expressing what made her, <b>her</b> on traditional platforms such as social media.</p></div>
       <div className="the-solution-header"><span>The Solution</span></div>
-      <div className="the-solution-text"><p>Emily Bandel comissioned me to create her own platform where audiances could gather an individualistic and holostic understanding of Emily. 
+      <div className="the-solution-text"><p>Emily Bandel comissioned me to create her own platform where audiences could gather an individualistic and holostic understanding of Emily. 
       The design went through three iterations and everything from color patterns to content was build with Emily in mind. 
       I was able to take  the project from wireframes and client meetings to beautiful code, constructed in React.js. 
       Needless to say, Emily was thrilled.</p></div>

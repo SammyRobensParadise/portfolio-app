@@ -9,6 +9,7 @@ import ffLogo from './img/ff_logo_red_.png';
 import krogerLogo from './img/Current_Kroger_logo.png';
 import spheroLogo from './img/sphero2x.png';
 import luluLogo from './img/lulu@2x.png';
+import Home from './Home';
 
 class Work extends Component {
   constructor(props){
@@ -21,10 +22,42 @@ class Work extends Component {
   componentDidMount(){
     this.setState({
       _isRendered: true
-    })
+    });
+    setTimeout( () => {
+      this.animateImageAppear()
+    },1000);
     setTimeout( () => {
       this.animateGlow()
     },10000)
+  }
+  animateImageAppear = () =>{
+    anime({
+      targets: '.ff-logo-img',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear'
+    })
+    anime({
+      targets: '.lulu-logo',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear',
+      delay: 500
+    })
+    anime({
+      targets: '.kroger-logo',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear',
+      delay: 1000
+    })
+    anime({
+      targets: '.sphero-logo',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'linear',
+      delay: 1500
+    })
   }
   animateGlow = () => {
     anime({
@@ -40,6 +73,11 @@ class Work extends Component {
   render() {
     return (
       <div className="work-one">
+      <div className="navigation-bar">
+      <ul>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+       </ul>
+       </div>
       <div className="work-title">Work</div>
       <div className="ff_logo">
       <img className="ff-logo-img" src={ffLogo} alt="finger food logo"></img></div>

@@ -17,10 +17,10 @@ $solution-text-right: 50%;
     height: auto;
     width: $scale-size - 10;
     position: absolute;
-
     right: 8rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    opacity: 0;
 }
 
 .landing-page-image {
@@ -38,6 +38,7 @@ $solution-text-right: 50%;
     position: fixed;
     left: $edge-distance;
     top: 20%;
+    opacity: 0;
 }
 
 .feature-title {

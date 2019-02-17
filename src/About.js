@@ -5,6 +5,7 @@ import './styles/Navigation.scss';
 import AboutTwo from './AboutTwo';
 import WaterlooTxt from './assets/waterloo_txt.svg';
 import VancouverTxt from './assets/vancouver_txt.svg';
+import Home from './Home';
 
 import anime from 'animejs';
 
@@ -21,8 +22,19 @@ class About extends Component {
       _isRendered: true
     });
     setTimeout( () => {
+      this.animateImageAppear()
+    },1000);
+    setTimeout( () => {
       this.animateGlow()
     },10000)
+  }
+  animateImageAppear = () =>{
+    anime({
+      targets: '.west-coast-background',
+      duration: 1000,
+      opacity: [0,1],
+      easing: 'easeInCubic'
+    })
   }
   animateGlow = () => {
     anime({
@@ -39,6 +51,11 @@ class About extends Component {
     //ANIMATIONS REQUIRED
     return (
       <div className="About-one">
+      <div className="navigation-bar">
+      <ul>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+       </ul>
+       </div>
       <div className="aboutone-title">About</div>
       <div className="the-name-header"><span>Sammy Robens-Paradise</span></div>
       <div className="background-parent">
