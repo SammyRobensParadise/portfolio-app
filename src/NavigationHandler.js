@@ -12,6 +12,7 @@ import About from './About';
 import Feature from "./Feature";
 import AboutTwo from './AboutTwo';
 import AboutThree from "./AboutThree";
+import Resume from './Resume';
 
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
@@ -26,7 +27,6 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
             constructor(componentRegister, props) {
                 super(componentRegister, props);
                 this.componentRegister = componentRegister;
-                console.log("NavigationHandler::constructor()", componentRegister)
                 this.state = {
                     HasError: false
                 }
@@ -65,8 +65,11 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 if( screen === AboutThree){
                     ViewStack.push(<AboutThree/>)
                 } else
+                 if( screen === Resume){
+                     ViewStack.push(<Resume/>)
+                 } else
                  {
-                    ViewStack.push( <p>404: Error Page Not Found</p>)
+                    ViewStack.push( <p>404: Error Page Not Found. Reload the Webpage to clear the error.</p>)
                     }
                 }
 

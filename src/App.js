@@ -47,6 +47,8 @@ class App extends Component {
       isLoading: false,
     }), 3000);
     this.state.screenViewer.pushToNavigationStack(Home);
+    console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;"
+    , "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
   }
 
   componentDidUpdate(props) {
