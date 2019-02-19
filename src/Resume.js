@@ -55,6 +55,7 @@ import React, {
          </ul>
          </div>
         <div className="content"></div>
+        
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div className="screen-number"><p>1/1</p></div>
         </div>

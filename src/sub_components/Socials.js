@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FacebookProvider, ShareButton } from 'react-facebook';
+import NavigationHandler from '../NavigationHandler';
 //import CSS ---------------------------------------
 import '../styles/Socials.scss';
 
@@ -14,7 +15,8 @@ class Socials extends Component {
       isRendered: false,
       showShareExpanded: false,
       showContactExpanded: false,
-      currentClickCount: 0
+      currentClickCount: 0,
+      NavigationViewer: new NavigationHandler()
     }
     }
     componentDidMount(){
@@ -139,7 +141,7 @@ class Socials extends Component {
     return (
       <div className="social">
       <div className="btn-contain">
-      <div className="btn"><div className="icon-resume"></div></div>
+      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Resume)}></div></div>
       <div className="btn"><div className="icon-social" onClick={this.toggledShare}></div></div>
       <div className="btn"><div className="icon-contact" onClick={this.toggleContact}></div></div>
       </div>
@@ -161,7 +163,7 @@ class Socials extends Component {
       return (
       <div className="social">
       <div className="btn-contain">
-      <div className="btn"><div className="icon-resume"></div></div>
+      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Resume)}></div></div>
       <div className="btn"><div className="icon-social" onClick={this.toggledShare}></div></div>
       <div className="btn"><span>{contactList}<div className="icon-contact" onClick={this.toggleContact}></div></span></div>
       </div>
