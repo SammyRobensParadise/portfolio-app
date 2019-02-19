@@ -1,0 +1,161 @@
+@import url("https://use.typekit.net/ucu5nmz.css");
+@import './Global.scss';
+
+$scale-size: 30%;
+$edge-distance: 5%;
+$text-area-width: 28.8125rem;
+$text-right: 50%;
+$text-top: 20%;
+$text-botton: 60%;
+$solution-text-right: 50%;
+.resume-title {
+    color: #ffffff !important;
+    text-decoration: underline;
+    z-index: 30;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    position: fixed;
+    display: inline-block;
+    top: 2rem;
+    right: $text-right;
+    margin-right: -15%;
+
+}
+.Resume{
+  @extend %universal-component-layout;
+}
+.icon-headers{
+    color: #ffffff !important;
+    text-decoration: none;
+    z-index: 20;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    right: $text-right;
+    margin-right: -30%;
+    width: 60%;
+    height:50%;
+    background-color: black;
+
+}
+.skillset{
+    position: inherit;
+    display: inline-block;
+    top: 15%;
+    right: $text-right;
+    margin-right: -30%;
+    width: 60%;
+    height: 20%;
+}
+.design-tools{
+    position: inherit;
+    display: inline-block;
+    top: 15%;
+    right: $text-right;
+    margin-right: -52%;
+    width: 60%;
+    height: 20%;
+}
+.dev-tools{
+    position: inherit;
+    display: inline-block;
+    top: 15%;
+    right: $text-right;
+    margin-right: -78%;
+    width: 60%;
+    height: 20%;
+}
+.skillset-icon{
+    background: url("../assets/lightbulb_icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-self: center;
+    height: 8rem;
+    width: auto;
+
+}
+.design-icon{
+    background: url("../assets/web_design.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-self: center;
+    height: 8rem;
+    width: auto;
+}
+.dev-icon{
+    background: url("../assets/software_tools.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-self: center;
+    height: 8rem;
+    width: auto;
+}
+.skillset-text{
+    margin-top: 1rem;
+    width: 12rem;
+    height: auto;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.design-text{
+    margin-top: 1rem;
+    width: 12rem;
+    height: auto;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.dev-text{
+    margin-top: 1rem;
+    width: 12rem;
+    height: auto;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.scrollable-resume{
+    height: auto;
+    width: $scale-size - 10;
+    position: absolute;
+    left: 15%;
+    margin-top: 20rem;
+    margin-bottom: 4rem;
+}
+.work-section{
+    color: #ffffff !important;
+    z-index: 5;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: left;
+    top: 2rem;
+    padding-left: 5rem;
+
+
+}
+.projects-section{
+    color: #ffffff !important;
+    z-index: 5;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 5rem;
+    top: 2rem;
+
+}
+.education-section{
+    color: #ffffff !important;
+    z-index: 5;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 5rem;
+    top: 2rem;
+
+}

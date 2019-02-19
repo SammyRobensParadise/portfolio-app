@@ -27,8 +27,8 @@ import React, {
         isRendered: true
       });
       setTimeout(() => {
-        this.animateGlow(this.setisViewed)
-      }, 10000)
+        this.animateGlow()
+      }, 25000)
       return true;
     }
     componentDidUpdate() {
@@ -36,7 +36,7 @@ import React, {
     }
     animateGlow = () => {
       anime({
-        targets: '.glow-button-inner',
+        targets: '.glow-button-inner-horizontal',
         direction: 'alternate',
         loop: true,
         easing: 'linear',
@@ -54,9 +54,24 @@ import React, {
         <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
          </ul>
          </div>
-        <div className="content"></div>
-        
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
+         <div className="resume-title">Sammy Robens-Paradise</div>
+        <div className="icon-headers">
+        <div className="skillset"><div className="skillset-icon"></div><div className="skillset-text">
+        Agile and Lean prototyping, design, testing, concept ideation, test infrastrucutre development, data driven UX research and analysis.
+        </div></div>
+        <div className="design-tools"><div className="design-icon"></div><div className="design-text">
+        Photoshop, Illustrator, Indesign, Invision, Marvel Design Studio, motion design library experience.
+        </div></div>
+        <div className="dev-tools"><div className="dev-icon"></div><div className="dev-text">
+        React, javaScript, jQuery, CSS (Sass &#38; Less), HTML, C++, Python, SQL, VB, Git, Linux Ubuntu, XML.
+        </div></div>
+        </div>
+        <div className="scrollable-resume">
+        <div className="work-section"><p>Work</p></div>
+        <div className="projects-section"><p>Projects</p></div>
+        <div className="education-section"><p>Education</p></div>
+        </div>
+        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/1</p></div>
         </div>
       );
