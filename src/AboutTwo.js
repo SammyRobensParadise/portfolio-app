@@ -1,12 +1,12 @@
 import React, {
   Component
 } from 'react';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import './styles/AboutTwo.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
-import AboutThree from './AboutThree';
-import Home from './Home';
+//import AboutThree from './AboutThree';
+//import Home from './Home';
 
 class AboutTwo extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class AboutTwo extends Component {
   }
   componentDidCatch(error, info) {
     console.log(error, info);
-    this.state.NavigationViewer.pushToNavigationStack(Home);
+    this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
     this.setState({
@@ -56,7 +56,7 @@ class AboutTwo extends Component {
       <div className="About-two">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
        </ul>
        </div>
     <div className="abouttwo-title">Education</div>
@@ -72,7 +72,7 @@ class AboutTwo extends Component {
         <div className="waterloo-grad-year"><span>2017-2023</span></div>
       </div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutThree)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutThree)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>2/3</p></div>
       </div>
     );

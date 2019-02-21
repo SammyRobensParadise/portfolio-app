@@ -78,7 +78,7 @@ $solution-text-right: 50%;
     padding-bottom: 2%;
 }
 
-.ff-job-details-button {
+.ff-job-details-button a{
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -97,10 +97,9 @@ $solution-text-right: 50%;
     margin-top: 1rem;
 }
 
-.ff-job-details-button:hover {
+.ff-job-details-button a:hover {
     border-color: #221563;
     cursor: pointer;
-    text-decoration: none;
     color: rgb(255, 255, 255);
 }
 

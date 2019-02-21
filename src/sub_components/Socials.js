@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { FacebookProvider, ShareButton } from 'react-facebook';
-import NavigationHandler from '../NavigationHandler';
+import NavigationHandler, { ScreenEnum } from '../NavigationHandler';
 //import CSS ---------------------------------------
 import '../styles/Socials.scss';
 
 //import libraries ---------------------------------
 import anime from 'animejs';
-import Resume from '../Resume';
+//import Resume from '../Resume';
 
 class Socials extends Component {
   constructor(props){
@@ -141,7 +141,7 @@ class Socials extends Component {
     return (
       <div className="social">
       <div className="btn-contain">
-      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Resume)}></div></div>
+      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Resume)}></div></div>
       <div className="btn"><div className="icon-social" onClick={this.toggledShare}></div></div>
       <div className="btn"><div className="icon-contact" onClick={this.toggleContact}></div></div>
       </div>
@@ -152,7 +152,7 @@ class Socials extends Component {
       return (
       <div className="social">
       <div className="btn-contain">
-      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Resume)}></div></div>
+      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Resume)}></div></div>
       <div className="btn"><span>{shareList}<div className="icon-social" onClick={this.toggledShare}></div></span></div>
       <div className="btn"><div className="icon-contact" onClick={this.toggleContact}></div></div>
       </div>
@@ -163,7 +163,7 @@ class Socials extends Component {
       return (
       <div className="social">
       <div className="btn-contain">
-      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Resume)}></div></div>
+      <div className="btn"><div className="icon-resume" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Resume)}></div></div>
       <div className="btn"><div className="icon-social" onClick={this.toggledShare}></div></div>
       <div className="btn"><span>{contactList}<div className="icon-contact" onClick={this.toggleContact}></div></span></div>
       </div>

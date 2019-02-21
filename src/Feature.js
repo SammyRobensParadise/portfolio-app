@@ -8,7 +8,7 @@ import fullWebpage from './img/Combined.png';
 import landingPageImage from './img/LandingPage.png';
 import TwitterLogo from './img/Emily_Bandel_Twitter.png';
 import Work from './Work';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import Home from './Home';
 import About from './About';
 
@@ -23,7 +23,7 @@ class Feature extends Component {
 
   componentDidCatch(error, info) {
     console.log(error, info);
-    this.state.NavigationHandler.pushToNavigationStack(Home);
+    this.state.NavigationHandler.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
     this.setState({
@@ -71,7 +71,7 @@ class Feature extends Component {
       <div className="Feature">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
        </ul>
        </div>
       <div className="screen-1">
@@ -91,7 +91,7 @@ class Feature extends Component {
       <img className="landing-page-image" src={landingPageImage} alt="full webpage of Emily Bandel's website"></img>
       <img className="emily-twitter-photo" src={TwitterLogo} alt='Twitter Logo'></img>
       <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div> 
       </div>
       </div>

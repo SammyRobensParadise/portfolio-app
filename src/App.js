@@ -9,7 +9,7 @@ import Home from './Home';
 import About from './About';
 import Work from './Work';
 import Feature from './Feature';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 
 //Loading and Buffering Component import -
 import Loading from './Loading';
@@ -46,7 +46,7 @@ class App extends Component {
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
-    this.state.screenViewer.pushToNavigationStack(Home);
+    this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
     console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;"
     , "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
   }

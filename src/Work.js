@@ -2,7 +2,7 @@ import React, {
   Component
 } from 'react';
 import anime from 'animejs';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import About from './About';
 import WorkTwo from './WorkTwo';
 import './styles/WorkOne.scss';
@@ -23,7 +23,7 @@ class Work extends Component {
   }
   componentDidCatch(error, info) {
     console.log(error, info);
-    this.state.NavigationViewer.pushToNavigationStack(Home);
+    this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
     this.setState({
@@ -81,7 +81,7 @@ class Work extends Component {
       <div className="work-one">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
        </ul>
        </div>
       <div className="work-title">Work</div>
@@ -91,16 +91,16 @@ class Work extends Component {
         I leverage analytics and user experience data to ship game changing products of every shape and size.</p></div>
         <div className="the-role-header"><span>Role:</span></div>
         <div className="the-job-header"><span>QA Lead &#38; Analytics developer</span></div>
-        <div className="ff-job-details-button"><div className="details-btn-text">Details...</div></div>
+        <div className="ff-job-details-button"><a href="https://www.fingerfoodstudios.com/" target="_blank" rel="noopener noreferrer"><div className="details-btn-text">Details...</div></a></div>
         <div className="projects-header"><span>Disclosable Projects:</span></div>
         <div className="projects-container">
         <img className="lulu-logo" src={luluLogo} alt="Lululemon"></img>
         <img className="kroger-logo" src={krogerLogo} alt="Kroger"></img>
         <img className="sphero-logo" src={spheroLogo} alt="sphero"></img>
         </div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className= "more-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(WorkTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/2</p></div>
       </div>
     );

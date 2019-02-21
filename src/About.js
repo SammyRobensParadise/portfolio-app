@@ -1,12 +1,10 @@
 import React, {
   Component
 } from 'react';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import './styles/AboutOne.scss';
 import './styles/Navigation.scss';
 import AboutTwo from './AboutTwo';
-import WaterlooTxt from './assets/waterloo_txt.svg';
-import VancouverTxt from './assets/vancouver_txt.svg';
 import Home from './Home';
 
 import anime from 'animejs';
@@ -19,9 +17,9 @@ class About extends Component {
       NavigationViewer: new NavigationHandler()
     }
   }
-  componentDidCatch(error, info) {
+  componentDidCatch(error, info,) {
     console.log(error, info);
-    this.state.NavigationViewer.pushToNavigationStack(Home);
+    this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
     this.setState({
@@ -59,7 +57,7 @@ class About extends Component {
       <div className="About-one">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
        </ul>
        </div>
       <div className="aboutone-title">About</div>
@@ -83,7 +81,7 @@ class About extends Component {
         <div className="hidden-base-64-about"><p>V2VzdCBDb2FzdCBLaWQu</p></div>
 
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(AboutTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/3</p></div>
       </div>
     );

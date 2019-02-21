@@ -5,11 +5,11 @@ import HomeImage from './sub_components/HomeImage';
 import './styles/Home.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
-import NavigationHandler from './NavigationHandler';
-import App from './App';
-import Work from './Work';
-import About from './About';
-import Feature from './Feature';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+//import App from './App';
+//import Work from './Work';
+//import About from './About';
+//import Feature from './Feature';
 
 
 class Home extends Component {
@@ -52,9 +52,9 @@ class Home extends Component {
       <div className="Home">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">R. Paradise</span></li>
-      <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Work)}><span className="navigation">Work</span></li>
-      <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><span className="navigation">About</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">R. Paradise</span></li>
+      <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><span className="navigation">Work</span></li>
+      <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
        </ul>
        </div>
       <div className="content">
@@ -65,7 +65,7 @@ class Home extends Component {
   
       <HomeImage className="home-image-target" />
     
-      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
+      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div>
       </div>
     );

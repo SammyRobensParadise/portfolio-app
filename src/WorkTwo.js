@@ -2,7 +2,7 @@ import React, {
   Component
 } from 'react';
 import anime from 'animejs';
-import NavigationHandler from './NavigationHandler';
+import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import About from './About';
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
@@ -19,7 +19,7 @@ class WorkTwo extends Component {
   }
   componentDidCatch(error, info) {
     console.log(error, info);
-    this.state.NavigationViewer.pushToNavigationStack(Home);
+    this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
     this.setState({
@@ -56,7 +56,7 @@ class WorkTwo extends Component {
       <div className="work-two">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(Home)}><span className="navigation">Start Over...</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
        </ul>
        </div>
       <div className="worktwo-title">Work</div>
@@ -69,7 +69,7 @@ class WorkTwo extends Component {
         <div className="tower-parent">
         <div className="peace-tower-background"></div>
         </div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(About)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
         <div className="screen-number"><p>2/2</p></div>
       </div>
