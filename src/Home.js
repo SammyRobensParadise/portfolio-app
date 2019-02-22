@@ -52,7 +52,7 @@ class Home extends Component {
   render() {
     return (
       <Router>
-        <Link to="/Home">
+        <Link to="/">
       <div className="Home">
       <div className="navigation-bar">
       <ul>
