@@ -46,7 +46,14 @@ class App extends Component {
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
+    if(window.location.href.includes("policy")){
+      this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home)
+      setTimeout( () => {
+        this.state.screenViewer.pushToNavigationStack(ScreenEnum.Policy)
+      },100)
+    } else{
     this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
+    }
     console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;"
     , "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
   }

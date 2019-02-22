@@ -6,6 +6,8 @@ import './styles/Home.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Policy from './Policy';
 //import App from './App';
 //import Work from './Work';
 //import About from './About';
@@ -49,6 +51,8 @@ class Home extends Component {
   //ANIMATIONS REQUIRED
   render() {
     return (
+      <Router>
+        <Link to="/Home">
       <div className="Home">
       <div className="navigation-bar">
       <ul>
@@ -64,10 +68,16 @@ class Home extends Component {
       <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
   
       <HomeImage className="home-image-target" />
-    
+      
+      <div className="Policy-Redirect" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Policy)}>
+      <Link to="/policy">policy</Link>
+      </div>
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div>
       </div>
+      </Link>
+      </Router>
+
     );
   }
 }

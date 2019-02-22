@@ -13,6 +13,7 @@ import Feature from "./Feature";
 import AboutTwo from './AboutTwo';
 import AboutThree from "./AboutThree";
 import Resume from './Resume';
+import Policy from './Policy';
 
 export const ScreenEnum = {
     Home: 1,
@@ -22,7 +23,8 @@ export const ScreenEnum = {
     Feature: 5,
     AboutTwo: 6,
     AboutThree: 7,
-    Resume: 8
+    Resume: 8,
+    Policy: 9
 }
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
@@ -76,6 +78,9 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
                 } else
                 if( screen === ScreenEnum.AboutThree){
                     ViewStack.push(<AboutThree/>)
+                } else
+                if( screen === ScreenEnum.Policy){
+                    ViewStack.push(<Policy/>)
                 } else
                  {
                     ViewStack.push( <p>404: Error Page Not Found. Reload the Webpage to clear the error.</p>)
