@@ -7,6 +7,7 @@
     font-family: century-gothic, sans-serif;
     font-weight: 400;
     font-style: normal;
+    cursor: default;
 }
 .Home-Image-load{
     height: max-content;
@@ -17,6 +18,7 @@
     font-style: normal;
     align-content: center;
     margin-top: 10rem;
+    cursor: default;
 }
 .landing-img{
     margin-block-start: 0rem;
@@ -24,4 +26,9 @@
     align-self: center;
     width: 60%;
     height: auto;
+    cursor: default;
+}
+.generating-text{
+    cursor: none;
+    text-decoration: underline;
 }

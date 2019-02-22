@@ -155,6 +155,7 @@ import React, {
         <li>By email: srobensparadise@gmail.com</li>
           
       </ul>
+      <br></br>
          </div>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><Link to="/Home"><div className= "back-button"><div className="glow-button-inner-horizontal"></div></div></Link></div>
         <div className="screen-number"><p>1/1</p></div>
