@@ -65,13 +65,20 @@
 }
 
 .icon-fb {
-    background-image: url('../assets/share_btn_expand_fb.svg');
-    @extend %button-shared;
+    background: url('../assets/share_btn_expand_fb.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-block-start: 1rem;
     border: 0;
     padding: 0;
-    background-color: #03030C;
+    background-repeat: no-repeat;
+
 }
-.icon-fb:focus{
+
+.icon-fb:focus {
     outline: none;
 }
 
@@ -101,11 +108,13 @@
     background-image: url('../assets/share_btn_expand_email_blue.svg');
     @extend %button-shared-hover;
 }
-.icon-github{
+
+.icon-github {
     background-image: url('../assets/connect_expand_github.svg');
     @extend %button-shared;
 }
-.icon-github:hover{
+
+.icon-github:hover {
     background-image: url('../assets/connect_expand_github_blue.svg');
     @extend %button-shared-hover;
 }
