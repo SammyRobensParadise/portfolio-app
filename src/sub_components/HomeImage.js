@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import anime from 'animejs';
 import landingImage from '../assets/landing_page.svg'
 import '../styles/HomeImage.css';
-import { CSSTransition } from 'react-transition-group'
 
 class HomeImage extends Component {
     constructor(props){

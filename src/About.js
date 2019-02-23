@@ -4,8 +4,6 @@ import React, {
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import './styles/AboutOne.scss';
 import './styles/Navigation.scss';
-import AboutTwo from './AboutTwo';
-import Home from './Home';
 
 import anime from 'animejs';
 

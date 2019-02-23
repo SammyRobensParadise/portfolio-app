@@ -3,11 +3,9 @@ import React, {
 } from 'react';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import About from './About';
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import './styles/WorkTwo.scss';
-import Home from './Home';
 
 class WorkTwo extends Component {
   constructor(props) {

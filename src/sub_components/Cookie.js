@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Cookie.scss';
-import anime from 'animejs';
+
 class Cookie extends Component {
     constructor(props){
         super(props)

@@ -3,15 +3,12 @@ import React, {
 } from 'react';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import About from './About';
-import WorkTwo from './WorkTwo';
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import ffLogo from './img/ff_logo_red_.png';
 import krogerLogo from './img/Current_Kroger_logo.png';
 import spheroLogo from './img/sphero2x.png';
 import luluLogo from './img/lulu@2x.png';
-import Home from './Home';
 
 class Work extends Component {
   constructor(props) {

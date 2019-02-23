@@ -24,10 +24,6 @@ import Welcome from './Welcome';
 import Socials from './sub_components/Socials';
 import CookieBar from './sub_components/Cookie';
 
-//Library import -------------------------
-import anime from 'animejs';
-
-
 class App extends Component {
   static propTypes = {
     cookies: instanceOf(Cookies).isRequired
@@ -95,7 +91,6 @@ class App extends Component {
     this.setState({
       screenClick: current + 1
     });
-    console.log(this.state.screenClick);
     if (this.state.screenClick < 1) {
       this.handleCookieUpdate(true);
     }

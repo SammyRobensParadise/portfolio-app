@@ -7,10 +7,7 @@ import anime from 'animejs';
 import fullWebpage from './img/Combined.png';
 import landingPageImage from './img/LandingPage.png';
 import TwitterLogo from './img/Emily_Bandel_Twitter.png';
-import Work from './Work';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import Home from './Home';
-import About from './About';
 
 class Feature extends Component {
   constructor(props) {
