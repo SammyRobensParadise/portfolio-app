@@ -118,3 +118,11 @@
     background-image: url('../assets/connect_expand_github_blue.svg');
     @extend %button-shared-hover;
 }
+.icon-linkedin{
+    background-image: url('../assets/share_btn_linkedin.svg');
+    @extend %button-shared;
+}
+.icon-linkedin:hover{
+    background-image: url('../assets/share_btn_linkedin_hover.svg');
+    @extend %button-shared-hover;
+}

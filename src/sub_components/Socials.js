@@ -106,6 +106,13 @@ class Socials extends Component {
       delay: 200,
       duration: 600,
     })
+    anime({
+      targets: '.icon-linkedin',
+      translateX: '-6rem',
+      opacity: [0,1],
+      delay: 300,
+      duration: 600,
+    })
   }
   ContactContract = () => {
     anime({
@@ -113,10 +120,17 @@ class Socials extends Component {
       translateX: '6rem',
       opacity: [1,0],
       duration: 600,
-      delay: 100
+      delay: 200
     })
     anime({
       targets: '.icon-email',
+      translateX: '6rem',
+      opacity: [1,0],
+      duration: 600,
+      delay: 100
+    })
+    anime({
+      targets: '.icon-linkedin',
       translateX: '6rem',
       opacity: [1,0],
       duration: 600,
@@ -131,9 +145,12 @@ class Socials extends Component {
   </ShareButton>
  </FacebookProvider>
  </div>
- <a id="instagram-link" href="https://www.instagram.com/stereo_west/" target="_blank" rel="noopener noreferrer"><div className="icon-instagram"></div></a> </div>
-    const contactList = <div className="expanded-contact"><a id="github-link" href="https://github.com/SammyRobensParadise" target="_blank" rel="noopener noreferrer"><div className="icon-github"></div></a>
-    <a href="mailto:srobensp@edu.uwaterloo.ca?Subject=Inquiry%20From%20Website" target="_top"><div className="icon-email"></div></a></div>
+ <a id="instagram-link" href="https://www.instagram.com/stereo_west/" target="_blank" rel="noopener noreferrer"><div className="icon-instagram"></div></a></div>
+
+  const contactList = <div className="expanded-contact"><a id="github-link" href="https://github.com/SammyRobensParadise" target="_blank" rel="noopener noreferrer"><div className="icon-github"></div></a>
+    <a href="mailto:srobensp@edu.uwaterloo.ca?Subject=Inquiry%20From%20Website" target="_top"><div className="icon-email"></div></a>
+    <a id="linkedin-link" href="https://www.linkedin.com/in/sammy-robens-paradise/" target="_blank" rel="noopener noreferrer"><div className="icon-linkedin"></div></a>
+    </div>
     let showContact = this.state.showContactExpanded;
     let showShare = this.state.showShareExpanded;
 
