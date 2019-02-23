@@ -1,0 +1,46 @@
+@import url("https://use.typekit.net/ucu5nmz.css");
+@import './Global.scss';
+
+.cookie-static{
+    @extend %universal-component-layout;
+}
+
+$scale-size: 30%;
+$edge-distance: 5%;
+$text-area-width: 28.8125rem;
+$text-right: 35%;
+$text-top: 20%;
+$text-botton: 60%;
+$solution-text-right: 50%;
+
+.cookie-bar{
+    position: fixed;
+    bottom: 0%;
+    width: 60%;
+    height: 3.5rem;
+    left: 20%;
+    background-color: #0D0830;
+    z-index: 90;
+}
+.cookie-rocket{
+    position: fixed;
+    bottom: 0%;
+    height: 6rem;
+    width: 6rem;
+    background-repeat: no-repeat;
+
+}
+a{
+ color: #ffffff;
+}
+a:hover{
+    color: #34639B;
+}
+.close-button{
+    position: fixed;
+    right: 20%;
+    bottom: 5%
+}
+.close-button:hover{
+    cursor: pointer;
+}

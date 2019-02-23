@@ -1,15 +1,20 @@
 import React, {
   Component
 } from 'react';
+import {
+  instanceOf
+} from 'prop-types';
+import {
+  withCookies,
+  Cookies
+} from 'react-cookie';
 //CSS import -----------------------------
 import './styles/App.css';
 
 //Component import -----------------------
-import Home from './Home';
-import About from './About';
-import Work from './Work';
-import Feature from './Feature';
-import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import NavigationHandler, {
+  ScreenEnum
+} from './NavigationHandler';
 
 //Loading and Buffering Component import -
 import Loading from './Loading';
@@ -17,13 +22,21 @@ import Welcome from './Welcome';
 
 //Buttons anf Features
 import Socials from './sub_components/Socials';
+import CookieBar from './sub_components/Cookie';
 
 //Library import -------------------------
 import anime from 'animejs';
 
+
 class App extends Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired
+  };
   constructor(props) {
     super(props);
+    const {
+      cookies
+    } = props;
     this.state = {
       isLoading: true,
       unWelcome: true,
@@ -31,6 +44,7 @@ class App extends Component {
       screenClick: 0,
       screenViewer: new NavigationHandler(),
       HasError: false,
+      cookieIndex: cookies.get('cookieIndex') || false
     };
   }
 
@@ -46,18 +60,24 @@ class App extends Component {
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
-    if(window.location.href.includes("policy")){
+    if (window.location.href.includes("policy")) {
       this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home)
-      setTimeout( () => {
+      setTimeout(() => {
         this.state.screenViewer.pushToNavigationStack(ScreenEnum.Policy)
-      },100)
-    } else{
-    this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
+      }, 100)
+    } else {
+      this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
     }
-    console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;"
-    , "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
+    console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
   }
-
+  handleCookieUpdate = (e) => {
+    const {
+      cookies
+    } = this.props;
+    cookies.set('cookieIndex', e, {
+      path: '/'
+    });
+  }
   componentDidUpdate(props) {
     if (!props.onboardComplete) {
       setTimeout(() => {
@@ -68,11 +88,17 @@ class App extends Component {
       }, 9000);
     }
   }
+  componentWillUnmount() {}
+
   _registerClicks = () => {
     let current = this.state.screenClick;
     this.setState({
       screenClick: current + 1
     });
+    console.log(this.state.screenClick);
+    if (this.state.screenClick < 1) {
+      this.handleCookieUpdate(true);
+    }
   }
   forceUpdate() {
 
@@ -89,7 +115,7 @@ class App extends Component {
     if(!this.state.isLoading && this.state.unWelcome){
       return <div><Welcome/></div> ;
     }
-    if(this.state.onboardComplete){
+    if(this.state.onboardComplete && !this.state.cookieIndex){
     return (
       <div className="App">
       <div className="click-target" onClick={this._registerClicks}>
@@ -99,7 +125,20 @@ class App extends Component {
       </div>
     );
     }
+    if(this.state.onboardComplete && this.state.cookieIndex){
+      return (
+        <div className="App">
+        <div className="click-target" onClick={this._registerClicks}>
+       < this.state.screenViewer._getCurrentView />
+        </div>
+        <Socials currentClickCount={this.state.screenClick}/>
+        < CookieBar />
+        </div>
+          
+
+      );
+    }
   }
 }
  
-export default App;
+export default withCookies(App);

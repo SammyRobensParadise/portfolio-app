@@ -44,9 +44,17 @@
   font-size: 0.8rem;
   cursor: vertical-text;
 }
-.Policy-Redirect{
+.Policy-Redirect a{
   position: fixed;
   bottom: 2%;
-  right: 50%;
+  right: 10%;
+  color: #ffffff;
+}
+.Policy-Redirect:focus{
+  text-decoration: none;
+
+}
+.Policy-Redirect a:hover{
+  color: #450092;
 }
 /*CSSTransition */
