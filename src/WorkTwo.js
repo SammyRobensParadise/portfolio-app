@@ -25,7 +25,7 @@ class WorkTwo extends Component {
     });
     setTimeout(() => {
       this.animateImageAppear()
-    }, 1500);
+    }, 700);
     setTimeout(() => {
       this.animateGlow()
     }, 10000)
@@ -63,7 +63,7 @@ class WorkTwo extends Component {
           Transportation Division to aid in the development of various software engineering solutions; the backbone of regulatory compliance.</p></div>
         <div className="the-role-header-gov"><span>Role:</span></div>
         <div className="the-job-header-gov"><span>Software Engineering Co-op</span></div>
-        <div className="gov-job-details-button"><div className="details-btn-text">Details...</div></div>
+        <div className="gov-job-details-button"><a href="https://pollution-waste.canada.ca/environmental-protection-registry/regulations/view?Id=46" target="_blank" rel="noopener noreferrer"><div className="details-btn-text">Details...</div></a></div>
         <div className="tower-parent">
         <div className="peace-tower-background"></div>
         </div>

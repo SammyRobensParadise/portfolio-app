@@ -98,7 +98,7 @@ $solution-text-right: 50%;
     opacity: 0;
     
 }
-.gov-job-details-button{
+.gov-job-details-button a{
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -112,7 +112,7 @@ $solution-text-right: 50%;
     color: rgb(255, 255, 255);
 
 }
-.gov-job-details-button:hover{
+.gov-job-details-button a:hover{
     border-color: #221563;
     cursor: pointer;
     text-decoration: none;

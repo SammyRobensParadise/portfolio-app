@@ -78,7 +78,7 @@ $solution-text-right: 50%;
     padding-bottom: 2%;
 }
 
-.ff-job-details-button a{
+.ff-job-details-button a {
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -116,16 +116,20 @@ $solution-text-right: 50%;
     z-index: 99;
     padding-bottom: 2%;
 }
-.lulu-logo{
+
+.lulu-logo {
     opacity: 0;
 }
-.kroger-logo{
+
+.kroger-logo {
     opacity: 0;
 }
-.sphero-logo{
+
+.sphero-logo {
     opacity: 0;
 }
-.job-title{
+
+.job-title {
     background-color: #ffffff;
     border-radius: 0.25rem;
     border-color: none;
@@ -137,24 +141,37 @@ $solution-text-right: 50%;
     position: fixed;
     overflow: hidden;
 }
-@keyframes title-animation{
-    from {width: 28%;}
-    to {width: 0%;}
+
+@keyframes title-animation {
+    from {
+        width: $text-area-width;
+    }
+
+    to {
+        width: 0%;
+    }
 
 }
-.ux-content{
+
+.ux-content {
     background-color: #ffffff;
     border-radius: 0.25rem;
     border-color: none;
     border-width: 0 0 0 0;
     width: 16%;
     height: 1.5rem;
-    animation: para-animation 1s 1s;
+    animation: para-animation 1s 0.5s;
     animation-fill-mode: forwards;
     position: fixed;
     overflow: hidden;
 }
-@keyframes para-animation{
-    from {width: 16%;}
-    to {width: 0%;}
+
+@keyframes para-animation {
+    from {
+        width: 16%;
+    }
+
+    to {
+        width: 0%;
+    }
 }
