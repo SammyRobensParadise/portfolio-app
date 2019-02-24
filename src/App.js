@@ -24,6 +24,7 @@ import Welcome from './Welcome';
 import Socials from './sub_components/Socials';
 import CookieBar from './sub_components/Cookie';
 
+
 class App extends Component {
   static propTypes = {
     cookies: instanceOf(Cookies).isRequired
@@ -40,7 +41,7 @@ class App extends Component {
       screenClick: 0,
       screenViewer: new NavigationHandler(),
       HasError: false,
-      cookieIndex: cookies.get('cookieIndex') || false
+      cookieIndex: cookies.get('cookieIndex') || false,
     };
   }
 
@@ -65,6 +66,7 @@ class App extends Component {
       this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
     }
     console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
+    console.log(" 👤 : Sammy Robens-Paradise"," 📞 : 778-887-9189"," 📪 : srobensparadise@gmail.com", "📡")
   }
   handleCookieUpdate = (e) => {
     const {

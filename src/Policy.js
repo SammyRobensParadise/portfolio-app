@@ -5,7 +5,7 @@ import React, {
   import './styles/Navigation.scss';
   import anime from 'animejs';
   import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-  import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+  import { BrowserRouter as Router, Link } from "react-router-dom";
   
   
   class Policy extends Component {

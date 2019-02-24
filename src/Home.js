@@ -6,19 +6,14 @@ import './styles/Home.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-//import App from './App';
-//import Work from './Work';
-//import About from './About';
-//import Feature from './Feature';
-
+import { BrowserRouter as Router,Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
     }
   }
   componentDidCatch(error, info) {

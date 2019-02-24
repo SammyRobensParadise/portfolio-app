@@ -5,7 +5,6 @@ import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import './styles/AboutThree.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
-//import Home from './Home';
 
 class AboutThree extends Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class AboutThree extends Component {
   animateImageAppear = () => {
     anime({
       targets: '.toolkit-background',
-      duration: 1000,
+      duration: 700,
       opacity: [0, 1],
       easing: 'easeInExpo'
     })

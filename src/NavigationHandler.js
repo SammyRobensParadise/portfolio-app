@@ -29,14 +29,12 @@ export const ScreenEnum = {
 //This class is the bread and butter of the applications naviation. It handles screen navigation
 // Via a mutable arrau similar to a stack ||||||||||||||||||| where the last element of the mutable array
 //is what is rendered in the browser so if this is the stack => | | | | | | | [     _|_ ...this is sent to the browser...   ]
-export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared,
+export var ViewStack = [ <p> 404: We are still getting things prepared,
         if you 've been waiting a while try reloading the page...</p>];
-        export default class NavigationHandler extends Component {
 
-            // declaration of the viewHandler Navigation Stack
+export default class NavigationHandler extends Component {
 
-
-            constructor(componentRegister, props) {
+constructor(componentRegister, props) {
                 super(componentRegister, props);
                 this.componentRegister = componentRegister;
                 this.state = {
@@ -49,8 +47,7 @@ export var ViewStack = [ <p> ViewStack Var: We are still getting things prepared
             componentDidMount() {
                 return true;
             }
-            componentDidUpdate(screen) {
-
+            componentDidUpdate() {
                 let appobj = new App()
                 appobj.forceUpdate();
             }

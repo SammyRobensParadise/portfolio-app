@@ -24,7 +24,7 @@ class Socials extends Component {
         this.setState({isRendered: true});
       },500);
     }
-    componentDidUpdate(props){
+    componentDidUpdate(){
       let PrevClickCount = this.props.currentClickCount;
       if(PrevClickCount > this.state.currentClickCount){
         this.ShareContract();
