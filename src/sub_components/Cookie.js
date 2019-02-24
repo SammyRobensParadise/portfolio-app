@@ -8,6 +8,9 @@ class Cookie extends Component {
             isShowing: true
         }
     }
+componentDidCatch(error,info){
+console.log(error,info);
+}
 CloseCookieDialog = () => {
     this.setState({ isShowing: false})
 }

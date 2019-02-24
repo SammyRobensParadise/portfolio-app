@@ -125,3 +125,36 @@ $solution-text-right: 50%;
 .sphero-logo{
     opacity: 0;
 }
+.job-title{
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    border-color: none;
+    border-width: 0 0 0 0;
+    width: $text-area-width;
+    height: 1.5rem;
+    animation: title-animation 1s 0.2s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    overflow: hidden;
+}
+@keyframes title-animation{
+    from {width: 28%;}
+    to {width: 0%;}
+
+}
+.ux-content{
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    border-color: none;
+    border-width: 0 0 0 0;
+    width: 16%;
+    height: 1.5rem;
+    animation: para-animation 1s 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    overflow: hidden;
+}
+@keyframes para-animation{
+    from {width: 16%;}
+    to {width: 0%;}
+}
