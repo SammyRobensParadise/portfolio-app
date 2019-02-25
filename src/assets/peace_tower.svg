@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1745.43 960.12">
     <defs>
         <style>.cls-1{
-        animation: svg-anim 5s 0s  ease alternate infinite;
+        animation: svg-anim 12s 0s  ease alternate infinite;
         }
         @keyframes svg-anim {
-        from {fill: #fff;}
-        to {fill: #333300;}
+        0% {fill: #fff;}
+        25% {fill: #333300;}
+        50% {fill: #22B573;}
+        75% {fill: #34639B;}
+        100% {fill: #fff;}
         }
         </style>
     </defs>

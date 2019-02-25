@@ -5,11 +5,12 @@
         #coffee{
         animation: coffee-anim 4s 0s ease alternate infinite;
         animation-timing-function: linear;
+        transform-origin: 910.5px 530.5px;
+        transform: scale(0.7);
         }
-                @keyframes coffee-anim {
-            from {transform:rotate(-2.5deg);}
-            to {transform:rotate(10deg);
-            transform:translate(-2rem,2rem)}
+         @keyframes coffee-anim {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(20deg);}
         }
         #robot_arm_right{
         animation: robot-arm-anim 4s 0s ease alternate infinite;
@@ -22,32 +23,47 @@
         transform-origin: 808px 656px;
         }
         @keyframes robot-arm-anim {
-        from {transform:rotate-10deg);}
+        from {transform:rotate(0deg);}
         to {transform:rotate(20deg);}
         }
         #right_hand{
         animation: human-arm-anim 4s 0.4s ease alternate infinite;
         animate-timing-function: linear;
-        transform-origin: 297.82px 380.33px
+        transform-origin: 297.82px 380.33px;
         }
         #right_arm{
         animation: human-arm-anim 4s 0.4s ease alternate infinite;
         animate-timing-function: linear;
-        transform-origin: 297.82px 380.33px
+        transform-origin: 297.82px 380.33px;
         }
         #right_arm_shadow{
         animation: human-arm-anim 4s 0.4s ease alternate infinite;
         animate-timing-function: linear;
-        transform-origin: 297.82px 380.33px
+        transform-origin: 297.82px 380.33px;
         }
         #pen{
         animation: human-arm-anim 4s 0.4s ease alternate infinite;
         animate-timing-function: linear;
-        transform-origin: 297.82px 380.33px
+        transform-origin: 297.82px 380.33px;
         }
         @keyframes human-arm-anim{
-        from {transform:rotate-10deg);}
+        from {transform:rotate(0deg);}
         to {transform:rotate(10deg);}
+        }
+        #head{
+        animation: human-head-anim 4s 1s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 236px 334px;
+        }
+        #hair{
+        animation: human-head-anim 4s 1s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 236px 334px;
+        }
+        @keyframes human-head-anim {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(12deg);}
+        }
         </style>
     </defs>
     <title>24Artboard 1</title>
