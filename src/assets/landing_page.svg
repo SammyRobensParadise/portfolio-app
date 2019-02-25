@@ -11,6 +11,20 @@
             to {transform:rotate(10deg);
             transform:translate(-2rem,2rem)}
         }
+        #robot_arm_right{
+        animation: robot-arm-anim 4s 0s ease alternate infinite;
+        animation-timing-function: linear;
+        transform-origin: 808px 656px;
+        }
+        #right_hand-2{
+                animation: robot-arm-anim 4s 0s ease alternate infinite;
+        animation-timing-function: linear;
+        transform-origin: 808px 656px;
+        }
+        @keyframes robot-arm-anim {
+        from {transform:rotate-10deg);}
+        to {transform:rotate(20deg);}
+        }
         </style>
     </defs>
     <title>24Artboard 1</title>
