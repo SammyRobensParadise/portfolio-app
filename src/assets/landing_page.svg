@@ -17,7 +17,7 @@
         transform-origin: 808px 656px;
         }
         #right_hand-2{
-                animation: robot-arm-anim 4s 0s ease alternate infinite;
+        animation: robot-arm-anim 4s 0s ease alternate infinite;
         animation-timing-function: linear;
         transform-origin: 808px 656px;
         }
@@ -25,6 +25,29 @@
         from {transform:rotate-10deg);}
         to {transform:rotate(20deg);}
         }
+        #right_hand{
+        animation: human-arm-anim 4s 0.4s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 297.82px 380.33px
+        }
+        #right_arm{
+        animation: human-arm-anim 4s 0.4s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 297.82px 380.33px
+        }
+        #right_arm_shadow{
+        animation: human-arm-anim 4s 0.4s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 297.82px 380.33px
+        }
+        #pen{
+        animation: human-arm-anim 4s 0.4s ease alternate infinite;
+        animate-timing-function: linear;
+        transform-origin: 297.82px 380.33px
+        }
+        @keyframes human-arm-anim{
+        from {transform:rotate-10deg);}
+        to {transform:rotate(10deg);}
         </style>
     </defs>
     <title>24Artboard 1</title>
