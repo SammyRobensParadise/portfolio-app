@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" 
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1455">
     <defs>
-        <style>.cls-1{fill:#e6e6e6;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-3{fill:#fff;}.cls-4{fill:#4868b1;}.cls-5{fill:#03030c;}.cls-6{fill:#0d0830;stroke-width:18px;}.cls-6,.cls-8{stroke:#03030c;stroke-miterlimit:10;}.cls-7{fill:#450092;}.cls-8,.cls-9{fill:none;}.cls-8{stroke-width:10px;}</style>
+        <style>.cls-1{fill:#e6e6e6;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-3{fill:#fff;}.cls-4{fill:#4868b1;}.cls-5{fill:#03030c;}.cls-6{fill:#0d0830;stroke-width:18px;}.cls-6,.cls-8{stroke:#03030c;stroke-miterlimit:10;}.cls-7{fill:#450092;}.cls-8,.cls-9{fill:none;}.cls-8{stroke-width:10px;}
+        .cls-3{
+        animation: svg-anim 12s 0s  ease alternate infinite;
+        }
+        .cls-4{
+        animation: svg-anim 12s 0.5s  ease alternate infinite;
+        }
+        @keyframes svg-anim {
+        0% {fill: #fff;}
+        25% {fill: #333300;}
+        50% {fill: #22B573;}
+        75% {fill: #34639B;}
+        100% {fill: #fff;}
+        }
+
+        </style>
         <symbol id="Dot_Pattern_Vector_Pack_12" data-name="Dot Pattern Vector Pack 12" viewBox="0 0 743.54 742.97">
             <path class="cls-1" d="M278.05.86A1.12,1.12,0,0,1,277,2.07a1.22,1.22,0,0,1-1.07-.91A1.08,1.08,0,0,1,278.05.86Z"/>
             <path class="cls-1" d="M467.63.86a1.13,1.13,0,0,1-1.06,1.21,1.22,1.22,0,0,1-1.07-.91A1.08,1.08,0,0,1,467.63.86Z"/>

@@ -38,7 +38,7 @@ constructor(componentRegister, props) {
                 super(componentRegister, props);
                 this.componentRegister = componentRegister;
                 this.state = {
-                    HasError: false
+                    HasError: false,
                 }
             }
             componentDidCatch(error, info) {

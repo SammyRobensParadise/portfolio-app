@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 249"><defs><style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-1{stroke-width:4px;}.cls-2{stroke-width:3px;}</style></defs><title>iconswebdesign baseresume_icon</title><g id="Layer_2" data-name="Layer 2"><g id="webdesign_base" data-name="webdesign base"><rect class="cls-1" x="2" y="2" width="359" height="245" rx="12"/><rect class="cls-2" x="39.5" y="30.5" width="89" height="106" rx="6"/><rect class="cls-2" x="187.5" y="23.5" width="149" height="201" rx="6"/><line class="cls-2" x1="335.5" y1="25.5" x2="188.5" y2="222.5"/><line class="cls-2" x1="334.5" y1="222.5" x2="188.5" y2="25.5"/><line class="cls-2" x1="126.5" y1="134.5" x2="40.5" y2="31.5"/><line class="cls-2" x1="126.5" y1="32.5" x2="41.5" y2="134.5"/><rect class="cls-2" x="39.5" y="160.5" width="89" height="64" rx="6"/><line class="cls-2" x1="48.5" y1="175.5" x2="118.5" y2="175.5"/><line class="cls-2" x1="49" y1="188.5" x2="119" y2="188.5"/><line class="cls-2" x1="49" y1="200.5" x2="119" y2="200.5"/><line class="cls-2" x1="49" y1="212.5" x2="119" y2="212.5"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 249">
+    <defs>
+        <style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-1{stroke-width:4px;}.cls-2{stroke-width:3px;}
+        .cls-2{
+        animation: svg-anim 16s 0s  ease alternate infinite;
+        }
+        @keyframes svg-anim {
+        0% {fill: #ff0000;}
+        25% {fill: #ffcc33;}
+        50% {fill: #ff9c6a;}
+        75% {fill: #34639B;}
+        100% {fill: #5e5e5f;}
+        }
+        </style>
+    </defs>
+    <title>iconswebdesign baseresume_icon</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="webdesign_base" data-name="webdesign base">
+            <rect class="cls-1" x="2" y="2" width="359" height="245" rx="12"/>
+            <rect class="cls-2" x="39.5" y="30.5" width="89" height="106" rx="6"/>
+            <rect class="cls-2" x="187.5" y="23.5" width="149" height="201" rx="6"/>
+            <line class="cls-2" x1="335.5" y1="25.5" x2="188.5" y2="222.5"/>
+            <line class="cls-2" x1="334.5" y1="222.5" x2="188.5" y2="25.5"/>
+            <line class="cls-2" x1="126.5" y1="134.5" x2="40.5" y2="31.5"/>
+            <line class="cls-2" x1="126.5" y1="32.5" x2="41.5" y2="134.5"/>
+            <rect class="cls-2" x="39.5" y="160.5" width="89" height="64" rx="6"/>
+            <line class="cls-2" x1="48.5" y1="175.5" x2="118.5" y2="175.5"/>
+            <line class="cls-2" x1="49" y1="188.5" x2="119" y2="188.5"/>
+            <line class="cls-2" x1="49" y1="200.5" x2="119" y2="200.5"/>
+            <line class="cls-2" x1="49" y1="212.5" x2="119" y2="212.5"/>
+        </g>
+    </g>
+</svg>

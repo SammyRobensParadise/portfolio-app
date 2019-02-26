@@ -41,7 +41,7 @@ class App extends Component {
       screenClick: 0,
       screenViewer: new NavigationHandler(),
       HasError: false,
-      cookieIndex: cookies.get('cookieIndex') || false,
+      cookieIndex: cookies.get('cookieIndex') || false
     };
   }
 
@@ -85,6 +85,7 @@ class App extends Component {
         });
       }, 9000);
     }
+
   }
   componentWillUnmount() {}
 

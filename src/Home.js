@@ -13,6 +13,7 @@ class Home extends Component {
     super(props);
     this.state = {
       isRendered: false,
+      onBoardingComplete: false,
       NavigationViewer: new NavigationHandler(),
     }
   }
@@ -41,6 +42,9 @@ class Home extends Component {
       borderRadius: ['25%', '35%'],
       boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
+  }
+  _getOnboardStatus = () => {
+    return this.state.onBoardingComplete;
   }
   //ANIMATIONS REQUIRED
   render() {
