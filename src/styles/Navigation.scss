@@ -3,7 +3,6 @@
 
 $buttonWidth: 6rem;
 $buttonHeight: 4rem;
-
 .navigation-bar {
     @extend %universal-component-layout;
     font-size: 1.5rem;
@@ -47,6 +46,13 @@ li .navigation {
     font-weight: 600;
     cursor: pointer;
 
+}
+
+@media only screen and (max-width: 376px) {
+ li .navigation{
+    margin-inline-end: 1rem;
+    margin-block-start: 2rem;
+}
 }
 
 .more-button {
@@ -132,3 +138,32 @@ li .navigation {
     right: 10%;
     margin-right: -25%;
 }
+@media only screen and (max-width:321px) {
+    li .navigation{
+       margin-inline-end: 0.5rem;
+       margin-inline-start: 0rem;
+       margin-block-start: 2rem;
+   }
+   .home{
+       margin-left: 1rem;
+   }
+   .navigation-bar{
+       font-size: 1rem;
+   }
+   .about{
+       margin-right: 1rem;
+   }
+   .work{
+       margin-right: 0.5rem;
+   }
+   .screen-number{
+       display: none;
+   }
+
+   }
+   @media only screen and (max-width: 569px) and (max-height: 321px){
+    .navigation-bar{
+        font-size: 1rem;
+    }
+  }
+  /* KNOWN ISSUE IS THAT SOCAILS BUTTONS DO NOT WORK FOR IPHONE SE/5 IN LANDSCAPE MODE BECAUSE OF SCREEN HEIGHT*/

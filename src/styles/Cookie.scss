@@ -17,11 +17,12 @@ $solution-text-right: 50%;
     position: fixed;
     bottom: 0%;
     width: 60%;
-    height: 3.5rem;
+    height:6%;
     left: 20%;
     background-color: #0D0830;
     z-index: 90;
 }
+
 .cookie-rocket{
     position: fixed;
     bottom: 0%;
@@ -44,3 +45,31 @@ a:hover{
 .close-button:hover{
     cursor: pointer;
 }
+/* THIS IS SPECIFIC FOR IPADS */
+@media only screen and (max-height: 930px) {
+    .cookie-bar{
+        padding-bottom: 2.25rem;
+    }
+    .close-button{
+        bottom: 8%;
+    }
+}
+/*THIS IS SPECIFIC FOR THE IPHONE 8 PLUS  IN PORTRAIT MODE*/
+@media only screen and (max-width: 480px){
+    .cookie-static{
+        display: none;
+    }
+  }
+
+/* THIS IS SPECIFIC FOR THE IPHONE X */
+@media only screen and (max-width: 376px) {
+    .cookie-static{
+        display: none;
+    }
+}
+/* THIS IS SPECIFIC FOR THE IPHONE X  IN LANDSCAPE MODE*/
+@media only screen and (max-width: 813px) and (max-height: 376px){
+    .cookie-static{
+        display: none;
+    }
+  }

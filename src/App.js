@@ -128,7 +128,7 @@ class App extends Component {
         <div className="App">
         <div className="click-target" onClick={this._registerClicks}>
        < this.state.screenViewer._getCurrentView />
-        </div>
+       </div>
         <Socials currentClickCount={this.state.screenClick}/>
         < CookieBar />
         </div>

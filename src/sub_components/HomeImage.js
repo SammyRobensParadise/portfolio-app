@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import anime from 'animejs';
-import landingImage from '../assets/landing_page.svg'
+
 import '../styles/HomeImage.css';
+
 
 class HomeImage extends Component {
     constructor(props){
@@ -39,7 +40,10 @@ animateImageAppear = () =>{
     return (
       <div className="home-page">
       <div className="Home-Image">
-      <img className="landing-img" src={landingImage} alt="landing"></img>
+      <div className="landing-img"></div>
+     { /*<!--img className="landing-img" srcset={landingImageIpad+ " 1024w, " + landingImage+" 1080w"}
+       sizes="(min-width:1080px) 1080px, (max-width:1080px) 1024px" 
+    src={landingImage} alt="landing"></img> */}
       </div>
       </div>
     );

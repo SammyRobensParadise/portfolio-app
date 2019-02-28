@@ -68,7 +68,7 @@ class Home extends Component {
       <HomeImage className="home-image-target" />
       
       <div className="Policy-Redirect" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Policy)}>
-      <Link to="/policy">policy</Link>
+      <Link to="/policy"><p>Policy</p></Link>
       </div>
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div>
