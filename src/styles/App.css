@@ -42,6 +42,7 @@
 p{
   color: #ffffff;
 }
+
 .click-target{
   width: 100%;
   height: max-content;
@@ -51,12 +52,12 @@ p{
   overflow-y: hidden;
 }
 /* This is specific mobile*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   p {
     font-size: 0.75rem;
   }
 }
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 400px) {
   p {
     font-size: 0.5rem;
   }

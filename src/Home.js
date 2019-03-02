@@ -54,7 +54,7 @@ class Home extends Component {
       <div className="Home">
       <div className="navigation-bar">
       <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">R. Paradise</span></li>
+      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><div><span className="navigation">R. Paradise</span></div></li>
       <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><span className="navigation">Work</span></li>
       <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
        </ul>

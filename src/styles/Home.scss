@@ -8,6 +8,7 @@
  text-align: center
 }
 .line-1{ 
+    z-index: 30;
     display: inline-block;
     width: 30rem;
     margin-block-start: 6rem;
@@ -21,9 +22,15 @@
     font-style: normal;
     cursor: default;
 }
-
+@media only screen and (max-width: 570px) and (max-height: 350px){
+  .line-1{
+    margin-block-start: 4rem;
+    position: fixed;
+  }
+}
 /* Animation */
 .anim-typewriter{
+  
   cursor: none;
   animation: typewriter 4s steps(60) 1s 1 normal both,
              blinkTextCursor 500ms steps(60) infinite normal;
@@ -95,5 +102,14 @@
 }
 .Policy-Redirect a{
   right: 30%;
+}
+}
+@media screen and (max-width:570px) and (max-height:325px) {
+  .line-1{
+    transform: translateX(-40%);
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 15rem;}
 }
 }

@@ -61,6 +61,8 @@ class Feature extends Component {
       boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' inset 0rem 0rem 2rem 0.1rem #450092']
     })
   }
+  
+
   //AN
   //ANIMATIONS REQUIRED
   render() {
