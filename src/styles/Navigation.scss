@@ -194,7 +194,7 @@ li {
         display: none;
     }
 }
-@media only screen and (max-height: 750px){
+@media only screen and (max-height: 750px)and (max-width: 1000px){
     .screen-number{
         display: none;
     }
