@@ -10,9 +10,11 @@ $buttonHeight: 4rem;
     z-index: 99;
     color: #ffffff;
 }
-div{
+
+div {
     color: #ffffff !important;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -190,18 +192,28 @@ li {
     .navigation-bar {
         font-size: 1rem;
     }
-    .screen-number{
+
+    .screen-number {
         display: none;
     }
 }
-@media only screen and (max-height: 750px)and (max-width: 1000px){
-    .screen-number{
+
+@media only screen and (max-height: 750px)and (max-width: 1000px) {
+    .screen-number {
         display: none;
     }
 }
-@media only screen and (max-width: 850px) and (max-height: 450px){
-    .back-button{
+
+@media only screen and (max-width: 850px) and (max-height: 450px) {
+    .back-button {
         bottom: 30%;
     }
 }
+
+@media only screen and (max-width: 420px) and (max-height: 800px) {
+    .back-button {
+        bottom: 11rem;
+    }
+}
+
 /* KNOWN ISSUE IS THAT SOCAILS BUTTONS DO NOT WORK FOR IPHONE SE/5 IN LANDSCAPE MODE BECAUSE OF SCREEN HEIGHT*/

@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 @import './Global.scss';
 
-.cookie-static{
+.cookie-static {
     @extend %universal-component-layout;
 }
 
@@ -13,17 +13,17 @@ $text-top: 20%;
 $text-botton: 60%;
 $solution-text-right: 50%;
 
-.cookie-bar{
+.cookie-bar {
     position: fixed;
     bottom: 0%;
     width: 60%;
-    height:6%;
+    height: 6%;
     left: 20%;
     background-color: #0D0830;
-    z-index: 90;
+    z-index: 99;
 }
 
-.cookie-rocket{
+.cookie-rocket {
     position: fixed;
     bottom: 0%;
     height: 6rem;
@@ -31,45 +31,53 @@ $solution-text-right: 50%;
     background-repeat: no-repeat;
 
 }
-a{
- color: #ffffff;
+
+a {
+    color: #ffffff;
 }
-a:hover{
+
+a:hover {
     color: #34639B;
 }
-.close-button{
+
+.close-button {
     position: fixed;
     right: 20%;
     bottom: 4.5%
 }
-.close-button:hover{
+
+.close-button:hover {
     cursor: pointer;
 }
+
 /* THIS IS SPECIFIC FOR IPADS */
 @media only screen and (max-height: 930px) {
-    .cookie-bar{
+    .cookie-bar {
         padding-bottom: 2.25rem;
     }
-    .close-button{
+
+    .close-button {
         bottom: 8%;
     }
 }
-/*THIS IS SPECIFIC FOR THE IPHONE 8 PLUS  IN PORTRAIT MODE*/
-@media only screen and (max-width: 480px){
-    .cookie-static{
-        display: none;
-    }
-  }
 
-/* THIS IS SPECIFIC FOR THE IPHONE X */
-@media only screen and (max-width: 376px) {
-    .cookie-static{
+/*THIS IS SPECIFIC FOR THE IPHONE 8 PLUS  IN PORTRAIT MODE*/
+@media only screen and (max-width: 480px) {
+    .cookie-static {
         display: none;
     }
 }
-/* THIS IS SPECIFIC FOR THE IPHONE X  IN LANDSCAPE MODE*/
-@media only screen and (max-width: 813px) and (max-height: 376px){
-    .cookie-static{
+
+/* THIS IS SPECIFIC FOR THE IPHONE X */
+@media only screen and (max-width: 376px) {
+    .cookie-static {
         display: none;
     }
-  }
+}
+
+/* THIS IS SPECIFIC FOR THE IPHONE X  IN LANDSCAPE MODE*/
+@media only screen and (max-width: 813px) and (max-height: 376px) {
+    .cookie-static {
+        display: none;
+    }
+}
