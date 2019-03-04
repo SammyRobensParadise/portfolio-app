@@ -167,6 +167,7 @@ $solution-text-right: 50%;
     right: 0rem;
     top: 20%;
 }
+/*IPAD PRO RESPONSIVE CSS */
 @media only screen and (max-width: 1350px){
     .go-to-website-button a{
         right: 32%;
@@ -188,7 +189,7 @@ $solution-text-right: 50%;
         top: 52% - 2;
     }
 }
-@media only screen and (max-width: 1025px) and (max-height: 1370px){
+@media only screen and (max-width: 1025px) and (max-height: 1400px){
     .the-solution-text{
         right: 40%;
     }
@@ -201,3 +202,104 @@ $solution-text-right: 50%;
         right: 10%;
     }
 }
+@media only screen and (max-width: 1400px) and (max-height: 1025px){
+    .the-solution-text{
+        right: 40%;
+    }
+    .go-to-website-button a{
+        right: 40%;
+        top: 50%;
+    }
+    .combined-web-img{
+        margin-top: 10%;
+        right: 10%;
+    }
+}
+/*CONVENTIONAL IPAD RESPONSIVE CSS */
+@media only screen and (max-width: 770px) and (max-height: 1050px){
+    .the-solution-text{
+        right: 33%;
+    }
+    .the-solution-header{
+        right: 33%;
+    }
+    .go-to-website-button a{
+        right: 33%;
+        top: 50%;
+    }
+    .the-problem-header{
+        right: 33%;
+    }
+    .the-problem-text{
+        right: 33%;
+        width: 16rem;
+    }
+    .combined-web-img{
+        padding-top: 5%;
+    }
+}
+@media only screen and (max-width: 1050px) and (max-height: 770px){
+    .go-to-website-button a{
+        right: 75%;
+    }
+}
+/*IPHONE X AND XS RESPONSIVE CSS */
+@media only screen and (max-width: 450px) and (max-height: 814px){
+    .feature-title{
+        font-size: 1.5rem;
+        top: 8%;
+        right: 25%;
+    }
+    .emily-twitter-photo{
+        display: none;
+    }
+    .the-problem-text{
+        width: 50%;
+        right: 45%;
+    }
+    .the-problem-header{
+        font-size: 1rem;
+        right: 45%;
+    }
+    .the-solution-text{
+        width: 50%;
+        right: 45%;
+        top: 40%;
+    }
+    .the-solution-header{
+        font-size: 1rem;
+        right: 45%;
+        top: 40%-2;
+    }
+    .go-to-website-button a{
+        transform: scale(0.7);
+        top: 60%;
+        right: 45%;
+    }
+    .combined-web-img{
+        width: 7.75rem;
+        margin-top: 9rem;
+    }
+}
+@media only screen and (max-width: 850px) and (max-height: 575px){
+    .feature-title{
+        font-size: 1.5rem;
+    }
+    .the-solution-header{
+        font-size: 1rem;
+    }
+    .the-solution-text{
+        width: 15rem;
+    }
+    .the-problem-header{
+        font-size: 1rem;
+    }
+    .the-problem-text{
+        width: 15rem;
+    }
+    .go-to-website-button a{
+        transform: scale(0.7);
+        top: 76%;
+        right: 36.5%;
+    }
+  }
