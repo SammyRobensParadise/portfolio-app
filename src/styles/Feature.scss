@@ -264,7 +264,7 @@ $solution-text-right: 50%;
 }
 
 /*IPHONE X AND XS RESPONSIVE CSS */
-@media only screen and (max-width: 450px) and (max-height: 814px) {
+@media only screen and (max-width: 450px) and (max-height: 825px) {
     .feature-title {
         font-size: 1.5rem;
         top: 8%;
@@ -308,6 +308,7 @@ $solution-text-right: 50%;
         margin-top: 9rem;
     }
 }
+
 /*IPHONE 8+*/
 @media only screen and (max-width: 850px) and (max-height: 575px) {
     .feature-title {
@@ -336,34 +337,67 @@ $solution-text-right: 50%;
         right: 36.5%;
     }
 }
+
 /*IPHONE 6,7,8*/
-@media only screen and (max-width: 420px) and (max-height: 800px) {
+@media only screen and (max-width: 420px) and (max-height: 800px) and (min-width: 380px) {
     .feature-title {
         top: 4rem;
     }
 
     .the-problem-header {
-        top: 15%;
+        top: 7rem;
     }
 
     .the-problem-text {
-        top: 17%;
+        top: 8rem;
     }
 
     .the-solution-header {
-        top: 40%;
+        top: 17rem;
     }
 
     .the-solution-text {
-        top: 42%;
+        top: 18rem;
     }
 
     .go-to-website-button a {
         transform: scale(0.7);
-        top: 74%;
+        top: 11rem;
         right: 36.5%;
     }
 }
+
+/*IPHONE 6,7,8 WITH BROWSER WINDOW OPEN*/
+@media only screen and (max-width: 376px) and (max-height: 600px) and (min-width: 300px) and (min-height: 450px) {
+    .combined-web-img {
+        width: 6rem;
+        margin-top: 5rem;
+    }
+
+    .the-problem-header {
+        right: 9rem;
+    }
+
+    .the-problem-text {
+        right: 9rem;
+        width: 14rem;
+    }
+
+    .the-solution-header {
+        right: 9rem;
+    }
+
+    .the-solution-text {
+        right: 9rem;
+        width: 14rem;
+    }
+
+    .go-to-website-button a {
+        transform: scale(0.6);
+        top: 12rem;
+    }
+}
+
 /*IPHONE 6,7,8*/
 @media only screen and (max-width: 376px) and (max-height: 668px) and(min-width: 330px) {
     .go-to-website-button a {
@@ -372,39 +406,119 @@ $solution-text-right: 50%;
         right: 36.5%;
     }
 }
+
 /*IPHONE 5, SE*/
 @media only screen and (max-width: 330px) and (max-height: 570px) {
-    .the-problem-header{
+    .the-problem-header {
         top: 6.25rem;
     }
-    .the-problem-text{
+
+    .the-problem-text {
         width: 10rem;
         top: 7rem;
     }
-    .the-solution-header{
+
+    .the-solution-header {
         top: 14.25rem;
     }
-    .the-solution-text{
+
+    .the-solution-text {
         top: 15rem;
         width: 10rem;
     }
-    .combined-web-img{
+
+    .combined-web-img {
         width: 6rem;
         margin-top: 6.25rem;
     }
+
     .go-to-website-button a {
         transform: scale(0.6);
         top: 85%;
         right: 20%;
     }
 }
+
 @media only screen and (max-width: 570px) and (max-height: 500px) and (min-height: 200px) {
     .go-to-website-button a {
         transform: scale(0.6);
         top: 80%;
         right: 30%;
     }
-    .emily-twitter-photo{
+
+    .emily-twitter-photo {
         display: none;
+    }
+}
+
+/*GOOGLE PIXEL2 XL SPECIFIC SCALING */
+@media only screen and (max-width: 415px) and (max-height: 825px) and (min-height: 750px) {
+    .emily-twitter-photo {
+        display: none;
+    }
+
+    .go-to-website-button a {
+        transform: scale(0.6);
+        top: 80%;
+        right: 30%;
+    }
+
+    .the-solution-header {
+        top: 21rem;
+    }
+
+    .the-solution-text {
+        top: 22rem;
+    }
+
+}
+
+/* NEXUS 7 SPECIFIC SCALING FOR CSS */
+@media only screen and (max-width: 610px) and (max-height: 960px) and (min-height: 750px) and (min-width: 510px) {
+    .emily-twitter-photo {
+        display: none;
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
+        top: 8%;
+        right: 25%;
+    }
+
+    .emily-twitter-photo {
+        display: none;
+    }
+
+    .the-problem-text {
+        width: 50%;
+        right: 45%;
+    }
+
+    .the-problem-header {
+        font-size: 1rem;
+        right: 45%;
+    }
+
+    .the-solution-text {
+        width: 50%;
+        right: 45%;
+        top: 40%;
+    }
+
+    .the-solution-header {
+        font-size: 1rem;
+        right: 45%;
+        top: 40%-2;
+    }
+
+    .go-to-website-button a {
+        transform: scale(0.7);
+        top: 60%;
+        right: 45%;
+    }
+
+    .combined-web-img {
+        width: 11rem;
+        margin-top: 9rem;
     }
 }
