@@ -331,3 +331,170 @@ $solution-text-right: 50%;
     }
 
 }
+/* IPHONE X PORTRATE */
+@media only screen and (max-width: 390px) and (max-height: 825px) and (min-height: 750px) and (min-width: 350px){
+.work-title{
+    left: 9rem;
+    top: 3rem;
+}
+.ff-logo-img{
+    transform: scale(0.7);
+    top: 4rem;
+    right:-6rem;
+}
+.the-description-text{
+    right: 4rem;
+    top: 20rem;
+    width: 15rem;
+}
+.the-role-header{
+    top: 26rem;
+    right: 4.5rem;
+}
+.the-job-header{
+    top: 28rem;
+    right: 4.5rem;
+    width: 15rem;
+}
+.ff-job-details-button a{
+    transform: scale(0.7);
+    top: 24rem;
+    left: 2.5rem;
+}
+.kroger-logo{
+    left: 2.2rem;
+    top: 5rem;
+    transform: scale(0.6);
+}
+.lulu-logo{
+    top: 11rem;
+    transform: scale(0.7);
+}
+.sphero-logo{
+    top: 13rem;
+    transform: scale(0.7);
+}
+.projects-header{
+    display: none;
+}
+}
+/*IPHONE X LANDSCAPE */
+@media only screen and (max-width: 820px) and (max-height: 400px) and (min-height: 290px) and (min-width: 750px){
+    .work-title{
+        left: 28rem;
+    }
+    .ff-logo-img{
+        transform: scale(0.5);
+        right: 0rem;
+        top: 1rem;
+    }
+    .the-description-text{
+        width: 18rem;
+        right: 24rem;
+        top: 5.5em;
+    }
+    .the-role-header{
+        transform: scale(0.8);
+        top: 9rem;
+        right: 21.6rem;
+    }
+    .the-job-header{
+        transform: scale(0.8);
+        top: 10.5rem;
+        right: 21.6rem;
+    }
+    .ff-job-details-button a{
+        transform: scale(0.7);
+        top: 12rem;
+        left: 17.5rem;
+    }
+    .projects-header{
+        display: none;
+    }
+    .projects-container{
+        top: 16rem;
+    }
+    .kroger-logo{
+        transform: scale(0.7);
+    }
+    .lulu-logo{
+        top: 2rem;
+        transform: scale(0.8);
+        left: -3rem;
+    }
+    .sphero-logo{
+        transform: scale(0.7);
+        right: -4rem;
+    }
+}
+/*IPHONE 6,7,8 PLUS PORTRAIT*/
+@media only screen and (max-width: 420px) and (max-height: 800px) and (min-width: 380px) and (min-height: 650px) {
+    .work-title{
+        top: 5rem;
+        left: 10rem;
+    }
+    .ff-logo-img{
+        transform: scale(0.7);
+        right: -5rem;
+        top: 7rem;
+    }
+    .the-description-text{
+        top: 22rem;
+        right: 5rem;
+        width: 15rem;
+    }
+    .the-role-header{
+        top: 35rem;
+        right: 5rem;
+    }
+    .the-job-header{
+        top: 37rem;
+        right: 5rem;
+        width: 15rem;
+    }
+    .projects-header{
+        display: none;
+    }
+    .kroger-logo{
+        display: none;
+    }
+    .lulu-logo{
+        display: none;
+    }
+    .sphero-logo{
+        display: none;
+    }
+    .ff-job-details-button a{
+        transform: scale(0.7);
+        top: 33rem;
+        right: 9rem;
+    }
+}
+/*IPHONE 6,7,8 PLUS LANDSCAPE*/
+@media only screen and (max-width: 780px) and (max-height: 450px) and (min-width: 700px) and (min-height: 350px) {
+    .work-title{
+        left: 25rem;
+    }
+    .ff-logo-img{
+        transform: scale(0.6);
+        left: 14rem;
+        top: 1.5rem;
+    }
+    .the-description-text{
+        right: 21rem;
+    }
+    .the-role-header{
+        right: 21.5rem;
+    }
+    .the-job-header{
+        right: 21.5rem;
+    }
+    .ff-job-details-button a{
+        transform: scale(0.7);
+        top: 12.5rem;
+        right: 20rem;
+    }
+    .projects-header{
+        display: none;
+    }
+}
