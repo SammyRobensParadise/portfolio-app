@@ -208,10 +208,16 @@ li {
     .back-button {
         bottom: 30%;
     }
+    .next-button{
+        bottom: 30%;
+    }
 }
 /*IPHONE 6 */
 @media only screen and (max-width: 420px) and (max-height: 800px) {
     .back-button {
+        bottom: 12rem;
+    }
+    .next-button {
         bottom: 12rem;
     }
 }
@@ -219,6 +225,9 @@ li {
     
     .back-button{
         bottom: 10rem;
+}
+.next-button{
+    bottom: 10rem;
 }
 }
 /*IPHONE 5, SE */

@@ -430,25 +430,25 @@ $solution-text-right: 50%;
 /*IPHONE 6,7,8 PLUS PORTRAIT*/
 @media only screen and (max-width: 420px) and (max-height: 800px) and (min-width: 380px) and (min-height: 650px) {
     .work-title{
-        top: 5rem;
+        top: 4rem;
         left: 10rem;
     }
     .ff-logo-img{
         transform: scale(0.7);
         right: -5rem;
-        top: 7rem;
+        top: 6rem;
     }
     .the-description-text{
-        top: 22rem;
+        top: 21rem;
         right: 5rem;
         width: 15rem;
     }
     .the-role-header{
-        top: 35rem;
+        top: 34rem;
         right: 5rem;
     }
     .the-job-header{
-        top: 37rem;
+        top: 36rem;
         right: 5rem;
         width: 15rem;
     }
@@ -466,7 +466,7 @@ $solution-text-right: 50%;
     }
     .ff-job-details-button a{
         transform: scale(0.7);
-        top: 33rem;
+        top: 32rem;
         right: 9rem;
     }
 }
@@ -476,9 +476,9 @@ $solution-text-right: 50%;
         left: 25rem;
     }
     .ff-logo-img{
-        transform: scale(0.6);
-        left: 14rem;
-        top: 1.5rem;
+        transform: scale(0.5);
+        left: 13rem;
+        top: 0.8rem;
     }
     .the-description-text{
         right: 21rem;
@@ -496,5 +496,21 @@ $solution-text-right: 50%;
     }
     .projects-header{
         display: none;
+    }
+    .projects-container{
+        top: 15rem;
+    }
+    .kroger-logo{
+        transform: scale(0.7);
+    }
+    .sphero-logo{
+        top: 3rem;
+        transform: scale(0.7);
+        right: -3rem;
+    }
+    .lulu-logo{
+        top: 3.8rem;
+        transform: scale(0.75);
+        left: -3rem;
     }
 }
