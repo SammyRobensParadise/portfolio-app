@@ -38,91 +38,10 @@
 .generating-text {
     cursor: none;
     text-decoration: underline;
+    text-align: center;
 }
-
-/* THIS IS SPECIFIC FOR THE IPAD PRO 
-@media only screen and (max-width: 1080px) and (max-height: 1370px) {
-    .landing-img {
-        background-image: url(../assets/landing_page_responsive_iPadProV2.svg);
-        height: 70%;
-        transform: translateX(-40%)
+@media only screen and (max-width: 1080px) and (min-height:770px){
+    .landing-img{
+        transform: scale(1.2);
     }
 }
-@media screen and (max-width: 1200px){
-    .landing-img{
-        transform: translateX(-33%)
-    }
-  }
-@media screen and (max-width: 1080px){
-    .landing-img{
-        transform: translateX(-20%)
-    }
-  }
-/* THIS IS SPECIFIC FOR THE TRADITIONAL IPAD 
-@media screen and (max-width: 1025px) and (max-height:769px) {
-    .landing-img{
-        transform: translateX(-20%)
-    }
-  }
-  @media screen and (max-width: 525px){
-    .landing-img{
-        transform: translateX(-35%)
-    }
-  }
-  @media only screen and (max-width: 415px) {
-    .landing-img {
-        background-image: url(../assets/landing_page_responsive_iPadProV2.svg);
-        height: 80%;
-        transform: translateX(-48%)
-    }
-}
-/* THIS IS SPECIFIC FOR THE IPHONE X 
-@media only screen and (max-width: 376px) {
-    .landing-img {
-        background-image: url(../assets/landing_page_responsive_iPadProV2.svg);
-        height: 80%;
-        transform: translateX(-50%)
-    }
-}
-@media only screen and (max-width: 321px) {
-    .landing-img {
-        background-image: url(../assets/landing_page_responsive_iPadProV2.svg);
-        height: 65%;
-        transform: translateX(-44%)
-    }
-}
-@media screen and (max-width:366px) and (max-height:630px) {
-    .landing-img{
-        transform: translateX(-40%);
-        height: 60%;
-    }
-  }
-  @media screen and (max-width:325px) and (max-height:460px) {
-    .landing-img{
-        transform: translateX(-25%);
-        height: 60%;
-    }
-  }
-  @media screen and (max-width:570px) and (max-height:325px) {
-    .landing-img{
-        z-index: -9;
-        background-image: url(../assets/landing_page.svg);
-        transform: translateX(-45%);
-        height: 60%;
-        bottom: 10%;
-        width: 50%;
-    }
-  }
-  @media screen and (max-width:426px) and (max-height:664px) {
-    .landing-img{
-        transform: translateX(-40%);
-        height: 75%;
-    }
-  }
-  @media screen and (max-width:320px) and (max-height:580px) {
-    .landing-img{
-        transform: translateX(-45%);
-        height: 70%;
-    }
-  }
-  */
