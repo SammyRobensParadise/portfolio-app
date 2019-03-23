@@ -111,7 +111,6 @@
     color: #450092;
   }
 
-  /*CSSTransition */
   @media only screen and (max-width: 1080px) and (min-height:770px) {
     .col-left {
       width: calc(100%/5);
@@ -135,16 +134,43 @@
       margin-top: 20rem;
     }
   }
-
+  @media only screen and (max-width: 1170px) and (max-height:770px) {
+    .hidden-base-64 {
+      margin-top: 6rem;
+    }
+    z-index: 90;
+  }
+  @media only screen and (max-width: 500px){
+    .hidden-base-64{
+      display: none;
+    }
+  }
   /*THIS IS SPECIFIC FOR THE DECREASED TEXT SIZE LESS THAN 500PX*/
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 850px) and (max-height: 575px) {
+    .line-1{
+      overflow-x: hidden;
+    }
     @keyframes typewriter {
       from {
         width: 0;
       }
 
       to {
-        width: 22rem;
+        width: 18rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 610px) {
+    .line-1{
+      overflow-x: hidden;
+    }
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 24rem;
       }
     }
   }

@@ -45,3 +45,18 @@
         transform: scale(1.2);
     }
 }
+@media (max-aspect-ratio: 3/4){
+    .landing-img{
+        background-image: url(../assets/landing_page_responsive_iPadProV2.svg);
+    }
+}
+@media only screen and (max-width: 370px){
+    .landing-img{
+        transform: scale(1.4);
+    }
+}
+@media (max-aspect-ratio: 6/9){
+    .landing-img{
+        transform: scale(1.4);
+    }
+}
