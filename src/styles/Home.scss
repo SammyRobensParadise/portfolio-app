@@ -5,6 +5,7 @@
   .Home {
     @extend %universal-component-layout;
     height: max-content;
+    overflow-x: hidden;
   }
 
   .row::after {
@@ -146,7 +147,7 @@
     }
   }
   /*THIS IS SPECIFIC FOR THE DECREASED TEXT SIZE LESS THAN 500PX*/
-  @media only screen and (max-width: 850px) and (max-height: 575px) {
+  @media only screen and (max-width: 850px) and (max-height: 800px) {
     .line-1{
       overflow-x: hidden;
     }
@@ -160,7 +161,21 @@
       }
     }
   }
-  @media only screen and (max-width: 610px) and (min-width: 365px) {
+  @media only screen and (max-width: 400px) and (max-height: 814px){
+    .line-1{
+      overflow-x: hidden;
+    }
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 18rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 610px) and (min-width: 401px) {
     .line-1{
       overflow-x: hidden;
     }
