@@ -333,7 +333,7 @@ $solution-text-right: 50%;
 }
 
 /* IPHONE X PORTRATE */
-@media only screen and (max-width: 390px) and (max-height: 825px) and (min-height: 750px) and (min-width: 350px) {
+@media only screen and (max-width: 390px) and (max-height: 825px) and (min-height: 620px) and (min-width: 350px) {
     .work-title {
         left: 9rem;
         top: 3rem;
@@ -559,25 +559,55 @@ $solution-text-right: 50%;
 
 /* CONVENTIONAL IPHONE 6,7,8 PORTRAIT */
 @media only screen and (max-width: 380px) and (max-height:680px) and (min-width: 300px) and (min-height: 580px) {
-    .work-title{
+    .work-title {
         top: 2rem;
         left: 13rem;
     }
-    .ff-logo-img{
+
+    .ff-logo-img {
         top: 3rem;
         left: -5.5rem;
     }
-    .the-description-text{
+
+    .the-description-text {
         top: 18rem;
         right: 4rem;
     }
-    .the-role-header{
+
+    .the-role-header {
         top: 32rem;
     }
-    .the-job-header{
+
+    .the-job-header {
         top: 34rem;
     }
+
     .ff-job-details-button a {
         top: 28rem;
     }
 }
+/* IPHONE 6,7,8 CONVENTIONAL LANSCAPE */
+@media only screen and (max-width: 680px) and (max-height:380px) and (min-width: 580px) and (min-height: 300px) {
+    .work-title{
+        left: 22rem;
+    }
+    .ff-logo-img{
+        top: 0rem;
+        left: 9rem;
+        transform: scale(0.4);
+    }
+    .the-description-text{
+        top: 5.3rem;
+        right: 20rem;
+        width: 18rem;
+    }
+    .the-role-header{
+        right: 20.5rem;
+        top: 9rem;
+    }
+    .the-job-header{
+        top: 11rem;
+        right: 20.5rem;
+    }
+}
+/* iphone viewport size: 375x635 in safari browser */

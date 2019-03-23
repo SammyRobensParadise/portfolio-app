@@ -1,10 +1,6 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 @import './Global.scss';
 
-.cookie-static {
-    @extend %universal-component-layout;
-}
-
 $scale-size: 30%;
 $edge-distance: 5%;
 $text-area-width: 28.8125rem;

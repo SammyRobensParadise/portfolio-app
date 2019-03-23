@@ -59,16 +59,19 @@ class Home extends Component {
       <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
        </ul>
        </div>
-      <div className="content">
-
-      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer, artist, and student.</p>
-      </div>
+       <div className="row">
+      <div className="col-left">
       <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
-  
+      </div>
+      <div className="col-middle">
+      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer, artist, and student.</p>
       <HomeImage className="home-image-target" />
-      
+      </div>
+      <div className="col-right">
       <div className="Policy-Redirect" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Policy)}>
       <Link to="/policy"><p>Policy</p></Link>
+      </div>
+      </div>
       </div>
       <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
       <div className="screen-number"><p>1/1</p></div>
