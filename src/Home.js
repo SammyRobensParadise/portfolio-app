@@ -6,7 +6,7 @@ import './styles/Home.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import { BrowserRouter as Router,Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
@@ -51,32 +51,32 @@ class Home extends Component {
     return (
       <Router>
         <Link to="/">
-      <div className="Home">
-      <div className="navigation-bar">
-      <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><div><span className="navigation">R. Paradise</span></div></li>
-      <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><span className="navigation">Work</span></li>
-      <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
-       </ul>
-       </div>
-       <div className="row">
-      <div className="col-left">
-      <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
-      </div>
-      <div className="col-middle">
-      <p className="line-1 anim-typewriter">I am an inspired developer, UX designer, artist, and student.</p>
-      <HomeImage className="home-image-target" />
-      </div>
-      <div className="col-right">
-      <div className="Policy-Redirect" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Policy)}>
-      <Link to="/policy"><p>Policy</p></Link>
-      </div>
-      </div>
-      </div>
-      <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
-      <div className="screen-number"><p>1/1</p></div>
-      </div>
-      </Link>
+          <div className="Home">
+            <div className="navigation-bar">
+              <ul>
+                <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><div><span className="navigation">R. Paradise</span></div></li>
+                <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><span className="navigation">Work</span></li>
+                <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
+              </ul>
+            </div>
+            <div className="row">
+              <div className="col-left">
+                <div className="hidden-base-64"><p>UGxlYXNlIEhpcmUgTWUh</p></div>
+              </div>
+              <div className="col-middle">
+                <p className="line-1 anim-typewriter">I am an inspired developer, UX designer, artist, and student.</p>
+                <HomeImage className="home-image-target" />
+              </div>
+              <div className="col-right">
+                <div className="Policy-Redirect" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Policy)}>
+                  <Link to="/policy"><p>Policy</p></Link>
+                </div>
+              </div>
+            </div>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
+            <div className="screen-number"><p>1/1</p></div>
+          </div>
+        </Link>
       </Router>
 
     );

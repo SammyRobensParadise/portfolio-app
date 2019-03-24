@@ -2,217 +2,280 @@
 @import './Global.scss';
 
 .work-one {
-    @extend %universal-component-layout;
-}
-
-$scale-size: 30%;
-$edge-distance: 5%;
-$text-area-width: 28.8125rem;
-$text-right: 50%;
-$text-top: 20%;
-$text-botton: 60%;
-$solution-text-right: 50%;
-
-.work-title {
-    color: #ffffff !important;
-    text-decoration: underline;
-    z-index: 1;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5rem;
-    position: fixed;
-    display: inline-block;
-    top: 2rem;
-    right: $text-right;
-
-}
-
-.ff-logo-img {
-    padding-top: 0rem;
-    width: 35rem;
-    height: auto;
-    position: fixed;
-    right: 20%;
-    top: $text-top;
-    opacity: 0;
-}
-
-.the-description-text {
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    line-height: 1.2;
-    text-align: right;
-    position: fixed;
-    width: $text-area-width;
-    right: $text-right;
-    top: $text-top;
-    z-index: 99;
-    margin-right: 0.5rem;
-}
-
-.the-role-header {
-    font-size: 1.125rem;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: right;
-    position: fixed;
-    width: $text-area-width;
-    right: $text-right;
-    top: $text-top+16;
-    z-index: 99;
-    padding-bottom: 2%;
-}
-
-.the-job-header {
-    font-size: 1.125rem;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: right;
-    position: fixed;
-    width: $text-area-width;
-    right: $text-right;
-    top: $text-top+22;
-    z-index: 99;
-    padding-bottom: 2%;
-}
-
-.ff-job-details-button a {
-    border-width: 3px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    position: fixed;
-    right: 50%;
-    top: $text-top+30.5;
-    width: 10rem;
-    height: 3rem;
-    z-index: 98;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-
-}
-
-.details-btn-text {
-    margin-top: 1rem;
-}
-
-.ff-job-details-button a:hover {
-    border-color: #221563;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-}
-
-.projects-header {
-    font-size: 1.125rem;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: right;
-    position: fixed;
-    width: $text-area-width - 15;
-    right: $text-right+12;
-    top: $text-top+45;
-    z-index: 99;
-    padding-bottom: 2%;
-}
-
-.lulu-logo {
-    opacity: 0;
-}
-
-.kroger-logo {
-    opacity: 0;
-}
-
-.sphero-logo {
-    opacity: 0;
-}
-
-.job-title {
-    background-color: #ffffff;
-    border-radius: 0.25rem;
-    border-color: none;
-    border-width: 0 0 0 0;
-    width: $text-area-width;
-    height: 1.5rem;
-    animation: title-animation 1s 0.2s;
-    animation-fill-mode: forwards;
-    position: fixed;
-    overflow: hidden;
-}
-
-@keyframes title-animation {
-    from {
-        width: $text-area-width;
+    .work-one {
+        @extend %universal-component-layout;
+        overflow-x: hidden;
     }
 
-    to {
-        width: 0%;
+    $scale-size: 30%;
+    $edge-distance: 5%;
+    $text-right: 50%;
+    $text-top: 8rem;
+    $text-botton: 60%;
+    $solution-text-right: 50%;
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
-}
+    .col-header {
+        float: left;
+        width: 100%;
+        height: 1rem;
+        text-align: center;
+    }
 
-.ux-content {
-    background-color: #ffffff;
-    border-radius: 0.25rem;
-    border-color: none;
-    border-width: 0 0 0 0;
-    width: 16%;
-    height: 1.5rem;
-    animation: para-animation 1s 0.5s;
-    animation-fill-mode: forwards;
-    position: fixed;
-    overflow: hidden;
-}
+    .work-1-left {
+        float: left;
+        width: calc(100%/6);
+        height: 1rem;
 
-.projects-container {
-    position: fixed;
-    width: 52%;
-    height: 20%;
-    bottom: 25%;
-    left: 50%;
-    margin-bottom: -10%;
-    /* Negative half of height. */
-    margin-left: -25%;
-}
+    }
 
-/*DO NOT TOUCH!!!!! UNLESS MAKING CSS RESPONSIVE */
-.lulu-logo {
-    position: absolute;
-    height: auto;
-    width: 14rem;
-    left: -0.5rem;
-    top: 20%;
-}
+    .work-1-left-center {
+        float: left;
+        width: calc(100%/3);
+        height: 1rem;
+        text-align: center;
 
-.kroger-logo {
-    position: absolute;
-    height: auto;
-    width: 8rem;
-    left: 42.5%;
-    top: 0rem;
-}
+    }
 
-.sphero-logo {
-    position: absolute;
-    height: auto;
-    width: 12rem;
-    right: 0rem;
-    top: 20%;
-}
+    .work-1-right-center {
 
-@keyframes para-animation {
-    from {
+        float: left;
+        width: calc(100%/3);
+        height: 1rem;
+
+    }
+
+    .work-1-right {
+
+        float: left;
+        width: calc(100%/6);
+        height: 1rem;
+
+    }
+
+    .work-title {
+        color: #ffffff !important;
+        text-decoration: underline;
+        z-index: 3;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        position: absolute;
+        display: inline-block;
+        top: 2rem;
+        text-align: center;
+
+    }
+
+    .ff_logo {
+        position: absolute;
+        width: 35rem;
+    }
+
+    .ff-logo-img {
+        padding-top: 0rem;
+        width: inherit;
+        height: auto;
+        position: absolute;
+        text-align: center;
+        top: $text-top;
+        opacity: 0;
+    }
+
+    .the-description-text {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: justify;
+        position: absolute;
+        top: $text-top;
+        width: inherit;
+        margin-block-start: 1rem;
+        z-index: 99;
+    }
+
+    .the-role-header {
+        font-size: 1.125rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        right: $text-right;
+        top: $text-top+10rem;
+        z-index: 99;
+        padding-bottom: 2%;
+    }
+
+    .the-job-header {
+        font-size: 1.125rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        right: $text-right;
+        top: $text-top+12;
+        z-index: 99;
+    }
+
+    .ff-job-details-button a {
+        border-width: 3px;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        position: absolute;
+        top: $text-top+16;
+        width: 12rem;
+        height: 3rem;
+        z-index: 98;
+        right: $text-right;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+
+    }
+
+    .details-btn-text {
+        margin-top: 1rem;
+    }
+
+    .ff-job-details-button a:hover {
+        border-color: #221563;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+
+    .projects-header {
+        font-size: 1.125rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        z-index: 99;
+        top: $text-top+20;
+        padding-bottom: 2%;
+    }
+
+    .lulu-logo {
+        opacity: 0;
+    }
+
+    .kroger-logo {
+        opacity: 0;
+    }
+
+    .sphero-logo {
+        opacity: 0;
+    }
+
+    .job-title {
+        background-color: #ffffff;
+        border-radius: 0.25rem;
+        border-color: none;
+        border-width: 0 0 0 0;
+        height: 1.5rem;
+        animation: title-animation 1s 0.2s;
+        animation-fill-mode: forwards;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    @keyframes title-animation {
+        from {
+            width: 20%;
+        }
+
+        to {
+            width: 0%;
+        }
+
+    }
+
+    .ux-content {
+        background-color: #ffffff;
+        border-radius: 0.25rem;
+        border-color: none;
+        border-width: 0 0 0 0;
         width: 16%;
+        height: 1.5rem;
+        animation: para-animation 1s 0.5s;
+        animation-fill-mode: forwards;
+        position: absolute;
+        overflow: hidden;
     }
 
-    to {
-        width: 0%;
+    .projects-container {
+        top: 70%;
+        position: absolute;
+        background-color: blue;
+        height: 10rem;
     }
+
+    .col-1-lower {
+        float: left;
+        width: calc((100%/3));
+        height:10rem;
+        text-align: right;
+    }
+
+    .col-2-lower {
+        float: left;
+        width: calc(100%/3);
+        height: 10rem;
+        text-align: center;
+        
+    }
+
+    .col-3-lower {
+        float: right;
+        width: calc(100%/3);
+        height: 10rem;
+        text-align: left;
+    }
+
+    .lulu-logo {
+        position: absolute;
+        height: auto;
+        width: 14rem;
+        top: 34rem;
+        transform: translateX(-14rem);
+    }
+
+    .kroger-logo {
+        position: absolute;
+        height: auto;
+        width: 14rem;
+        top: 30rem;
+        transform: translateX(-7rem);
+    }
+
+    .sphero-logo {
+        position: absolute;
+        height: auto;
+        top: 33rem;
+    }
+
+    @keyframes para-animation {
+        from {
+            width: 16%;
+        }
+
+        to {
+            width: 0%;
+        }
+    }
+*{
+  /*  box-sizing: border-box;  
+    border: 1px solid blue;*/
+}
 }
 
-/*IPAD PRO 12.9IN */
+/*IPAD PRO 12.9IN 
 @media only screen and (max-width: 1040px) and (min-width: 950px) and (min-height: 1000px) {
     .ff-logo-img {
         right: 4rem;
@@ -255,7 +318,7 @@ $solution-text-right: 50%;
     }
 }
 
-/*IPAD PRO LANDSCAPE MODE */
+
 @media only screen and (max-width: 1380px) and (min-width: 1340px) and (max-height:1050px) and (min-height:950px) {
     .the-description-text {
         right: 46rem;
@@ -270,7 +333,7 @@ $solution-text-right: 50%;
     }
 }
 
-/* IPAD 4:3 PORTRATE MODE */
+
 @media only screen and (max-width: 780px) and (min-width: 700px) {
     .work-title {
         right: 20rem;
@@ -309,7 +372,7 @@ $solution-text-right: 50%;
     }
 }
 
-/*IPAD 4:3 LANDSCAPE MODE */
+
 @media only screen and (max-width: 1040px) and (min-width: 1000px) and (max-height: 780px) {
     .ff-logo-img {
         right: 0rem;
@@ -332,7 +395,7 @@ $solution-text-right: 50%;
 
 }
 
-/* IPHONE X PORTRATE */
+
 @media only screen and (max-width: 390px) and (max-height: 825px) and (min-height: 620px) and (min-width: 350px) {
     .work-title {
         left: 9rem;
@@ -389,7 +452,7 @@ $solution-text-right: 50%;
     }
 }
 
-/*IPHONE X LANDSCAPE */
+
 @media only screen and (max-width: 820px) and (max-height: 400px) and (min-height: 290px) and (min-width: 750px) {
     .work-title {
         left: 28rem;
@@ -449,7 +512,7 @@ $solution-text-right: 50%;
     }
 }
 
-/*IPHONE 6,7,8 PLUS PORTRAIT*/
+
 @media only screen and (max-width: 420px) and (max-height: 800px) and (min-width: 370px) and (min-height: 650px) {
     .work-title {
         top: 4rem;
@@ -502,7 +565,7 @@ $solution-text-right: 50%;
     }
 }
 
-/*IPHONE 6,7,8 PLUS LANDSCAPE*/
+
 @media only screen and (max-width: 780px) and (max-height: 450px) and (min-width: 650px) and (min-height: 350px) {
     .work-title {
         left: 25rem;
@@ -557,7 +620,6 @@ $solution-text-right: 50%;
     }
 }
 
-/* CONVENTIONAL IPHONE 6,7,8 PORTRAIT */
 @media only screen and (max-width: 380px) and (max-height:680px) and (min-width: 300px) and (min-height: 580px) {
     .work-title {
         top: 2rem;
@@ -586,7 +648,6 @@ $solution-text-right: 50%;
         top: 28rem;
     }
 }
-/* IPHONE 6,7,8 CONVENTIONAL LANSCAPE */
 @media only screen and (max-width: 680px) and (max-height:380px) and (min-width: 580px) and (min-height: 300px) {
     .work-title{
         left: 22rem;
@@ -610,4 +671,4 @@ $solution-text-right: 50%;
         right: 20.5rem;
     }
 }
-/* iphone viewport size: 375x635 in safari browser */
+ iphone viewport size: 375x635 in safari browser */

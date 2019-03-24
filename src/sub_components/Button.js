@@ -2,14 +2,9 @@ import React, {
   Component
 } from 'react';
 import '../styles/Navigation.scss';
-import anime from 'animejs';
 //Component import -----------------------
 
 import Home from '../Home';
-import About from '../About';
-import Work from '../Work';
-import Feature from '../Feature';
-import NavigationHandler from '../NavigationHandler';
 
 
 //manifestimport
@@ -36,16 +31,16 @@ class Navigation extends Component {
     return true;
   }
   render(props) {
-    if (this.props.currentView === Home){
-   return (
-      <div className="buttons">
-      <div className="buttons-inner">
-        <this.state.manifestObj.homeButtonStructure/>
-      </div>
-      </div>
-    );
+    if (this.props.currentView === Home) {
+      return (
+        <div className="buttons">
+          <div className="buttons-inner">
+            <this.state.manifestObj.homeButtonStructure />
+          </div>
+        </div>
+      );
+    }
   }
-}
 }
 
 
