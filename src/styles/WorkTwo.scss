@@ -1,8 +1,9 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 @import './Global.scss';
-
+.work-two{
 .work-two {
     @extend %universal-component-layout;
+    overflow-y: hidden;
 }
 
 $scale-size: 30%;
@@ -12,6 +13,49 @@ $text-right: 50%;
 $text-top: 20%;
 $text-botton: 60%;
 $solution-text-right: 50%;
+.row::after {
+    clear: both;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+.col-header{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.work-2-left{
+    float: left;
+    width: 10%;
+    height: 1rem;
+    text-align: center;
+    background-color: red;
+}
+.work-2-left-center{
+    float: left;
+    width: 40%;
+    height: 1rem;
+    text-align: center;
+    background-color: yellow;
+}
+.work-2-right-center{
+    float: left;
+    width: 40%;
+    height: 1rem;
+    text-align: justify;
+    background-color: green;
+}
+.work-2-right{
+    float: left;
+    width: 10%;
+    height: 1rem;
+    text-align: center;
+    background-color: maroon;
+}
 
 .worktwo-title {
     color: #ffffff !important;
@@ -20,10 +64,13 @@ $solution-text-right: 50%;
     font-weight: 400;
     font-style: normal;
     font-size: 2.5rem;
-    position: fixed;
+    position: absolute;
     display: inline-block;
     top: 2rem;
-    right: $text-right;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .the-description-text-gov {
@@ -31,7 +78,7 @@ $solution-text-right: 50%;
     color: rgb(255, 255, 255);
     line-height: 1.2;
     text-align: right;
-    position: fixed;
+    position: absolute;
     width: $text-area-width;
     right: $text-right - 35;
     top: $text-top + 10;
@@ -44,7 +91,7 @@ $solution-text-right: 50%;
     text-transform: uppercase;
     line-height: 1.2;
     text-align: right;
-    position: fixed;
+    position: absolute;
     width: $text-area-width;
     right: $text-right+10;
     top: $text-top+18;
@@ -58,7 +105,7 @@ $solution-text-right: 50%;
     text-transform: uppercase;
     line-height: 1.2;
     text-align: right;
-    position: fixed;
+    position: absolute;
     width: $text-area-width;
     right: $text-right+10;
     top: $text-top+24;
@@ -73,18 +120,20 @@ $solution-text-right: 50%;
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 0rem;
-    position: fixed;
+    position: absolute;
     right: $text-right - 10;
     top: $text-top - 5;
     z-index: 99;
 }
 .tower-parent{
     width: 60%;
-    height: 70%;
-    position: fixed;
-    bottom: 0%;
-    left: 35%; /* Negative half of height. */
-    margin-left: -16%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .peace-tower-background {
     background: url('../assets/peace_tower.svg');
@@ -94,7 +143,7 @@ $solution-text-right: 50%;
     align-self: center;
     height: 50rem;
     width: auto;
-    bottom: 0%;
+    bottom: 0;
     opacity: 0;
     
 }
@@ -120,4 +169,5 @@ $solution-text-right: 50%;
 }
 .details-btn-text{
     margin-top: 1rem;
+}
 }

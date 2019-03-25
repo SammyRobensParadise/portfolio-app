@@ -52,23 +52,43 @@ class WorkTwo extends Component {
   render() {
     return (
       <div className="work-two">
-      <div className="navigation-bar">
-      <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
-       </ul>
-       </div>
-      <div className="worktwo-title">Work</div>
-      <div className="canada-gov-logo"></div>
-      <div className="the-description-text-gov"><p>As a Software Engineering Student working with Environment and Climate Change Canada's 
-          Transportation Division to aid in the development of various software engineering solutions; the backbone of regulatory compliance.</p></div>
-        <div className="the-role-header-gov"><span>Role:</span></div>
-        <div className="the-job-header-gov"><span>Software Engineering Co-op</span></div>
-        <div className="gov-job-details-button"><a href="https://pollution-waste.canada.ca/environmental-protection-registry/regulations/view?Id=46" target="_blank" rel="noopener noreferrer"><div className="details-btn-text">Details...</div></a></div>
-        <div className="tower-parent">
-        <div className="peace-tower-background"></div>
+        <div className="navigation-bar">
+          <ul>
+            <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
+          </ul>
         </div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className= "more-button"><div className="glow-button-inner"></div></div></div>
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
+        <div className="row">
+          <div className="col-header">
+            <div className="worktwo-title">Work</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="canada-logo-col">
+            <div className="canada-gov-logo"></div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="work-2-left"></div>
+          <div className="work-2-left-center">
+            <div className="the-role-header-gov"><span>Role:</span></div>
+            <div className="the-job-header-gov"><span>Software Engineering Co-op</span></div>
+          </div>
+          <div className="work-2-right-center"></div>
+          <div className="work-2-right">
+            <div className="the-description-text-gov"><p>As a Software Engineering Student working with Environment and Climate Change Canada's
+          Transportation Division to aid in the development of various software engineering solutions; the backbone of regulatory compliance.</p></div>
+            <div className="gov-job-details-button"><a href="https://pollution-waste.canada.ca/environmental-protection-registry/regulations/view?Id=46" target="_blank" rel="noopener noreferrer"><div className="details-btn-text">Details...</div></a></div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="peace-tower-col">
+            <div className="tower-parent">
+              <div className="peace-tower-background"></div>
+            </div>
+          </div>
+        </div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
+        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
         <div className="screen-number"><p>2/2</p></div>
       </div>
     );
