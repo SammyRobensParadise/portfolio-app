@@ -73,11 +73,12 @@ class WorkTwo extends Component {
             <div className="the-role-header-gov"><span>Role:</span></div>
             <div className="the-job-header-gov"><span>Software Engineering Co-op</span></div>
           </div>
-          <div className="work-2-right-center"></div>
-          <div className="work-2-right">
-            <div className="the-description-text-gov"><p>As a Software Engineering Student working with Environment and Climate Change Canada's
+          <div className="work-2-right-center">
+            <div className="the-description-text-gov"><p className="paragraph-gov">As a Software Engineering Student working with Environment and Climate Change Canada's
           Transportation Division to aid in the development of various software engineering solutions; the backbone of regulatory compliance.</p></div>
             <div className="gov-job-details-button"><a href="https://pollution-waste.canada.ca/environmental-protection-registry/regulations/view?Id=46" target="_blank" rel="noopener noreferrer"><div className="details-btn-text">Details...</div></a></div>
+            </div>
+          <div className="work-2-right">
           </div>
         </div>
         <div className="row">

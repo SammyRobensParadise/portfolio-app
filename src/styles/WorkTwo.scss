@@ -1,173 +1,212 @@
 @import url("https://use.typekit.net/ucu5nmz.css");
 @import './Global.scss';
-.work-two{
+
 .work-two {
-    @extend %universal-component-layout;
-    overflow-y: hidden;
-}
+    .work-two {
+        @extend %universal-component-layout;
+        overflow-y: hidden;
+    }
 
-$scale-size: 30%;
-$edge-distance: 5%;
-$text-area-width: 28.8125rem;
-$text-right: 50%;
-$text-top: 20%;
-$text-botton: 60%;
-$solution-text-right: 50%;
-.row::after {
-    clear: both;
-    display: flex;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-}
-.col-header{
-    float: left;
-    width: 100%;
-    text-align: center;
-}
-.work-2-left{
-    float: left;
-    width: 10%;
-    height: 1rem;
-    text-align: center;
-    background-color: red;
-}
-.work-2-left-center{
-    float: left;
-    width: 40%;
-    height: 1rem;
-    text-align: center;
-    background-color: yellow;
-}
-.work-2-right-center{
-    float: left;
-    width: 40%;
-    height: 1rem;
-    text-align: justify;
-    background-color: green;
-}
-.work-2-right{
-    float: left;
-    width: 10%;
-    height: 1rem;
-    text-align: center;
-    background-color: maroon;
-}
+    $scale-size: 30%;
+    $edge-distance: 5%;
+    $text-area-width: 28.8125rem;
+    $text-right: 50%;
+    $text-top: 20%;
+    $text-botton: 60%;
+    $solution-text-right: 50%;
 
-.worktwo-title {
-    color: #ffffff !important;
-    text-decoration: underline;
-    z-index: 1;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5rem;
-    position: absolute;
-    display: inline-block;
-    top: 2rem;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .row::after {
+        clear: both;
+        display: flex;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+    }
 
-.the-description-text-gov {
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    line-height: 1.2;
-    text-align: right;
-    position: absolute;
-    width: $text-area-width;
-    right: $text-right - 35;
-    top: $text-top + 10;
-    z-index: 99;
-}
+    .col-header {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
 
-.the-role-header-gov {
-    font-size: 1.125rem;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: right;
-    position: absolute;
-    width: $text-area-width;
-    right: $text-right+10;
-    top: $text-top+18;
-    z-index: 99;
-    padding-bottom: 2%;
-}
+    .work-2-left {
+        float: left;
+        width: 10%;
+        height: 1rem;
+        text-align: center;
+        background-color: red;
+    }
 
-.the-job-header-gov {
-    font-size: 1.125rem;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: right;
-    position: absolute;
-    width: $text-area-width;
-    right: $text-right+10;
-    top: $text-top+24;
-    z-index: 99;
-    padding-bottom: 2%;
-}
+    .work-2-left-center {
+        float: left;
+        width: 40%;
+        height: 1rem;
+        text-align: center;
+        background-color: yellow;
+    }
 
-.canada-gov-logo {
-    background: url('../img/canada_gov_logo.png');
-    height: 8rem;
-    width: 20rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-top: 0rem;
-    position: absolute;
-    right: $text-right - 10;
-    top: $text-top - 5;
-    z-index: 99;
-}
-.tower-parent{
-    width: 60%;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-.peace-tower-background {
-    background: url('../assets/peace_tower.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    align-self: center;
-    height: 50rem;
-    width: auto;
-    bottom: 0;
-    opacity: 0;
-    
-}
-.gov-job-details-button a{
-    border-width: 3px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    position: fixed;
-    right: 34%;
-    top: $text-top+30.5;
-    width: 10rem;
-    height: 3rem;
-    z-index: 98;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+    .work-2-right-center {
+        float: left;
+        width: 40%;
+        height: 1rem;
+        text-align: justify;
+        background-color: green;
+        text-align: center;
+    }
 
-}
-.gov-job-details-button a:hover{
-    border-color: #221563;
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.details-btn-text{
-    margin-top: 1rem;
-}
+    .work-2-right {
+        float: left;
+        width: 10%;
+        height: 1rem;
+        text-align: center;
+        background-color: maroon;
+    }
+
+    .peace-tower-col {
+        float: left;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .worktwo-title {
+        color: #ffffff !important;
+        text-decoration: underline;
+        z-index: 1;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        position: absolute;
+        display: inline-block;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .the-description-text-gov {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: $text-top + 8;
+        z-index: 99;
+        width: inherit;
+    }
+
+    .paragragh-gov {
+        position: absolute;
+    }
+
+    .the-role-header-gov {
+        font-size: 1.125rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: inherit;
+        top: $text-top+18;
+        z-index: 99;
+        padding-bottom: 2%;
+        left: 1rem;
+    }
+
+    .the-job-header-gov {
+        font-size: 1.125rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        width: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        top: $text-top+24;
+        z-index: 99;
+        padding-bottom: 2%;
+        left: 1rem;
+    }
+
+    .canada-gov-logo {
+        background: url('../img/canada_gov_logo.png');
+        height: 8rem;
+        width: 20%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 0rem;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 99;
+    }
+
+    .tower-parent {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .peace-tower-background {
+        background: url('../assets/peace_tower.svg');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 36rem;
+        width: 65%;
+        top: 11rem;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .gov-job-details-button a {
+        text-align: center;
+        border-width: 3px;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+ 
+        top: $text-top+32;
+        width: 10rem;
+        height: 3rem;
+        z-index: 98;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+
+    }
+
+    .gov-job-details-button a:hover {
+        border-color: #221563;
+        cursor: pointer;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .details-btn-text {
+        margin-top: 1rem;
+    }
 }
