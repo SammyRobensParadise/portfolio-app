@@ -287,8 +287,15 @@
             width: 5%;
         }
     }
-
+    @media only screen and (max-height:650px) and (min-height: 610px) {
+        .projects-header{
+            top: 30rem;
+        }
+    }
     @media only screen and (max-width:1020px) {
+        .ff_logo{
+            width: 80%;
+        }
         .col-1-lower {
             width: 100%;
             text-align: center;
@@ -329,12 +336,11 @@
     }
 
     @media only screen and (max-width:880px) {
-
-        .lulu-logo,
+       .lulu-logo,
         .kroger-logo,
         .sphero-logo {
-            transform: translateX(-3rem);
-        }
+
+        } 
     }
 
     @media only screen and (max-width:720px) {
@@ -342,7 +348,6 @@
         .lulu-logo,
         .kroger-logo,
         .sphero-logo {
-            transform: translateX(-2rem);
         }
 
         .the-role-header {
@@ -482,8 +487,6 @@
     }
 
     @media screen and (max-width:400px) {
-        .ff_logo{
-        }
         .work-1-left {
             width: 0%
         }
