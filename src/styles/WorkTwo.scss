@@ -37,7 +37,7 @@
         width: 10%;
         height: 1rem;
         text-align: center;
-        background-color: red;
+
     }
 
     .work-2-left-center {
@@ -45,7 +45,7 @@
         width: 40%;
         height: 1rem;
         text-align: center;
-        background-color: yellow;
+
     }
 
     .work-2-right-center {
@@ -53,7 +53,7 @@
         width: 40%;
         height: 1rem;
         text-align: justify;
-        background-color: green;
+
         text-align: center;
     }
 
@@ -62,13 +62,15 @@
         width: 10%;
         height: 1rem;
         text-align: center;
-        background-color: maroon;
+
     }
 
     .peace-tower-col {
         float: left;
         width: 100%;
-        bottom: 0;
+        top: 0;
+        height: 1rem;
+
     }
 
     .worktwo-title {
@@ -189,7 +191,7 @@
         position: absolute;
         margin-left: auto;
         margin-right: auto;
- 
+
         top: $text-top+32;
         width: 10rem;
         height: 3rem;
@@ -208,5 +210,116 @@
 
     .details-btn-text {
         margin-top: 1rem;
+    }
+
+    /*CSS responsive media queries for mobile and tablets*/
+    @media screen and (max-width: 1150px) and (min-height: 580px) and (max-height: 920px) {
+        .peace-tower-background {
+            top: 20rem;
+        }
+
+    }
+
+    @media screen and (max-width: 1150px) and (min-height: 921px) and (max-height: 1236px) {
+        .peace-tower-background {
+            top: 30rem;
+            transform: scale(1.2);
+        }
+
+    }
+
+    @media screen and (max-width: 1150px) and (min-height: 1237px) and (max-height: 1400px) {
+        .peace-tower-background {
+            top: 36rem;
+            transform: scale(1.4);
+        }
+
+    }
+
+    @media screen and (max-width: 800px) and (min-height: 700px) {
+        .peace-tower-background {
+            top: 28rem;
+            transform: scale(1.2);
+        }
+    }
+
+    @media screen and (max-width: 700px){
+        .work-2-left {
+            width: 0%;
+            text-align: center;
+        }
+
+        .work-2-left-center {
+            width: 100%;
+            text-align: center;
+        }
+
+        .work-2-right-center {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .work-2-right {
+            width: 0%;
+            text-align: center;
+        }
+
+        .the-description-text-gov {
+            text-align: justify;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 15rem;
+        }
+
+        .canada-gov-logo {
+            transform: scale(2);
+            top: 12rem;
+        }
+
+        .the-role-header-gov {
+            text-align: justify;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 22rem;
+        }
+
+        .the-job-header-gov {
+            text-align: justify;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 24rem;
+        }
+
+        .gov-job-details-button a {
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 26rem;
+            transform: scale(0.8);
+        }
+        .peace-tower-background{
+            top: 30rem;
+            height: 15rem;
+        }
+    }
+    @media screen and (max-width: 400px){
+        .peace-tower-background{
+            top: 33rem;
+            transform: scale(1.5);
+        }
+        .gov-job-details-button a{
+            top: 28rem;
+        }
     }
 }
