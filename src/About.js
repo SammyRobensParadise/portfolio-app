@@ -15,7 +15,7 @@ class About extends Component {
       NavigationViewer: new NavigationHandler()
     }
   }
-  componentDidCatch(error, info,) {
+  componentDidCatch(error, info, ) {
     console.log(error, info);
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
@@ -53,33 +53,49 @@ class About extends Component {
     //ANIMATIONS REQUIRED
     return (
       <div className="About-one">
-      <div className="navigation-bar">
-      <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
-       </ul>
-       </div>
-      <div className="aboutone-title">About</div>
-      <div className="the-name-header"><span>Sammy Robens-Paradise</span></div>
-      <div className="background-parent">
-      <div className="west-coast-background"></div>
-      <div className="vertical-text">
-      <div className="waterloo-text"><p>Waterloo Ontario</p></div>
-      <div className="vancouver-text">Vancouver BC</div>
-      </div>
-      <div className="the-description-text-about-one"><p>As someone who advocates optimized engineering solutions,
-        I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challening problems.
-        I have always taken an interest in the way humans interact with technology, and more specifically,
-        the way it shapes our experiences. I chose to study Systems Design Engineering because of my
-        fascination with the way one user's experience of a product or service can shape their understanding of the world,
-        and more specifically, the unique impact of that understanding.</p></div>
-      </div>
-      <div className="the-description-text-about-one-higher"><p>Through my exposure to, and interest in software,
-         as well as my personal persuit of web development I found a keen interest in the connection
+        <div className="navigation-bar">
+          <ul>
+            <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
+          </ul>
+        </div>
+        <div className="row">
+          <div className="col-header">
+            <div className="aboutone-title">About</div>
+            <div className="the-name-header"><span>Sammy Robens-Paradise</span></div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-1-top"></div>
+          <div className="col-2-top">
+            <div className="the-description-text-about-one-higher"><p>Through my exposure to, and interest in software,
+               as well as my personal persuit of web development I found a keen interest in the connection
         between a user's experience and the interface that is presented to that user</p></div>
-        <div className="hidden-base-64-about"><p>V2VzdCBDb2FzdCBLaWQu</p></div>
-
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutTwo)}><div className= "next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+            <div className="hidden-base-64-about"><p>V2VzdCBDb2FzdCBLaWQu</p></div>
+          </div>
+          <div className="col-3-top"></div>
+          <div className="col-4-top">
+            <div className="vertical-text">
+              <div className="waterloo-text"><p>Waterloo Ontario</p></div>
+              <div className="vancouver-text">Vancouver BC</div>
+            </div>
+          </div>
+          <div className="col-5-top"></div>
+          <div className="row">
+            <div className="col-bottom">
+              <div className="background-parent">
+                <div className="west-coast-background">
+                  <div className="the-description-text-about-one"><p>As someone who advocates optimized engineering solutions,
+                    I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challening problems.
+                    I have always taken an interest in the way humans interact with technology, and more specifically,
+                    the way it shapes our experiences. I chose to study Systems Design Engineering because of my
+                    fascination with the way one user's experience of a product or service can shape their understanding of the world,
+        and more specifically, the unique impact of that understanding.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/3</p></div>
       </div>
     );
