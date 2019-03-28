@@ -76,7 +76,7 @@ li {
 }
 
 .more-button {
-    z-index: 98;
+    z-index: 99;
     background-image: url("../assets/more_btn.svg");
     position: fixed;
     left: 10%;
@@ -101,6 +101,7 @@ li {
     height: $buttonHeight;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 99;
 }
 
 .back-button:hover {
@@ -117,6 +118,7 @@ li {
     height: $buttonHeight;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 99;
 }
 
 .next-button:hover {
