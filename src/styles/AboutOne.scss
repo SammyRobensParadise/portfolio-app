@@ -208,7 +208,6 @@
             width: 0%;
             height: 1rem;
             text-align: center;
-            background-color: red;
         }
 
         .col-2-top {
@@ -216,7 +215,7 @@
             width: 100%;
             height: 1rem;
             text-align: center;
-            background-color: palegreen;
+
         }
 
         .col-3-top {
@@ -224,7 +223,6 @@
             width: 100%;
             height: 1rem;
             text-align: center;
-            background-color: purple;
         }
 
         .col-4-top {
@@ -232,7 +230,6 @@
             width: 100%;
             height: 1rem;
             text-align: center;
-            background-color: fuchsia;
         }
 
         .col-5-top {
@@ -240,7 +237,6 @@
             width: 0%;
             height: 1rem;
             text-align: center;
-            background-color: navajowhite;
         }
 
         .the-description-text-about-one-higher {
@@ -274,6 +270,17 @@
         }
         .the-description-text-about-one{
             width: 50%;
+        }
+    }
+    /*Mobile Responsive CSS*/
+    @media screen and (min-width: 376px) and (max-width: 426px) and (max-height: 860px) {
+        .west-coast-background{
+            top: 16rem;
+            height: 85%;
+            width: 80%;
+        }
+        .the-description-text-about-one{
+            width: 60%;
         }
     }
 }
