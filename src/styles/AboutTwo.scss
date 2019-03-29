@@ -2,99 +2,129 @@
 @import './Global.scss';
 
 .About-two {
-    @extend %universal-component-layout;
-}
+    .About-two {
+        @extend %universal-component-layout;
+    }
 
-$scale-size: 30%;
-$edge-distance: 5%;
-$text-area-width: 28.8125rem;
-$text-right: 50%;
-$text-top: 20%;
-$text-botton: 60%;
-$solution-text-right: 50%;
-$text-lower-bottom: 2%;
+    $scale-size: 30%;
+    $edge-distance: 5%;
+    $text-area-width: 28.8125rem;
+    $text-right: 50%;
+    $text-top: 20%;
+    $text-botton: 60%;
+    $solution-text-right: 50%;
+    $text-lower-bottom: 2%;
 
-.abouttwo-title {
-    color: #ffffff !important;
-    text-decoration: underline;
-    z-index: 1;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5rem;
-    position: fixed;
-    display: inline-block;
-    top: 2rem;
-    right: $text-right;
-}
+    .row::after {
+        clear: both;
+        display: flex;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+    }
+    .col-header {
+        float: left;
+        width: 100%;
+        text-align: center;
+        height: 1rem;
+    }
+    .col-edu-main {
+        float: left;
+        width: 100%;
+        text-align: center;
+        height: 1rem;
+        background-color: palegreen;
+    }
+    .about-two-title {
+        color: #ffffff !important;
+        text-decoration: underline;
+        z-index: 1;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        position: absolute;
+        display: inline-block;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
 
-.background-parent-about-two {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    bottom: 10%;
-    left: 44%;
-    /* Negative half of height. */
-    margin-left: -20%;
-}
+    }
 
-.waterloo-background {
-    background: url('../assets/waterloo-background.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    align-self: center;
-    height: 40rem;
-    width: 60%;
-    bottom: 0%;
-    z-index: 1;
-    opacity: 0;
-}
+    .background-parent-about-two {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 10%;
+        left: 44%;
+        /* Negative half of height. */
+        margin-left: -20%;
+    }
+
+    .waterloo-background {
+        background: url('../assets/waterloo-background.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        align-self: center;
+        height: 40rem;
+        width: 60%;
+        bottom: 0%;
+        z-index: 1;
+        opacity: 0;
+    }
 
 
-.the-description-text-education-one {
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    line-height: 1.2;
-    text-align: right;
-    position: fixed;
-    width: $text-area-width+20;
-    right: $text-right - 25;
-    bottom: $text-lower-bottom;
-    z-index: 50;
-    background-color: #03030C;
-}
+    .the-description-text-education-one {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        width: $text-area-width+20;
+        right: $text-right - 25;
+        bottom: $text-lower-bottom;
+        z-index: 50;
+        background-color: #03030C;
+    }
 
-.the-about-systems-header{
-    font-size: 1.125rem;
-    line-height: 1.2;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    z-index: 1;
-    font-weight: 400;
-    font-style: normal;
-    position: fixed;
-    display: inline-block;
-    bottom: $text-lower-bottom+20;
-    right: $text-right - 25;
-    z-index: 40;
-    background-color: #03030C;
-    padding-left: 20%;
+    .the-about-systems-header {
+        font-size: 1.125rem;
+        line-height: 1.2;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        z-index: 1;
+        font-weight: 400;
+        font-style: normal;
+        position: absolute;
+        display: inline-block;
+        bottom: $text-lower-bottom+20;
+        right: $text-right - 25;
+        z-index: 40;
+        background-color: #03030C;
+        padding-left: 20%;
 
-    
-}
-.waterloo-grad-year{
-    font-size: 2rem;
-    line-height: 1.2;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    z-index: 1;
-    font-weight: 400;
-    font-style: normal;
-    width: 8rem;
-    position: fixed;
-    display: inline-block;
-    bottom: $text-lower-bottom+50;
-    right: $text-right - 20;
-    z-index: 60;
 
+    }
+
+    .waterloo-grad-year {
+        font-size: 2rem;
+        line-height: 1.2;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        z-index: 1;
+        font-weight: 400;
+        font-style: normal;
+        width: 8rem;
+        position: absolute;
+        display: inline-block;
+        bottom: $text-lower-bottom+50;
+        right: $text-right - 20;
+        z-index: 60;
+
+    }
 }
