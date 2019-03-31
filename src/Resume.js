@@ -19,6 +19,10 @@ class Resume extends Component {
     console.log(error, info);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "resume"
+    };
+    window.history.pushState(thisPage, "resume", "resume");
     this.setState({
       isRendered: true
     });

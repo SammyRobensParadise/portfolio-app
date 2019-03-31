@@ -19,6 +19,10 @@ class AboutThree extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "toolbox"
+    };
+    window.history.pushState(thisPage, "toolbox", "toolbox");
     this.setState({
       _isRendered: true
     });

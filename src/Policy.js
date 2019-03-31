@@ -20,6 +20,10 @@ class Policy extends Component {
     console.log(error, info);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "policy"
+    };
+    window.history.pushState(thisPage, "policy", "policy");
     this.setState({
       isRendered: true
     });

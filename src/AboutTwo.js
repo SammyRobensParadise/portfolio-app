@@ -21,6 +21,10 @@ class AboutTwo extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "education"
+    };
+    window.history.pushState(thisPage, "education", "education");
     this.setState({
       _isRendered: true
     });
