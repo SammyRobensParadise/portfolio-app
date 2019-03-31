@@ -73,7 +73,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Feature)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
             <div className="screen-number"><p>1/1</p></div>
           </div>
         </Link>
