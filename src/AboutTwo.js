@@ -67,6 +67,7 @@ class AboutTwo extends Component {
         <div className="row">
         <div className="col-edu-main">
         <div className="background-parent-about-two">
+        <div className="waterloo-grad-year"><span>2017-2023</span></div>
           <div className="waterloo-background"></div>
           <div className="the-about-systems-header"><span>Systems Design Engineering, The university of Waterloo</span></div>
           <div className="the-description-text-education-one"><p>As someone who advocates optimized engineering solutions,
@@ -75,7 +76,7 @@ class AboutTwo extends Component {
             the way it shapes our experiences. I chose to study Systems Design Engineering because of my
             fascination with the way one user's experience of a product or service can shape their understanding of the world,
         and more specifically, the unique impact of that understanding.</p></div>
-          <div className="waterloo-grad-year"><span>2017-2023</span></div>
+          
         </div>
         </div>
         </div>
