@@ -38,16 +38,27 @@ class AboutThree extends Component {
     //ANIMATIONS REQUIRED
     return (
       <div className="About-three">
-      <div className="navigation-bar">
-      <ul>
-      <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
-       </ul>
-       </div>
-    <div className="aboutthree-title">Toolbox</div>
-      <div className="background-parent-about-three">
-      <div className="toolkit-background"></div>
-      </div>
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className= "back-button"></div></div>
+        <div className="navigation-bar">
+          <ul>
+            <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
+          </ul>
+        </div>
+        <div className="row">
+          <div className="col-header">
+            <div className="about-three-title">Toolbox</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="about-3-col-main">
+            <div className="background-parent-about-three">
+              <div className="toolkit-background"></div>
+            </div>
+          </div>
+        </div>
+        <div className="background-parent-about-three">
+          <div className="toolkit-background"></div>
+        </div>
+        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
         <div className="screen-number"><p>3/3</p></div>
       </div>
     );
