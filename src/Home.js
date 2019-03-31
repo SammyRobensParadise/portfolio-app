@@ -50,11 +50,11 @@ class Home extends Component {
   render() {
     return (
       <Router>
-        <Link to="/">
+        <Link to="/Home">
           <div className="Home">
             <div className="navigation-bar">
               <ul>
-                <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><div><span className="navigation">R. Paradise</span></div></li>
+                <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">R. Paradise</span></li>
                 <li className="work" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><span className="navigation">Work</span></li>
                 <li className="about" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><span className="navigation">About</span></li>
               </ul>
@@ -73,7 +73,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><Link to="/Work-One"><div className="more-button"><div className="glow-button-inner"></div></div></Link></div>
             <div className="screen-number"><p>1/1</p></div>
           </div>
         </Link>

@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import ffLogo from './img/ff_logo_red_.png';
@@ -75,6 +76,8 @@ class Work extends Component {
   }
   render() {
     return (
+      <Router>
+      <Link to="/Work-One">
       <div className="work-one">
         <div className="navigation-bar">
           <ul>
@@ -117,6 +120,8 @@ class Work extends Component {
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/2</p></div>
       </div>
+      </Link>
+      </Router>
     );
   }
 }

@@ -14,7 +14,12 @@
 p {
   color: #ffffff;
 }
-
+span{
+  color: #ffffff;
+}
+li{
+  color: #ffffff;
+}
 .click-target {
   width: 100%;
   height: 100%;
