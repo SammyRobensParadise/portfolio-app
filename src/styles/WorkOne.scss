@@ -184,6 +184,7 @@
         border-color: none;
         border-width: 0 0 0 0;
         height: 1.5rem;
+        width: 100%;
         animation: title-animation 1s 0.2s;
         animation-fill-mode: forwards;
         position: absolute;
@@ -192,7 +193,7 @@
 
     @keyframes title-animation {
         from {
-            width: 20%;
+            width: 90%;
         }
 
         to {
@@ -206,9 +207,9 @@
         border-radius: 0.25rem;
         border-color: none;
         border-width: 0 0 0 0;
-        width: 16%;
-        height: 1.5rem;
-        animation: para-animation 1s 0.5s;
+        width: 100%;
+        height: 4rem;
+        animation: para-animation 1s 0.7s;
         animation-fill-mode: forwards;
         position: absolute;
         overflow: hidden;
@@ -262,7 +263,7 @@
 
     @keyframes para-animation {
         from {
-            width: 16%;
+            width: 100%;
         }
 
         to {
@@ -287,15 +288,18 @@
             width: 5%;
         }
     }
+
     @media only screen and (max-height:650px) and (min-height: 610px) {
-        .projects-header{
+        .projects-header {
             top: 30rem;
         }
     }
+
     @media only screen and (max-width:1020px) {
-        .ff_logo{
+        .ff_logo {
             width: 80%;
         }
+
         .col-1-lower {
             width: 100%;
             text-align: center;
@@ -335,20 +339,9 @@
         }
     }
 
-    @media only screen and (max-width:880px) {
-       .lulu-logo,
-        .kroger-logo,
-        .sphero-logo {
-
-        } 
-    }
+    @media only screen and (max-width:880px) {}
 
     @media only screen and (max-width:720px) {
-
-        .lulu-logo,
-        .kroger-logo,
-        .sphero-logo {
-        }
 
         .the-role-header {
             top: 20rem;

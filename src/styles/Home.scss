@@ -18,6 +18,7 @@
     float: left;
     width: calc(100%/4);
     height: 30rem;
+    cursor: default;
   }
 
   .col-middle {
@@ -27,11 +28,13 @@
     align-content: center;
     background-position: center;
     height: 100%;
+    cursor: default;
   }
 
   .col-right {
     width: calc(100%/4);
     height: 1rem;
+    cursor: default;
   }
 
   .line-1 {

@@ -26,6 +26,7 @@ li{
   margin: 0px;
   padding: 0px;
   overflow-y: hidden;
+  cursor: default;
 }
 
 /* This is specific mobile*/
