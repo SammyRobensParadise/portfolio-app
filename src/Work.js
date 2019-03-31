@@ -77,7 +77,7 @@ class Work extends Component {
   render() {
     return (
       <Router>
-      <Link to="/Work-One">
+      <Link to="/">
       <div className="work-one">
         <div className="navigation-bar">
           <ul>

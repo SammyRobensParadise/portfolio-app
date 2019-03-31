@@ -21,6 +21,10 @@ class Home extends Component {
     console.log(error, info);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "home"
+    }
+    window.history.pushState(thisPage, "home", "home")
     this.setState({
       isRendered: true
     });
@@ -73,7 +77,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><Link to="/Work-One"><div className="more-button"><div className="glow-button-inner"></div></div></Link></div>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><Link to="/fingerfoods"><div className="more-button"><div className="glow-button-inner"></div></div></Link></div>
             <div className="screen-number"><p>1/1</p></div>
           </div>
         </Link>

@@ -23,8 +23,6 @@ import Welcome from './Welcome';
 //Buttons anf Features
 import Socials from './sub_components/Socials';
 import CookieBar from './sub_components/Cookie';
-
-
 class App extends Component {
   static propTypes = {
     cookies: instanceOf(Cookies).isRequired
@@ -41,9 +39,21 @@ class App extends Component {
       screenClick: 0,
       screenViewer: new NavigationHandler(),
       HasError: false,
-      cookieIndex: cookies.get('cookieIndex') || false
+      cookieIndex: cookies.get('cookieIndex') || false,
+      navigationRedirectURL: [
+        ["home", ScreenEnum.Home],
+        ["fingerfoods", ScreenEnum.Work],
+        ["government", ScreenEnum.WorkTwo],
+        ["about", ScreenEnum.About],
+        ["feature", ScreenEnum.Feature],
+        ["education", ScreenEnum.AboutTwo],
+        ["toolbox", ScreenEnum.AboutThree],
+        ["resume", ScreenEnum.Resume],
+        ["policy", ScreenEnum.Policy]
+      ]
     };
   }
+
 
   //Definitions ------------------------------
   componentDidCatch(error, info) {
@@ -57,16 +67,16 @@ class App extends Component {
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
-    if (window.location.href.includes("policy")) {
-      this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home)
-      setTimeout(() => {
-        this.state.screenViewer.pushToNavigationStack(ScreenEnum.Policy)
-      }, 100)
-    } else {
-      this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
+    this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
+    for (var i = 0; i < this.state.navigationRedirectURL.length; i++) {
+      if (window.location.href.toLocaleLowerCase().includes(this.state.navigationRedirectURL[i][0])) {
+        this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
+        this.state.screenViewer.pushToNavigationStack(this.state.navigationRedirectURL[i][1]);
+        break;
+      }
     }
     console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
-    console.log(" 👤 : Sammy Robens-Paradise"," 📞 : 778-887-9189"," 📪 : srobensparadise@gmail.com", "📡")
+    console.log(" 👤 : Sammy Robens-Paradise", " 📞 : 778-887-9189", " 📪 : srobensparadise@gmail.com", "📡")
   }
   handleCookieUpdate = (e) => {
     const {
@@ -87,7 +97,7 @@ class App extends Component {
     }
 
   }
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
   _registerClicks = () => {
     let current = this.state.screenClick;
@@ -101,42 +111,42 @@ class App extends Component {
   forceUpdate() {
 
   }
-//Render: Sent to Browser -------------------
+  //Render: Sent to Browser -------------------
 
   render(props) {
-    if(this.state.HasError){
+    if (this.state.HasError) {
       return <h1><span>Oops! It looks like something has gone wrong in our codebase. Come back in a bit when the problem is fixed!</span></h1>
     }
-    if(this.state.isLoading){
-      return( <div><Loading/></div>);
+    if (this.state.isLoading) {
+      return (<div><Loading /></div>);
     }
-    if(!this.state.isLoading && this.state.unWelcome){
-      return <div><Welcome/></div> ;
+    if (!this.state.isLoading && this.state.unWelcome) {
+      return <div><Welcome /></div>;
     }
-    if(this.state.onboardComplete && !this.state.cookieIndex){
-    return (
-      <div className="App">
-      <div className="click-target" onClick={this._registerClicks}>
-     < this.state.screenViewer._getCurrentView />
-      </div>
-      <Socials currentClickCount={this.state.screenClick}/>
-      </div>
-    );
-    }
-    if(this.state.onboardComplete && this.state.cookieIndex){
+    if (this.state.onboardComplete && !this.state.cookieIndex) {
       return (
         <div className="App">
-        <div className="click-target" onClick={this._registerClicks}>
-       < this.state.screenViewer._getCurrentView />
-       </div>
-        <Socials currentClickCount={this.state.screenClick}/>
-        < CookieBar />
+          <div className="click-target" onClick={this._registerClicks}>
+            < this.state.screenViewer._getCurrentView />
+          </div>
+          <Socials currentClickCount={this.state.screenClick} />
         </div>
-          
+      );
+    }
+    if (this.state.onboardComplete && this.state.cookieIndex) {
+      return (
+        <div className="App">
+          <div className="click-target" onClick={this._registerClicks}>
+            < this.state.screenViewer._getCurrentView />
+          </div>
+          <Socials currentClickCount={this.state.screenClick} />
+          < CookieBar />
+        </div>
+
 
       );
     }
   }
 }
- 
+
 export default withCookies(App);
