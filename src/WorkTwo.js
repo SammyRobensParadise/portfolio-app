@@ -20,6 +20,10 @@ class WorkTwo extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "government"
+    };
+    window.history.pushState(thisPage, "government", "government");
     this.setState({
       _isRendered: true
     });

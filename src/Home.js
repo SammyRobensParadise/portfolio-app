@@ -23,8 +23,8 @@ class Home extends Component {
   componentDidMount() {
     let thisPage = {
       name: "home"
-    }
-    window.history.pushState(thisPage, "home", "home")
+    };
+    window.history.pushState(thisPage, "home", "home");
     this.setState({
       isRendered: true
     });

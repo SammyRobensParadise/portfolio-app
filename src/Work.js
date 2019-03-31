@@ -24,6 +24,10 @@ class Work extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "fingerfoods"
+    };
+    window.history.pushState(thisPage, "fingerfoods", "fingerfoods");
     this.setState({
       _isRendered: true
     });

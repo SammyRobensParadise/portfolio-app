@@ -14,8 +14,6 @@ import AboutTwo from './AboutTwo';
 import AboutThree from "./AboutThree";
 import Resume from './Resume';
 import Policy from './Policy';
-import { exists } from "fs";
-
 export const ScreenEnum = {
     Home: 1,
     Work: 2,

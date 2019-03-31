@@ -23,6 +23,10 @@ class Feature extends Component {
     this.state.NavigationHandler.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "feature"
+    };
+    window.history.pushState(thisPage, "feature", "feature");
     this.setState({
       isRendered: true
     });

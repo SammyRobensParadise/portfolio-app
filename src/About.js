@@ -20,6 +20,10 @@ class About extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    let thisPage = {
+      name: "about"
+    };
+    window.history.pushState(thisPage, "about", "about");
     this.setState({
       _isRendered: true
     });
