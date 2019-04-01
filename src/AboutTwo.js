@@ -30,7 +30,7 @@ class AboutTwo extends Component {
     });
     setTimeout(() => {
       this.animateImageAppear()
-    }, 1000);
+    }, 700);
     setTimeout(() => {
       this.animateGlow()
     }, 10000)
@@ -38,7 +38,7 @@ class AboutTwo extends Component {
   animateImageAppear = () => {
     anime({
       targets: '.waterloo-background',
-      duration: 1000,
+      duration: 600,
       opacity: [0, 1],
       easing: 'easeInExpo'
     })
@@ -55,7 +55,6 @@ class AboutTwo extends Component {
     })
   }
   render() {
-    //ANIMATIONS REQUIRED
     return (
       <div className="About-two">
         <div className="navigation-bar">

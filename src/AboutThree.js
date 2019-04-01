@@ -28,7 +28,7 @@ class AboutThree extends Component {
     });
     setTimeout(() => {
       this.animateImageAppear()
-    }, 1000);
+    }, 500);
   }
   animateImageAppear = () => {
     anime({

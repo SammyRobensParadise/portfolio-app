@@ -4,10 +4,10 @@
         animation: svg-anim 12s 0s  ease alternate infinite;
         }
         @keyframes svg-anim {
-        0% {fill: #fff;}
-        25% {fill: #333300;}
-        50% {fill: #22B573;}
-        75% {fill: #34639B;}
+        0% {fill: #fafffd;}
+        25% {fill: #9fd356;}
+        50% {fill: #2e1760}
+        75% {fill: #fa824c;}
         100% {fill: #fff;}
         }
         </style>
