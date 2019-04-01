@@ -81,7 +81,6 @@ class Work extends Component {
   render() {
     return (
       <Router>
-      <Link to="/">
       <div className="work-one">
         <div className="navigation-bar">
           <ul>
@@ -124,7 +123,6 @@ class Work extends Component {
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         <div className="screen-number"><p>1/2</p></div>
       </div>
-      </Link>
       </Router>
     );
   }
