@@ -3,7 +3,8 @@ import React, {
 } from 'react';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import classnames from "classnames";
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import ffLogo from './img/ff_logo_red_.png';
@@ -16,7 +17,8 @@ class Work extends Component {
     super(props);
     this.state = {
       _isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
+      showNav: true
     }
   }
   componentDidCatch(error, info) {
@@ -38,6 +40,8 @@ class Work extends Component {
       this.animateGlow()
     }, 10000)
   }
+  componentDidUpdate(){
+    }
   animateImageAppear = () => {
     anime({
       targets: '.ff-logo-img',
@@ -81,48 +85,49 @@ class Work extends Component {
   render() {
     return (
       <Router>
-      <div className="work-one">
-        <div className="navigation-bar">
-          <ul>
-            <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
-          </ul>
-        </div>
-        <div className="row">
-        <div className="col-header">
-        <div className="work-title">Work</div>
-        </div>
-        </div>
-        <div className="row">
-          <div className="work-1-left"></div>
-          <div className="work-1-left-center">
-            <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most  <div className="ux-content"></div> challenging problems.
+        <div className="work-one">
+          <div className="navigation-bar">
+            <ul>
+              <li className="home" onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home)}><span className="navigation">Start Over...</span></li>
+            </ul>
+          </div>
+          <div className="row">
+            <div className="col-header">
+              <div className="work-title">Work</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="work-1-left"></div>
+            <div className="work-1-left-center">
+              <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most  <div className="ux-content"></div> challenging problems.
         I leverage analytics and user experience data to ship game changing products of every shape and size.</p></div>
-            <div className="the-role-header"><span>Role:</span></div>
-            <div className="the-job-header"><div className="job-title"></div><span >QA Lead &#38; Analytics developer</span></div>
-            <div className="ff-job-details-button"><a href="https://www.fingerfoodstudios.com/" target="_blank" rel="noopener noreferrer">
-              <div className="details-btn-text">Details...</div></a>
+              <div className="the-role-header"><span>Role:</span></div>
+              <div className="the-job-header"><div className="job-title"></div><span >QA Lead &#38; Analytics developer</span></div>
+              <div className="ff-job-details-button"><a href="https://www.fingerfoodstudios.com/" target="_blank" rel="noopener noreferrer">
+                <div className="details-btn-text">Details...</div></a>
+              </div>
+              <div className="projects-header"><span>Disclosable Projects:</span></div>
             </div>
-            <div className="projects-header"><span>Disclosable Projects:</span></div>
-          </div>
-          <div className="work-1-right-center">
-            <div className="ff_logo">
-              <img className="ff-logo-img" src={ffLogo} alt="finger food logo"></img>
+            <div className="work-1-right-center">
+              <div className="ff_logo">
+                <img className="ff-logo-img" src={ffLogo} alt="finger food logo"></img>
+              </div>
             </div>
+            <div className="work-1-right"></div>
           </div>
-          <div className="work-1-right"></div>
-        </div>
-        <div className="row">
+          <div className="row">
 
             <div className="col-1-lower"><img className="lulu-logo" src={luluLogo} alt="Lululemon"></img></div>
             <div className="col-2-lower"><img className="kroger-logo" src={krogerLogo} alt="Kroger"></img></div>
             <div className="col-3-lower"><img className="sphero-logo" src={spheroLogo} alt="sphero"></img></div>
 
+          </div>
+          {console.log("in Work.js", this.props.showNavigation)}
+          <div className={classnames("nav-holisitc", { "navigation-hidden": this.props.showNavigation})} onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
+          <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+          <div className="screen-number"><p>1/2</p></div>
         </div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
-        <div className="screen-number"><p>1/2</p></div>
-      </div>
       </Router>
     );
   }

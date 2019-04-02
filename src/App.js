@@ -50,7 +50,9 @@ class App extends Component {
         ["toolbox", ScreenEnum.AboutThree],
         ["resume", ScreenEnum.Resume],
         ["policy", ScreenEnum.Policy]
-      ]
+      ],
+      prevScrollPos: window.pageYOffset,
+      navButtonsVisible: true
     };
   }
 
@@ -75,9 +77,22 @@ class App extends Component {
         break;
       }
     }
+    window.addEventListener("scroll", this.handleScroll);
     console.log("Coded & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
     console.log(" 👤 : Sammy Robens-Paradise", " 📞 : 778-887-9189", " 📪 : srobensparadise@gmail.com", "📡")
   }
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const navButtonsVisible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      navButtonsVisible
+    });
+    console.log(currentScrollPos,navButtonsVisible);
+  };
   handleCookieUpdate = (e) => {
     const {
       cookies
@@ -97,7 +112,9 @@ class App extends Component {
     }
 
   }
-  componentWillUnmount() { }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
   _registerClicks = () => {
     let current = this.state.screenClick;
@@ -137,7 +154,7 @@ class App extends Component {
       return (
         <div className="App">
           <div className="click-target" onClick={this._registerClicks}>
-            < this.state.screenViewer._getCurrentView />
+            < this.state.screenViewer._getCurrentView showNavigation={this.state.navButtonsVisible}/>
           </div>
           <Socials currentClickCount={this.state.screenClick} />
           < CookieBar />
