@@ -18,7 +18,8 @@ class Work extends Component {
     this.state = {
       _isRendered: false,
       NavigationViewer: new NavigationHandler(),
-      showNav: true
+      prevScrollPos: window.pageYOffset,
+      navButtonsVisible: true
     }
   }
   componentDidCatch(error, info) {
@@ -40,8 +41,12 @@ class Work extends Component {
       this.animateGlow()
     }, 10000)
   }
-  componentDidUpdate(){
-    }
+  componentDidUpdate() {
+
+  }
+  static getDerivedStateFromProps(props, state) {
+
+  }
   animateImageAppear = () => {
     anime({
       targets: '.ff-logo-img',
@@ -82,7 +87,7 @@ class Work extends Component {
       boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
   }
-  render() {
+  render(props) {
     return (
       <Router>
         <div className="work-one">
@@ -123,7 +128,7 @@ class Work extends Component {
 
           </div>
           {console.log("in Work.js", this.props.showNavigation)}
-          <div className={classnames("nav-holisitc", { "navigation-hidden": this.props.showNavigation})} onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
+          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
           <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
           <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
           <div className="screen-number"><p>1/2</p></div>
