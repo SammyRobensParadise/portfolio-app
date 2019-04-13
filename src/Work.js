@@ -11,6 +11,7 @@ import ffLogo from './img/ff_logo_red_.png';
 import krogerLogo from './img/Current_Kroger_logo.png';
 import spheroLogo from './img/sphero2x.png';
 import luluLogo from './img/lulu@2x.png';
+import ScrollHandler from './ScrollHandler';
 
 class Work extends Component {
   constructor(props) {
@@ -19,14 +20,16 @@ class Work extends Component {
       _isRendered: false,
       NavigationViewer: new NavigationHandler(),
       prevScrollPos: window.pageYOffset,
-      navButtonsVisible: true
+      navButtonsVisible: true,
+      ScrollObj: new ScrollHandler(window.pageYOffset,0)
     }
   }
   componentDidCatch(error, info) {
     console.log(error, info);
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
-  componentDidMount() {
+  componentDidMount(props) {
+   //window.addEventListener("scroll", this.state.ScrollObj.handleScroll(window.pageYOffset));
     let thisPage = {
       name: "fingerfoods"
     };
@@ -40,12 +43,10 @@ class Work extends Component {
     setTimeout(() => {
       this.animateGlow()
     }, 10000)
+
   }
   componentDidUpdate() {
-
-  }
-  static getDerivedStateFromProps(props, state) {
-
+   console.log(this.state.ScrollObj._getVisibilityStatus()); 
   }
   animateImageAppear = () => {
     anime({
