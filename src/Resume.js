@@ -5,20 +5,23 @@ import './styles/Resume.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
-
+import classnames from "classnames";
+import ScrollHandler, {scrollBool} from './ScrollHandler';
 
 class Resume extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
+      ScrollObj: new ScrollHandler()
     }
   }
   componentDidCatch(error, info) {
     console.log(error, info);
   }
   componentDidMount() {
+    window.addEventListener("scroll",this.scrollHandler);
     let thisPage = {
       name: "resume"
     };
@@ -33,6 +36,12 @@ class Resume extends Component {
   }
   componentDidUpdate() {
     return true;
+  }
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scrollHandler);
+  }
+  scrollHandler = () => {
+    this.state.ScrollObj.handleScroll(window.pageYOffset);
   }
   animateGlow = () => {
     anime({
