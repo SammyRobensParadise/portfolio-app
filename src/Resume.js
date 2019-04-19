@@ -14,6 +14,7 @@ class Resume extends Component {
     this.state = {
       isRendered: false,
       NavigationViewer: new NavigationHandler(),
+      navButtonsVisible: true,
       ScrollObj: new ScrollHandler()
     }
   }
@@ -42,6 +43,9 @@ class Resume extends Component {
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
+    this.setState({
+      navButtonsVisible: scrollBool
+    })
   }
   animateGlow = () => {
     anime({
@@ -136,7 +140,11 @@ class Resume extends Component {
           </div>
         </div>
         </div>
+        <div className={classnames("nav-el", {
+            "navigation-hidden": !this.state.navButtonsVisible
+          })}>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"><div className="glow-button-inner-horizontal"></div></div></div>
+        </div>
         <div className="screen-number"><p>1/1</p></div>
       </div>
     );

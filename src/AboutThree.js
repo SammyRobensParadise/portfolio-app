@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import classnames from "classnames";
-import ScrollHandler, {scrollBool} from './ScrollHandler';
+import ScrollHandler, { scrollBool } from './ScrollHandler';
 import './styles/AboutThree.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
@@ -14,6 +14,7 @@ class AboutThree extends Component {
     this.state = {
       _isRendered: false,
       NavigationViewer: new NavigationHandler(),
+      navButtonsVisible: true,
       ScrollObj: new ScrollHandler()
     }
   }
@@ -35,13 +36,16 @@ class AboutThree extends Component {
     }, 500);
   }
 
-  componentWillUnmount(){
-    window.removeEventListener("scroll",this.scrollHandler);
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollHandler);
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
+    this.setState({
+      navButtonsVisible: scrollBool
+    })
   }
-  
+
   animateImageAppear = () => {
     anime({
       targets: '.toolkit-background',
@@ -74,7 +78,11 @@ class AboutThree extends Component {
         <div className="background-parent-about-three">
           <div className="toolkit-background"></div>
         </div>
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+        <div className={classnames("nav-el", {
+          "navigation-hidden": !this.state.navButtonsVisible
+        })}>
+          <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+        </div>
         <div className="screen-number"><p>3/3</p></div>
       </div>
     );

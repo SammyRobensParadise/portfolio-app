@@ -16,6 +16,7 @@ class AboutTwo extends Component {
     this.state = {
       _isRendered: false,
       NavigationViewer: new NavigationHandler(),
+      navButtonsVisible: true,
       ScrollObj: new ScrollHandler()
     }
   }
@@ -45,6 +46,9 @@ class AboutTwo extends Component {
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
+    this.setState({
+      navButtonsVisible: scrollBool
+    })
   }
 
   animateImageAppear = () => {
@@ -95,9 +99,12 @@ class AboutTwo extends Component {
         </div>
         </div>
         </div>
-
+        <div className={classnames("nav-el", {
+            "navigation-hidden": !this.state.navButtonsVisible
+          })}>
         <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutThree)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+        </div>
         <div className="screen-number"><p>2/3</p></div>
       </div>
     );
