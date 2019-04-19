@@ -11,7 +11,7 @@ import ffLogo from './img/ff_logo_red_.png';
 import krogerLogo from './img/Current_Kroger_logo.png';
 import spheroLogo from './img/sphero2x.png';
 import luluLogo from './img/lulu@2x.png';
-import ScrollHandler, {scrollBool} from './ScrollHandler';
+import ScrollHandler, { scrollBool } from './ScrollHandler';
 
 class Work extends Component {
   constructor(props) {
@@ -46,11 +46,14 @@ class Work extends Component {
 
   }
 
-  componentWillUnmount(){
-    window.removeEventListener("scroll",this.scrollHandler);
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollHandler);
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
+    this.setState({
+      navButtonsVisible: scrollBool
+    })
   }
   animateImageAppear = () => {
     anime({
@@ -126,15 +129,18 @@ class Work extends Component {
             <div className="work-1-right"></div>
           </div>
           <div className="row">
-
             <div className="col-1-lower"><img className="lulu-logo" src={luluLogo} alt="Lululemon"></img></div>
             <div className="col-2-lower"><img className="kroger-logo" src={krogerLogo} alt="Kroger"></img></div>
             <div className="col-3-lower"><img className="sphero-logo" src={spheroLogo} alt="sphero"></img></div>
-
           </div>
-          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
-          <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
-          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+          {console.log("navButtonVisible", this.state.navButtonsVisible)}
+          <div className={classnames("nav-el", {
+            "navigation-hidden": !this.state.navButtonsVisible
+          })}>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
+            <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+            <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+          </div>
           <div className="screen-number"><p>1/2</p></div>
         </div>
       </Router>
