@@ -11,7 +11,7 @@ import ffLogo from './img/ff_logo_red_.png';
 import krogerLogo from './img/Current_Kroger_logo.png';
 import spheroLogo from './img/sphero2x.png';
 import luluLogo from './img/lulu@2x.png';
-import ScrollHandler from './ScrollHandler';
+import ScrollHandler, {scrollBool} from './ScrollHandler';
 
 class Work extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Work extends Component {
       NavigationViewer: new NavigationHandler(),
       prevScrollPos: window.pageYOffset,
       navButtonsVisible: true,
-      ScrollObj: new ScrollHandler(window.pageYOffset,0)
+      ScrollObj: new ScrollHandler()
     }
   }
   componentDidCatch(error, info) {
@@ -29,7 +29,7 @@ class Work extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount(props) {
-   //window.addEventListener("scroll", this.state.ScrollObj.handleScroll(window.pageYOffset));
+    window.addEventListener("scroll", this.scrollHandler);
     let thisPage = {
       name: "fingerfoods"
     };
@@ -46,7 +46,10 @@ class Work extends Component {
 
   }
   componentDidUpdate() {
-   console.log(this.state.ScrollObj._getVisibilityStatus()); 
+
+  }
+  scrollHandler = () => {
+    this.state.ScrollObj.handleScroll(window.pageYOffset);
   }
   animateImageAppear = () => {
     anime({
@@ -128,7 +131,6 @@ class Work extends Component {
             <div className="col-3-lower"><img className="sphero-logo" src={spheroLogo} alt="sphero"></img></div>
 
           </div>
-          {console.log("in Work.js", this.props.showNavigation)}
           <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"></div></div>
           <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
           <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.WorkTwo)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>

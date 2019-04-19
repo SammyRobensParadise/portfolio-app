@@ -4,17 +4,19 @@ import {
 import React, {
     Component
 } from 'react';
-
+export var scrollposition = 0;
+export var scrollBool = true;
 export default class ScrollHandler extends Component {
 
-    constructor(componentRegister, props) {
-        super(componentRegister, props);
-        this.componentRegister = componentRegister;
+    constructor(props) {
+        super(props);
         this.state = {
             HasError: false,
-            prevScrollPos: 0, //this is the initial window.Yoffset val (int)
+            prevScrollPos: 0,
             visible: true
         }
+        scrollposition = 0;
+        scrollBool = true;
     }
     componentDidMount() {
         return true;
@@ -27,18 +29,24 @@ export default class ScrollHandler extends Component {
         console.log(error, info, throws);
     }
     handleScroll = (currentYoffset) => {
-        let prevYoffset = this.state.prevScrollPos;
-        if (currentYoffset < prevYoffset) {
-            this.setState({
-                visible: false
-            })
-            return true;
+        console.log(scrollBool, scrollposition, currentYoffset);
+        if (currentYoffset > scrollposition) {
+            console.log("scrolling Down");
+            scrollposition = currentYoffset;
+            scrollBool = false;
+
         } else {
-            this.setState({
-                visible: true
-            })
-            return false;
+            console.log("scrolling Up");
+            scrollposition = currentYoffset;
+            scrollBool = true;
         }
+    }
+    _setScrollPos = (currentYoffset) => {
+        console.log("in _setScrollpos", currentYoffset);
+        this.setState({
+            prevScrollPos: currentYoffset
+        })
+        console.log("in _setScrollpos",this.state.prevScrollPos);
     }
     _getVisibilityStatus = () => {
         return this.state.visible;
