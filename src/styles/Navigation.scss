@@ -14,9 +14,14 @@ span {
     color: #ffffff;
 }
 .navigation-hidden{
-    display: none;
+    animation: hide-navs;
+    animation-duration: 0.4s;
+    opacity: 0;
 }
-
+@keyframes hide-navs {
+    0% { opacity: 1;}
+    100% {opacity: 0;}
+}
 ul {
     list-style-type: none;
     margin: 0;
