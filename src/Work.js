@@ -45,8 +45,9 @@ class Work extends Component {
     }, 10000)
 
   }
-  componentDidUpdate() {
 
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scrollHandler);
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);

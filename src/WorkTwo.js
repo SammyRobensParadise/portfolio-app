@@ -3,6 +3,8 @@ import React, {
 } from 'react';
 import anime from 'animejs';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import ScrollHandler, {scrollBool} from './ScrollHandler';
+import classnames from "classnames";
 import './styles/WorkOne.scss';
 import './styles/Navigation.scss';
 import './styles/WorkTwo.scss';
@@ -12,7 +14,8 @@ class WorkTwo extends Component {
     super(props);
     this.state = {
       _isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
+      ScrollObj: new ScrollHandler()
     }
   }
   componentDidCatch(error, info) {
@@ -20,6 +23,7 @@ class WorkTwo extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    window.addEventListener("scroll", this.scrollHandler);
     let thisPage = {
       name: "government"
     };
@@ -33,6 +37,12 @@ class WorkTwo extends Component {
     setTimeout(() => {
       this.animateGlow()
     }, 10000)
+  }
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scrollHandler);
+  }
+  scrollHandler = () => {
+    this.state.ScrollObj.handleScroll(window.pageYOffset);
   }
   animateImageAppear = () => {
     anime({

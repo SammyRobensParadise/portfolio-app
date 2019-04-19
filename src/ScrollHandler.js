@@ -1,7 +1,7 @@
 import {
     throws
 } from "assert";
-import React, {
+import {
     Component
 } from 'react';
 export var scrollposition = 0;
@@ -46,7 +46,7 @@ export default class ScrollHandler extends Component {
         this.setState({
             prevScrollPos: currentYoffset
         })
-        console.log("in _setScrollpos",this.state.prevScrollPos);
+        console.log("in _setScrollpos", this.state.prevScrollPos);
     }
     _getVisibilityStatus = () => {
         return this.state.visible;

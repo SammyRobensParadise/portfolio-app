@@ -2,6 +2,8 @@ import React, {
   Component
 } from 'react';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import classnames from "classnames";
+import ScrollHandler, {scrollBool} from './ScrollHandler';
 import './styles/AboutOne.scss';
 import './styles/Navigation.scss';
 
@@ -12,7 +14,8 @@ class About extends Component {
     super(props);
     this.state = {
       _isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
+      ScrollObj: new ScrollHandler()
     }
   }
   componentDidCatch(error, info, ) {
@@ -20,6 +23,7 @@ class About extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    window.addEventListener("scroll", this.scrollHandler);
     let thisPage = {
       name: "about"
     };
@@ -34,6 +38,14 @@ class About extends Component {
       this.animateGlow()
     }, 10000)
   }
+
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scrollHandler);
+  }
+  scrollHandler = () => {
+    this.state.ScrollObj.handleScroll(window.pageYOffset);
+  }
+  
   animateImageAppear = () => {
     anime({
       targets: '.west-coast-background',

@@ -2,6 +2,8 @@ import React, {
   Component
 } from 'react';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
+import classnames from "classnames";
+import ScrollHandler, {scrollBool} from './ScrollHandler';
 import './styles/AboutThree.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
@@ -11,7 +13,8 @@ class AboutThree extends Component {
     super(props);
     this.state = {
       _isRendered: false,
-      NavigationViewer: new NavigationHandler()
+      NavigationViewer: new NavigationHandler(),
+      ScrollObj: new ScrollHandler()
     }
   }
   componentDidCatch(error, info) {
@@ -19,6 +22,7 @@ class AboutThree extends Component {
     this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Home);
   }
   componentDidMount() {
+    window.addEventListener("scroll", this.scrollHandler);
     let thisPage = {
       name: "toolbox"
     };
@@ -30,6 +34,14 @@ class AboutThree extends Component {
       this.animateImageAppear()
     }, 500);
   }
+
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scrollHandler);
+  }
+  scrollHandler = () => {
+    this.state.ScrollObj.handleScroll(window.pageYOffset);
+  }
+  
   animateImageAppear = () => {
     anime({
       targets: '.toolkit-background',
