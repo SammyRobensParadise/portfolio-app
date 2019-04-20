@@ -29,24 +29,18 @@ export default class ScrollHandler extends Component {
         console.log(error, info, throws);
     }
     handleScroll = (currentYoffset) => {
-        console.log(scrollBool, scrollposition, currentYoffset);
         if (currentYoffset > scrollposition) {
-            console.log("scrolling Down");
             scrollposition = currentYoffset;
             scrollBool = false;
-
         } else {
-            console.log("scrolling Up");
             scrollposition = currentYoffset;
             scrollBool = true;
         }
     }
     _setScrollPos = (currentYoffset) => {
-        console.log("in _setScrollpos", currentYoffset);
         this.setState({
             prevScrollPos: currentYoffset
         })
-        console.log("in _setScrollpos", this.state.prevScrollPos);
     }
     _getVisibilityStatus = () => {
         return this.state.visible;
