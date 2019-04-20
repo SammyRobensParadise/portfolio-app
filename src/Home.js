@@ -21,6 +21,7 @@ class Home extends Component {
     console.log(error, info);
   }
   componentDidMount() {
+    
     let thisPage = {
       name: "home"
     };

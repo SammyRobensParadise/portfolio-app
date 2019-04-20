@@ -55,6 +55,7 @@ class Work extends Component {
       navButtonsVisible: scrollBool
     })
   }
+
   animateImageAppear = () => {
     anime({
       targets: '.ff-logo-img',
