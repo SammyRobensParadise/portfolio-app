@@ -135,7 +135,6 @@ class Work extends Component {
             <div className="col-2-lower"><img className="kroger-logo" src={krogerLogo} alt="Kroger"></img></div>
             <div className="col-3-lower"><img className="sphero-logo" src={spheroLogo} alt="sphero"></img></div>
           </div>
-          {console.log("navButtonVisible", this.state.navButtonsVisible)}
           <div className={classnames("nav-el", {
             "navigation-hidden": !this.state.navButtonsVisible
           })}>
