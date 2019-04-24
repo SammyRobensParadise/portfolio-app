@@ -113,8 +113,9 @@ class Work extends Component {
           <div className="row">
             <div className="work-1-left"></div>
             <div className="work-1-left-center">
-              <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most  <div className="ux-content"></div> challenging problems.
-        I leverage analytics and user experience data to ship game changing products of every shape and size.</p></div>
+                <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most challenging problems.
+        I leverage analytics and user experience data to ship game changing products of every shape and size.</p>
+              </div>
               <div className="the-role-header"><span>Role:</span></div>
               <div className="the-job-header"><div className="job-title"></div><span >QA Lead &#38; Analytics developer</span></div>
               <div className="ff-job-details-button"><a href="https://www.fingerfoodstudios.com/" target="_blank" rel="noopener noreferrer">

@@ -11,7 +11,8 @@ span {
     @extend %universal-component-layout;
     font-size: 1.5rem;
     z-index: 99;
-    color: #ffffff;
+    color: #ffffff !important;
+    text-emphasis-color: #ffffff;
 }
 .navigation-hidden{
     animation: hide-navs;
@@ -71,6 +72,7 @@ li {
 .navigation:hover {
     font-weight: 600;
     cursor: pointer;
+    color: #ffffff;
 
 }
 
@@ -78,6 +80,7 @@ li {
     li .navigation {
         margin-inline-end: 1rem;
         margin-block-start: 2rem;
+        color: #ffffff;
     }
 }
 
@@ -178,6 +181,7 @@ li {
         margin-inline-end: 0.5rem;
         margin-inline-start: 0rem;
         margin-block-start: 2rem;
+        color: #ffffff;
     }
 
     .home {

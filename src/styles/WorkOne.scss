@@ -66,14 +66,17 @@
     .work-title {
         color: #ffffff !important;
         text-decoration: underline;
-        z-index: 3;
+        z-index: 1;
         font-weight: 400;
         font-style: normal;
         font-size: 2.5rem;
         position: absolute;
         display: inline-block;
         top: 2rem;
-        text-align: center;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
@@ -100,7 +103,6 @@
         position: absolute;
         top: $text-top;
         width: inherit;
-        margin-block-start: 1rem;
         z-index: 99;
     }
 
@@ -189,11 +191,12 @@
         animation-fill-mode: forwards;
         position: absolute;
         overflow: hidden;
+        
     }
 
     @keyframes title-animation {
         from {
-            width: 90%;
+            width: 100%;
         }
 
         to {
@@ -208,10 +211,10 @@
         border-color: none;
         border-width: 0 0 0 0;
         width: 100%;
-        height: 4rem;
+        height: 2rem;
         animation: para-animation 1s 0.7s;
         animation-fill-mode: forwards;
-        position: absolute;
+        position: inherit;
         overflow: hidden;
     }
 
@@ -349,6 +352,7 @@
 
         .the-job-header {
             top: 22rem;
+            
         }
     }
 
@@ -410,7 +414,7 @@
             margin-left: auto;
             margin-right: auto;
             width: 80%;
-            top: 26rem;
+            top: 24rem;
         }
 
         .the-role-header {
