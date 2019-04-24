@@ -157,7 +157,7 @@
             
         }
         .the-description-text-education-one{
-            width: 50%;
+            width: 70%;
         }
         .the-about-systems-header{
             width: 40%;
@@ -173,7 +173,7 @@
             right: 10%;
         }
         .the-description-text-education-one{
-            width: 50%;
+            width: 70%;
         }
         .the-about-systems-header{
             width: 40%;
@@ -223,6 +223,14 @@
             width: 30%;
             height: 40%;
             transform: scale(2);
+        }
+    }
+    @media screen and (max-width: 380px){
+        .the-about-systems-header{
+            top: 32rem;
+        }
+        .the-description-text-education-one{
+            top: 36rem;
         }
     }
 }
