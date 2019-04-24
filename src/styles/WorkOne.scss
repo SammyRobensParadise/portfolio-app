@@ -191,7 +191,7 @@
         animation-fill-mode: forwards;
         position: absolute;
         overflow: hidden;
-        
+
     }
 
     @keyframes title-animation {
@@ -231,7 +231,6 @@
         width: calc(100%/3);
         height: 10rem;
         text-align: center;
-
 
     }
 
@@ -292,9 +291,9 @@
         }
     }
 
-    @media only screen and (max-height:650px) and (min-height: 610px) {
+    @media only screen and (max-height:680px) and (min-height: 610px) {
         .projects-header {
-            top: 30rem;
+            top: 31rem;
         }
     }
 
@@ -342,8 +341,6 @@
         }
     }
 
-    @media only screen and (max-width:880px) {}
-
     @media only screen and (max-width:720px) {
 
         .the-role-header {
@@ -352,7 +349,7 @@
 
         .the-job-header {
             top: 22rem;
-            
+
         }
     }
 
@@ -385,7 +382,7 @@
     }
 
     /*Responsive scss for mobile*/
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1020px) {
         .work-1-left {
             width: 0%
         }
@@ -404,8 +401,9 @@
         }
 
         .ff_logo {
-            top: 0rem;
+            top: 5rem;
             width: 100%;
+            transform: scale(0.5);
         }
 
         .the-description-text {
@@ -483,6 +481,19 @@
         }
     }
 
+    @media screen and (max-width: 770px) {
+        .ff_logo {
+            top: 3rem;
+            transform: scale(0.6);
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        .ff_logo {
+            transform: scale(0.8);
+        }
+    }
+
     @media screen and (max-width:400px) {
         .work-1-left {
             width: 0%
@@ -499,10 +510,37 @@
         .work-1-right {
             width: 0%;
         }
+
+        .ff_logo {
+            transform: scale(1);
+        }
+    }
+    @media screen and (max-width: 420px){
+        .the-role-header{
+            top: 34rem;
+        }
+        .the-job-header{
+            top: 36rem;
+        }
+        .projects-header{
+            top: 40rem;
+        }
+        .ff-job-details-button a{
+            top: 42rem;
+        }
+        .lulu-logo{
+            top: 47rem;
+        }
+        .kroger-logo{
+            top: 53rem;
+        }
+        .sphero-logo{
+            top: 65rem;
+        }
+    }
     }
 
     * {
         /* box-sizing: border-box;  
     border: 1px solid blue; */
     }
-}
