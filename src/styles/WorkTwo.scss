@@ -184,6 +184,7 @@
     }
 
     .gov-job-details-button a {
+        background-color: #03030C;
         text-align: center;
         border-width: 3px;
         border-color: rgb(255, 255, 255);
@@ -320,6 +321,68 @@
         }
         .gov-job-details-button a{
             top: 28rem;
+        }
+    }
+    /*responsive css added for increased font size for mobile*/
+    @media screen and (max-width: 680px) {
+        .the-role-header-gov{
+            top: 24rem;
+        }
+        .the-job-header-gov{
+            top: 26rem;
+        }
+        .gov-job-details-button a {
+            top: 28rem;
+        }
+        .peace-tower-background{
+            top: 36rem;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .the-role-header-gov{
+            top: 26rem;
+            width: 80%;
+        }
+        .the-job-header-gov{
+            top: 28rem;
+            width: 80%;
+        }
+        .gov-job-details-button a {
+            top: 30rem;
+        }
+        .peace-tower-background{
+            top: 38rem;
+        }
+        .the-description-text-gov{
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .the-role-header-gov{
+            top: 28rem;
+        }
+        .the-job-header-gov{
+            top: 30rem;
+        }
+        .gov-job-details-button a {
+            top: 34rem;
+        }
+        .peace-tower-background{
+            top: 40rem;
+        }
+    }
+    @media screen and (max-width: 345px) {
+        .the-role-header-gov{
+            top: 30rem;
+        }
+        .the-job-header-gov{
+            top: 32rem;
+        }
+        .gov-job-details-button a {
+            top: 36rem;
+        }
+        .peace-tower-background{
+            top: 42rem;
         }
     }
 }
