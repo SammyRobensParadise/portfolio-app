@@ -21,7 +21,7 @@ class Home extends Component {
     console.log(error, info);
   }
   componentDidMount() {
-    
+    window.addEventListener("popstate", this.popHandler);
     let thisPage = {
       name: "home"
     };
@@ -36,6 +36,12 @@ class Home extends Component {
   }
   componentDidUpdate() {
     return true;
+  }
+  componentWillUnmount(){
+    window.removeEventListener("popstate", this.popHandler);
+  }
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
   }
   animateGlow = () => {
     anime({
