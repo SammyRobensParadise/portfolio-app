@@ -30,6 +30,7 @@ class Work extends Component {
   }
   componentDidMount(props) {
     window.addEventListener("scroll", this.scrollHandler);
+    window.addEventListener("popstate", this.popHandler);
     let thisPage = {
       name: "fingerfoods"
     };
@@ -55,7 +56,10 @@ class Work extends Component {
       navButtonsVisible: scrollBool
     })
   }
-
+  popHandler = () => {
+    console.log("popstate fired");
+    this.state.NavigationViewer.popFromNavigationStack();
+  }
   animateImageAppear = () => {
     anime({
       targets: '.ff-logo-img',

@@ -109,7 +109,13 @@ export default class NavigationHandler extends Component {
 
     }
     popFromNavigationStack = () => {
+        var displayEl = ViewStack.length;
+        if(displayEl <= 2){
+            return;
+        }
+        else{
         ViewStack.pop();
+        }
     }
     _getRegister() {
         return this.componentRegister;
