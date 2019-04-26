@@ -110,7 +110,7 @@ class WorkTwo extends Component {
             "navigation-hidden": !this.state.navButtonsVisible
           })}>
         <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="more-button"><div className="glow-button-inner"></div></div></div>
-        <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.Work)}><div className="back-button"></div></div>
         </div>
         <div className="screen-number"><p>2/2</p></div>
       </div>
