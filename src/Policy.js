@@ -20,6 +20,8 @@ class Policy extends Component {
     console.log(error, info);
   }
   componentDidMount() {
+    window.addEventListener("popstate", this.popHandler);
+
     let thisPage = {
       name: "policy"
     };
@@ -34,6 +36,12 @@ class Policy extends Component {
   }
   componentDidUpdate() {
     return true;
+  }
+  componentWillUnmount(){
+    window.removeEventListener("popstate", this.popHandler);
+  }
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
   }
   animateGlow = () => {
     anime({

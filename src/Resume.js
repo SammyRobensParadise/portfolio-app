@@ -23,6 +23,8 @@ class Resume extends Component {
   }
   componentDidMount() {
     window.addEventListener("scroll",this.scrollHandler);
+    window.addEventListener("popstate", this.popHandler);
+
     let thisPage = {
       name: "resume"
     };
@@ -40,12 +42,17 @@ class Resume extends Component {
   }
   componentWillUnmount(){
     window.removeEventListener("scroll",this.scrollHandler);
+    window.removeEventListener("popstate", this.popHandler);
+
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
     this.setState({
       navButtonsVisible: scrollBool
     })
+  }
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
   }
   animateGlow = () => {
     anime({

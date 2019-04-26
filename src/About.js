@@ -25,6 +25,7 @@ class About extends Component {
   }
   componentDidMount() {
     window.addEventListener("scroll", this.scrollHandler);
+    window.addEventListener("popstate", this.popHandler);
     let thisPage = {
       name: "about"
     };
@@ -42,6 +43,8 @@ class About extends Component {
 
   componentWillUnmount(){
     window.removeEventListener("scroll",this.scrollHandler);
+    window.removeEventListener("popstate", this.popHandler);
+
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
@@ -49,7 +52,9 @@ class About extends Component {
       navButtonsVisible: scrollBool
     })
   }
-  
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
+  }
   animateImageAppear = () => {
     anime({
       targets: '.west-coast-background',

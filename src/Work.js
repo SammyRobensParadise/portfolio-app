@@ -49,6 +49,7 @@ class Work extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scrollHandler);
+    window.removeEventListener("popstate", this.popHandler);
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
@@ -57,7 +58,6 @@ class Work extends Component {
     })
   }
   popHandler = () => {
-    console.log("popstate fired");
     this.state.NavigationViewer.popFromNavigationStack();
   }
   animateImageAppear = () => {
@@ -117,7 +117,7 @@ class Work extends Component {
           <div className="row">
             <div className="work-1-left"></div>
             <div className="work-1-left-center">
-                <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most challenging problems.
+              <div className="the-description-text"><p>I worked to quantify and evaluate bleeding edge tech solutions for some of our industry's most challenging problems.
         I leverage analytics and user experience data to ship game changing products of every shape and size.</p>
               </div>
               <div className="the-role-header"><span>Role:</span></div>

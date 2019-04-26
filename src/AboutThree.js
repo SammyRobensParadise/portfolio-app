@@ -24,6 +24,7 @@ class AboutThree extends Component {
   }
   componentDidMount() {
     window.addEventListener("scroll", this.scrollHandler);
+    window.addEventListener("popstate", this.popHandler);
     let thisPage = {
       name: "toolbox"
     };
@@ -38,6 +39,8 @@ class AboutThree extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scrollHandler);
+    window.removeEventListener("popstate", this.popHandler);
+
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
@@ -45,7 +48,9 @@ class AboutThree extends Component {
       navButtonsVisible: scrollBool
     })
   }
-
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
+  }
   animateImageAppear = () => {
     anime({
       targets: '.toolkit-background',

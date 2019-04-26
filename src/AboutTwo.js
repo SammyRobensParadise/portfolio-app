@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import NavigationHandler, { ScreenEnum } from './NavigationHandler';
 import classnames from "classnames";
-import ScrollHandler, {scrollBool} from './ScrollHandler';
+import ScrollHandler, { scrollBool } from './ScrollHandler';
 import './styles/AboutTwo.scss';
 import './styles/Navigation.scss';
 import anime from 'animejs';
@@ -26,6 +26,7 @@ class AboutTwo extends Component {
   }
   componentDidMount() {
     window.addEventListener("scroll", this.scrollHandler);
+    window.addEventListener("popstate", this.popHandler);
     let thisPage = {
       name: "education"
     };
@@ -40,15 +41,20 @@ class AboutTwo extends Component {
       this.animateGlow()
     }, 10000)
   }
-  
-  componentWillUnmount(){
-    window.removeEventListener("scroll",this.scrollHandler);
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollHandler);
+    window.removeEventListener("popstate", this.popHandler);
+
   }
   scrollHandler = () => {
     this.state.ScrollObj.handleScroll(window.pageYOffset);
     this.setState({
       navButtonsVisible: scrollBool
     })
+  }
+  popHandler = () => {
+    this.state.NavigationViewer.popFromNavigationStack();
   }
 
   animateImageAppear = () => {
@@ -84,26 +90,26 @@ class AboutTwo extends Component {
           </div>
         </div>
         <div className="row">
-        <div className="col-edu-main">
-        <div className="background-parent-about-two">
-        <div className="waterloo-grad-year"><span>2017-2023</span></div>
-          <div className="waterloo-background"></div>
-          <div className="the-about-systems-header"><span>Systems Design Engineering, The university of Waterloo</span></div>
-          <div className="the-description-text-education-one"><p>As someone who advocates optimized engineering solutions,
-            I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challening problems.
-            I have always taken an interest in the way humans interact with technology, and more specifically,
-            the way it shapes our experiences. I chose to study Systems Design Engineering because of my
-            fascination with the way one user's experience of a product or service can shape their understanding of the world,
+          <div className="col-edu-main">
+            <div className="background-parent-about-two">
+              <div className="waterloo-grad-year"><span>2017-2023</span></div>
+              <div className="waterloo-background"></div>
+              <div className="the-about-systems-header"><span>Systems Design Engineering, The university of Waterloo</span></div>
+              <div className="the-description-text-education-one"><p>As someone who advocates optimized engineering solutions,
+                I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challening problems.
+                I have always taken an interest in the way humans interact with technology, and more specifically,
+                the way it shapes our experiences. I chose to study Systems Design Engineering because of my
+                fascination with the way one user's experience of a product or service can shape their understanding of the world,
         and more specifically, the unique impact of that understanding.</p></div>
-          
-        </div>
-        </div>
+
+            </div>
+          </div>
         </div>
         <div className={classnames("nav-el", {
-            "navigation-hidden": !this.state.navButtonsVisible
-          })}>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="back-button"></div></div>
-        <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutThree)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
+          "navigation-hidden": !this.state.navButtonsVisible
+        })}>
+          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.About)}><div className="back-button"></div></div>
+          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutThree)}><div className="next-button"><div className="glow-button-inner-horizontal"></div></div></div>
         </div>
         <div className="screen-number"><p>2/3</p></div>
       </div>
