@@ -44,7 +44,6 @@ class Work extends Component {
     setTimeout(() => {
       this.animateGlow()
     }, 10000)
-
   }
 
   componentWillUnmount() {
