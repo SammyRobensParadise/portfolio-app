@@ -81,7 +81,7 @@ class AboutThree extends Component {
         <div className={classnames("nav-el", {
           "navigation-hidden": !this.state.navButtonsVisible
         })}>
-          <div onClick={() => this.state.NavigationViewer.popFromNavigationStack()}><div className="back-button"></div></div>
+          <div onClick={() => this.state.NavigationViewer.pushToNavigationStack(ScreenEnum.AboutTwo)}><div className="back-button"></div></div>
         </div>
         <div className="screen-number"><p>3/3</p></div>
       </div>
