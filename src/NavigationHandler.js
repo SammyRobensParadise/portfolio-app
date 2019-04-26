@@ -64,7 +64,13 @@ export default class NavigationHandler extends Component {
         appobj.forceUpdate();
     }
     pushToNavigationStack = (screen) => {
-        if (screen === ScreenEnum.Home) {
+        for (var j =0; j < NavigationViewList.length;j++){
+            if(screen === NavigationViewList[j][0]){
+                ViewStack.push(NavigationViewList[j][1]);
+                return true;
+            }
+        }
+      /*  if (screen === ScreenEnum.Home) {
             ViewStack.push(<Home />);
             return true;
         } else
@@ -102,7 +108,7 @@ export default class NavigationHandler extends Component {
                                         } else {
                                             ViewStack.push(<p>404: Error Page Not Found. Reload the Webpage to clear the error.</p>)
                                             return false;
-                                        }
+                                        } */
     }
 
     componentWillUnmount() {
