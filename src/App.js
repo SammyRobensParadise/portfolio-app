@@ -74,13 +74,6 @@ class App extends Component {
         this.state.screenViewer.pushToNavigationStack(ScreenEnum.Home);
         this.state.screenViewer.pushToNavigationStack(this.state.navigationRedirectURL[i][1]);
         break;
-      } else if(window.location.href === window.location.origin+'/'){
-        break;
-      }
-      else
-      {
-        alert("Hi there! It looks like the URL you are looking for: " + window.location.href + " does not exist or has been removed. Don't worry! We are taking you home from here... 🏠✔️");
-        break;
       }
     }
     console.log("Coded/Developed & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
