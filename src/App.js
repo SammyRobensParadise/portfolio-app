@@ -94,7 +94,7 @@ class App extends Component {
           unWelcome: false,
           onboardComplete: true
         });
-      }, 8600);
+      }, 4200);
     }
 
   }

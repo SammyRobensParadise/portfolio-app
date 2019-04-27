@@ -21,12 +21,12 @@ class Welcome extends Component {
         showSubTxt: true
       });
       this.animateEaseIn();
-    }, 2800)
+    }, 1600)
   }
   animateEaseIn = () => {
     anime({
       targets: '.welcome-msg',
-      duration: 1000,
+      duration: 700,
       opacity: [0, 1],
       easing: 'linear'
     })
