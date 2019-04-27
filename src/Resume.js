@@ -124,7 +124,7 @@ class Resume extends Component {
           </div>
           <div>
             <p className="projects-section">Projects</p>
-            <div className="proj-free"><p>Freelance Web Design &#38; Development - <span className="free-text">EmilyBandel.com</span></p></div>
+            <div className="proj-free"><p>Freelance Web Design &#38; Development - <span className="free-text">Emily Bandel</span></p></div>
             <ul className="section-description">
               <li><p className="para">- Iterativy Designed and Developed single page react app for Actress, Emily Bandel.</p></li>
               <li><p className="para">- Engaged client in multiple design sessions and reviews throughout design process.</p></li>
