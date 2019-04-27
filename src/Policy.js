@@ -69,11 +69,11 @@ class Policy extends Component {
             <p>Effective date: February 22, 2019</p>
 
 
-            <p>Sammy Robens-Paradise | Design Develop With Me ("us", "we", or "our") operates the https://portfolio-app-1091c.firebaseapp.com/ website (the "Service").</p>
+            <p>Sammy Robens-Paradise | Design Develop With Me ("us", "we", or "our") operates the https://sammy.world website (the "Service").</p>
 
             <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
 
-            <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from https://portfolio-app-1091c.firebaseapp.com/</p>
+            <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from https://sammy.world</p>
 
 
             <h2 className="h-2-title">Information Collection And Use</h2>

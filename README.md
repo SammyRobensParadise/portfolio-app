@@ -4,6 +4,10 @@
 This is Sammy's personal portfolio, hosted on google firebase. It is built in using react.js
 I am a Developer, UX Designer, Artist and Student at the University of Waterloo.
 
+## Website:
+
+https://sammy.world
+
 ## Available Scripts
 
 In the project directory, you can run:

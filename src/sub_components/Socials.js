@@ -141,7 +141,7 @@ class Socials extends Component {
     const shareList = <div className="expanded-share">
       <div className="icon-fb-outer">
         <FacebookProvider appId="813508179041617">
-          <ShareButton className="icon-fb" href="https://portfolio-app-1091c.firebaseapp.com/">
+          <ShareButton className="icon-fb" href="https://sammy.world/">
           </ShareButton>
         </FacebookProvider>
       </div>
