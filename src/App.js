@@ -40,6 +40,7 @@ class App extends Component {
       screenViewer: new NavigationHandler(),
       HasError: false,
       cookieIndex: cookies.get('cookieIndex') || false,
+      loadCookie: cookies.get('loadCookie') || false,
       navigationRedirectURL: [
         ["home", ScreenEnum.Home],
         ["fingerfoods", ScreenEnum.Work],
@@ -65,6 +66,16 @@ class App extends Component {
   }
 
   componentDidMount() {
+    if(this.state.loadCookie){
+      this.setState({
+        isLoading: true,
+        unWelcome: false,
+        onboardComplete: true
+      })
+    } else{
+      this.handleLoadCookieUpdate(true);
+    }
+    
     setTimeout(() => this.setState({
       isLoading: false,
     }), 3000);
@@ -76,6 +87,8 @@ class App extends Component {
         break;
       }
     }
+
+    
     console.log("Coded/Developed & Designed with ❤️ by Sammy Robens-Paradise;", "☕,🥑, and 🍌 were harmed in the making of this web app (sorry)");
     console.log(" 👤 : Sammy Robens-Paradise", " 📞 : 778-887-9189", " 📪 : srobensparadise@gmail.com", "📡")
   }
@@ -84,6 +97,14 @@ class App extends Component {
       cookies
     } = this.props;
     cookies.set('cookieIndex', e, {
+      path: '/'
+    });
+  }
+  handleLoadCookieUpdate = (e) => {
+    const {
+      cookies
+    } = this.props;
+    cookies.set('loadCookie', e, {
       path: '/'
     });
   }
@@ -96,10 +117,11 @@ class App extends Component {
         });
       }, 4200);
     }
-
+    console.log("app unmounted from update");
   }
   componentWillUnmount() {
-    // window.removeEventListener("scroll", this.handleScroll);
+    this.handleLoadCookieUpdate(true);
+    console.log("app unmounted from dom");
   }
 
   _registerClicks = () => {
@@ -111,9 +133,7 @@ class App extends Component {
       this.handleCookieUpdate(true);
     }
   }
-  forceUpdate() {
 
-  }
   //Render: Sent to Browser -------------------
 
   render(props) {
