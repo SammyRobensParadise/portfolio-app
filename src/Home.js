@@ -45,11 +45,11 @@ class Home extends Component {
   }
   animateGlow = () => {
     anime({
-      targets: '.glow-button-inner',
+      targets: '.more-button',
       direction: 'alternate',
       loop: true,
-      easing: 'linear',
-      duration: 2500,
+      easing: 'easeInOutCubic',
+      duration: 2000,
       borderRadius: ['25%', '35%'],
       boxShadow: [' inset 0rem 0rem 0rem 0rem #450092', ' 0rem 0rem 2rem 0.1rem #450092']
     })
