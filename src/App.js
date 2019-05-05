@@ -117,11 +117,9 @@ class App extends Component {
         });
       }, 4200);
     }
-    console.log("app unmounted from update");
   }
   componentWillUnmount() {
     this.handleLoadCookieUpdate(true);
-    console.log("app unmounted from dom");
   }
 
   _registerClicks = () => {

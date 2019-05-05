@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320.51 220">
     <defs>
-        <style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-1{stroke-width:4px;}.cls-2{stroke-width:3px;}.cls-3{font-size:98.03px;fill:#fff;font-family:Consolas;letter-spacing:-0.15em;}
+    
+        <style>
+        .cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-1{stroke-width:4px;}.cls-2{stroke-width:3px;}.cls-3{font-size:98.03px;fill:#fff;font-family:Consolas;letter-spacing:-0.15em;}
         .cls-3{
         animation: svg-anim 16s 0s  ease alternate infinite;
         }
@@ -21,7 +23,7 @@
             <circle class="cls-2" cx="19" cy="15" r="4.5"/>
             <circle class="cls-2" cx="36.5" cy="15" r="4.5"/>
             <circle class="cls-2" cx="54" cy="15" r="4.5"/>
-            <text class="cls-3" transform="translate(94.04 148.68)">&lt;/&gt;</text>
+            <text class="cls-3" transform="translate(94.04 148.68)">&lt; / &gt;</text>
         </g>
     </g>
 </svg>
