@@ -105,7 +105,7 @@ class Resume extends Component {
                     React, javaScript, jQuery,
   CSS (Sass &#38; Less), HTML, PHP
   C++, Python, MySQL, VB, Git,
-  SVN,Linux Ubuntu,npm.
+  SVN, Linux Ubuntu, npm.
                   </div>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ class Resume extends Component {
               </ul>
               <div className="proj-gangl"><p>Student UX Optimization Design - <span className="gangl-text">Gangle App</span></p></div>
               <ul className="section-description">
-                <li><p className="para">- Gangl App manages and structures student's worloads into a simple user-centered platform</p></li>
+                <li><p className="para">- Gangl App manages and structures student's workloads into a simple user-centered platform</p></li>
                 <li><p className="para">- Gangle was created and conceptualized by engineering design team as a way to address workload related stress of university students</p></li>
                 <li><a href="https://www.youtube.com/watch?v=QaixSsK434s" target="_blank" rel="noopener noreferrer"><div className="youtube-link"><p className="para">- watch the gangle design process...</p></div></a></li>
               </ul>
