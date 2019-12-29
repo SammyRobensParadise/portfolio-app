@@ -6,7 +6,7 @@ I am a Developer, UX Designer, Artist and Student at the University of Waterloo.
 
 ## Website:
 
-https://sammy.world
+https://portfolio-app-1091c.firebaseapp.com/
 
 ## Available Scripts
 
